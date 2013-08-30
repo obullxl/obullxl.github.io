@@ -1,7 +1,16 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
 body {
 	padding-top: 60px;
 	padding-bottom: 60px;
 	/*text-align: center;*/
+	font-size: 20px;
+	font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif, '微软雅黑';
+	line-height: 150%;
 }
 
 .side-nav-fixed {
