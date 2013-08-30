@@ -1,5 +1,7 @@
 body {
 	padding-top: 60px;
+	padding-bottom: 60px;
+	/*text-align: center;*/
 }
 
 .side-nav-fixed {
@@ -8,6 +10,7 @@ body {
 }
 
 /* Enable use of floated navbar text */
+/*
 @media ( max-width : 980px) {
 	.navbar-text.pull-right {
 		float: none;
@@ -15,6 +18,21 @@ body {
 		padding-right: 5px;
 	}
 }
+*/
+
+/*
+@media all { 
+	body {
+		width:970px;
+		text-align: center;
+	} 
+}
+
+@media print  
+    {  
+        body{ font:14px; width:595px;}
+    }  
+*/
 
 /*------------------------------------------------------------------
 [ 圆角区域 / .radius-block ]
