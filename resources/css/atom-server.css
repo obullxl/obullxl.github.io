@@ -6,7 +6,7 @@
 
 body {
 	padding-top: 60px;
-	padding-bottom: 60px;
+	/*padding-bottom: 60px;*/
 	/*text-align: center;*/
 	font-size: 20px;
 	font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif, '微软雅黑';
@@ -42,6 +42,95 @@ body {
         body{ font:14px; width:595px;}
     }  
 */
+
+/*------------------------------------------------------------------
+[ 导航栏 / .navbar ]
+*/
+.navbar {
+	margin: 0px 0px 15px 0px;
+}
+
+.navbar-inner>.container {
+	width: 940px;
+}
+
+.navbar-inner {
+	border-radius: 0px;
+	background: #e24e35 !important;
+	background-image: none;
+	background-repeat: no-repeat;
+	filter: none !important;
+	border-top: 1px solid #cc412a !important;
+	border-bottom: 1px solid #cc412a !important;
+	border-left: 0px !important;
+	border-right: 0px !important;
+}
+
+.navbar .btn {
+	background: #cc412a !important;
+	font-size: 13px;
+	padding: 4px 10px;
+	color: #fff !important;
+	text-shadow: none !important;
+}
+
+.navbar .btn:hover {
+	background: #e24e35 !important;
+}
+
+.navbar .caret {
+	border-top-color: #fff !important;
+	border-bottom-color: #fff !important;
+}
+
+.navbar .brand {
+	color: #fff !important;
+	text-shadow: none !important;
+}
+
+.navbar .nav {
+	border-left: 1px solid #cc412a;
+	border-right: 1px solid #e75f48;
+}
+
+.navbar .nav>li>a {
+	background: #e24e35;
+	padding: 12px 15px 12px;
+	color: #fff !important;
+	text-shadow: none !important;
+	border-right: 1px solid #cc412a;
+	border-left: 1px solid #e75f48;
+	-webkit-transition: background 1s ease;
+	-moz-transition: background 1s ease;
+	-o-transition: background 1s ease;
+	transition: background 1s ease;
+	font-size: 13px !important;
+}
+
+.navbar .nav>li>a:hover {
+	background: #cc412a !important;
+	color: #fff !important;
+	-webkit-transition: background 1s ease;
+	-moz-transition: background 1s ease;
+	-o-transition: background 1s ease;
+	transition: background 1s ease;
+}
+
+.navbar .nav .active>a,.navbar .nav .active>a:hover,.navbar .nav .active>a:focus
+	{
+	color: #ffffff;
+	box-shadow: none;
+	background: #cc412a !important;
+}
+
+.dropdown-toggle {
+	background: #e24e35 !important;
+}
+
+.nav-collapse a {
+	font-weight: normal !important;
+	text-shadow: none !important;
+}
 
 /*------------------------------------------------------------------
 [ 圆角区域 / .radius-block ]
