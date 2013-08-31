@@ -12,6 +12,7 @@ body {
 	font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif,
 		'微软雅黑';
 	line-height: 150%;
+	background: #FFF url('../img/grey.png') repeat;
 }
 
 .side-nav-fixed {
@@ -141,7 +142,7 @@ body {
 	border-top: 5px solid #e24e35;
 	padding: 15px 0;
 	font-size: 14px;
-	background: #151515 url('img/bot.png') repeat;
+	background: #151515 url('../img/bot.png') repeat;
 	color: #999;
 	-webkit-box-shadow: inset 0 1px 0 #292929;
 	-moz-box-shadow: inset 0 1px 0 #292929;
@@ -537,7 +538,7 @@ body {
 /* Footer */
 footer {
 	color: #ddd;
-	background: #151515 url('img/bot.png') repeat;
+	background: #151515 url('../img/bot.png') repeat;
 	margin-top: 20px;
 	border-top: 5px solid #14a900;
 	padding-top: 10px;
