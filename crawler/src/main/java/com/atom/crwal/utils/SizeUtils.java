@@ -14,8 +14,6 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang.StringUtils;
 
-import com.atom.crwal.Consts;
-
 /**
  * 尺寸工具类
  * 

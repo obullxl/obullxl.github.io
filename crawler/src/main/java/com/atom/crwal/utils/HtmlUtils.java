@@ -31,7 +31,6 @@ import org.htmlparser.util.NodeList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.atom.crwal.Consts;
 import com.atom.crwal.dto.PostFormDTO;
 
 /**
@@ -302,18 +301,28 @@ public class HtmlUtils {
      * 保存HTML内容
      */
     public static final void saveHTML(String uri) throws Exception {
+        saveHTML(uri, uri);
+    }
+
+    /**
+     * 保存HTML内容
+     */
+    public static final void saveHTML(String uri, String fname) throws Exception {
         Reader is = null;
         OutputStream out = null;
         try {
             String path = FilenameUtils.normalize(Consts.ROOT);
             FileUtils.forceMkdir(new File(path));
             File config = new File(path).getParentFile();
-            
+
             String host = ConfigUtils.findHost();
             String html = fetchHtml(host + "/" + uri);
+            
+            // 处理HMTL内容
+            html = processHtml(html);
 
             is = new StringReader(html);
-            out = new FileOutputStream(new File(config, uri));
+            out = new FileOutputStream(new File(config, fname));
             IOUtils.copy(is, out, "UTF-8");
         } finally {
             IOUtils.closeQuietly(is);
@@ -342,6 +351,13 @@ public class HtmlUtils {
         getMethod.addRequestHeader("Cache-Control", "max-age=0");
 
         return HttpUtils.get(getMethod);
+    }
+    
+    /**
+     * 处理HTML内容
+     */
+    private static final String processHtml(String html) {
+        return html;
     }
 
 }

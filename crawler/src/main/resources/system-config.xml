@@ -7,12 +7,14 @@
 	<!-- 系统参数配置 -->
 	<!-- ================================ -->
 	<entry key="HOST">http://anode.aliapp.com</entry>
+	<entry key="MIN-TOPIC-ID">0</entry>
+	<entry key="MAX-TOPIC-ID">100</entry>
 
 	<!-- ================================ -->
 	<!-- 数据源JDBC配置 -->
 	<!-- ================================ -->
 	<entry key="jdbc.driver">com.mysql.jdbc.Driver</entry>
-	<entry key="jdbc.url">jdbc:mysql://127.0.01:3306/web_crwal?useUnicode=true&amp;characterEncoding=UTF8</entry>
-	<entry key="jdbc.user">crwal</entry>
-	<entry key="jdbc.passwd">crwal</entry>
+	<entry key="jdbc.url">jdbc:mysql://r7821obullxl.mysql.aliyun.com:3306/r631obullxl?useUnicode=true&amp;characterEncoding=UTF8</entry>
+	<entry key="jdbc.user">r631obullxl</entry>
+	<entry key="jdbc.passwd">rd828439b</entry>
 </properties>

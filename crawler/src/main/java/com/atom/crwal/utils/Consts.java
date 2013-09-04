@@ -2,7 +2,7 @@
  * Alipay.com Inc.
  * Copyright (c) 2004-2012 All Rights Reserved.
  */
-package com.atom.crwal;
+package com.atom.crwal.utils;
 
 import java.io.File;
 

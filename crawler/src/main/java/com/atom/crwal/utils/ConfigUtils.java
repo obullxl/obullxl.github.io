@@ -14,8 +14,6 @@ import java.util.Properties;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.ObjectUtils;
 
-import com.atom.crwal.Consts;
-
 /**
  * 系统参数工具类
  * 
@@ -89,6 +87,28 @@ public class ConfigUtils {
      */
     public static final String findHost() {
         return findConfig("HOST");
+    }
+
+    /**
+     * 获取主题最小的ID值
+     */
+    public static final long findMinID() {
+        try {
+            return Long.parseLong(findConfig("MIN-TOPIC-ID"));
+        } catch (Exception e) {
+            return 0L;
+        }
+    }
+
+    /**
+     * 获取主题最大的ID值
+     */
+    public static final long findMaxID() {
+        try {
+            return Long.parseLong(findConfig("MAX-TOPIC-ID"));
+        } catch (Exception e) {
+            return 100L;
+        }
     }
 
 }

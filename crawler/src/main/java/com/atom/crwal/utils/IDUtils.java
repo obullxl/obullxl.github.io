@@ -15,8 +15,6 @@ import org.apache.commons.collections.MapUtils;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 
-import com.atom.crwal.Consts;
-
 /**
  * ID工具类
  * 
