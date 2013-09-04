@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration debug="true" scan="true" scanPeriod="30 seconds">
+	<contextName>TEST</contextName>
+	<property name="logPath" value="logs" />
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%contextName %date %-5level [%X{LogID}][%thread] %logger [%file:%line] - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="LOGGER" level="debug" additivity="false">
+		<appender-ref ref="STDOUT" />
+	</logger>
+
+	<root level="debug">
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>

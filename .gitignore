@@ -4,3 +4,8 @@
 *.war
 *.ear
 /bootword
+/crawler/.settings
+
+/crawler/.classpath
+/crawler/.project
+/crawler/target

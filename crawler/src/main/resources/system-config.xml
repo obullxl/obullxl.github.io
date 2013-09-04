@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>系统参数配置</comment>
+
+	<!-- ================================ -->
+	<!-- 系统参数配置 -->
+	<!-- ================================ -->
+	<entry key="HOST">http://anode.aliapp.com</entry>
+
+	<!-- ================================ -->
+	<!-- 数据源JDBC配置 -->
+	<!-- ================================ -->
+	<entry key="jdbc.driver">com.mysql.jdbc.Driver</entry>
+	<entry key="jdbc.url">jdbc:mysql://127.0.01:3306/web_crwal?useUnicode=true&amp;characterEncoding=UTF8</entry>
+	<entry key="jdbc.user">crwal</entry>
+	<entry key="jdbc.passwd">crwal</entry>
+</properties>
