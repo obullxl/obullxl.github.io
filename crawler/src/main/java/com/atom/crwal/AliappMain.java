@@ -43,11 +43,12 @@ public class AliappMain {
      * 获取导航页面
      */
     private static void fetchCatgs() throws Exception {
-        HtmlUtils.saveHTML("index.html");
+        HtmlUtils.saveHTML("index.html?vt=clean", "index.html");
 
         List<String> catgs = Arrays.asList("blog", "news", "misc", "album", "about");
         for (String catg : catgs) {
-            HtmlUtils.saveHTML("index-" + catg + ".html");
+            String fname = "index-" + catg + ".html";
+            HtmlUtils.saveHTML(fname + "?vt=clean", fname);
         }
     }
 
@@ -73,7 +74,7 @@ public class AliappMain {
                 logger.warn("主题信息-{},{},{}", id, catg, title);
 
                 String fname = "topic-" + catg + "-" + id + ".html";
-                HtmlUtils.saveHTML(fname + "?v=clean", fname);
+                HtmlUtils.saveHTML(fname + "?vt=clean", fname);
             }
         } finally {
             DBUtils.closeQuietly(rs);

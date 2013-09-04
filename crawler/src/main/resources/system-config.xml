@@ -6,7 +6,7 @@
 	<!-- ================================ -->
 	<!-- 系统参数配置 -->
 	<!-- ================================ -->
-	<entry key="HOST">http://anode.aliapp.com</entry>
+	<entry key="HOST">http://localhost</entry>
 	<entry key="MIN-TOPIC-ID">0</entry>
 	<entry key="MAX-TOPIC-ID">100</entry>
 
