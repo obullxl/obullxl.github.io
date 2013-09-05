@@ -10,6 +10,15 @@
 
 	<dependencies>
 		<!-- ======================================== -->
+		<!-- ATOM相关依赖 -->
+		<!-- ======================================== -->
+		<dependency>
+			<groupId>com.atom</groupId>
+			<artifactId>atom-core-lang</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+		
+		<!-- ======================================== -->
 		<!-- SpringMVC相关依赖 -->
 		<!-- ======================================== -->
 		<dependency>
@@ -160,6 +169,10 @@
 	</dependencies>
 
 	<repositories>
+		<repository>
+			<id>github.io</id>
+			<url>http://obullxl.github.io/mvnrepo</url>
+		</repository>
 		<repository>
 			<id>alibabatech.com</id>
 			<url>http://code.alibabatech.com/svn/fastjson/repository</url>
