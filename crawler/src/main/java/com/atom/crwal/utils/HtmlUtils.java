@@ -357,9 +357,9 @@ public class HtmlUtils {
      * 处理HTML内容
      */
     private static final String processHtml(String html) {
-        html = StringUtils.replace(html, "http://anode.aliapp.com/js", "http://obullxl.github.io/public/js");
-        html = StringUtils.replace(html, "http://anode.aliapp.com/css", "http://obullxl.github.io/public/css");
-        html = StringUtils.replace(html, "http://anode.aliapp.com/img", "http://obullxl.github.io/public/img");
+        html = StringUtils.replace(html, "http://anode.aliapp.com/public", "http://obullxl.github.io/public");
+        html = StringUtils.replace(html, "http://anode.aliapp.com/public", "http://obullxl.github.io/public");
+        html = StringUtils.replace(html, "http://anode.aliapp.com/public", "http://obullxl.github.io/public");
         
         html = StringUtils.replace(html, "linezing.com/3298179/tongji", "linezing.com/3298180/tongji");
         

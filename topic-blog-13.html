@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>最新 Java/Node.js/Spring/MySQL/数据库 技术博客 - 做最好的Java,Node.js,Bootstrap,DWZ,Git,GitHub,阿里云 技术交流开发博客</title>
+<meta name="description" content="Java编程,Node.js Bootstrap Node Spring SpringMVC Struts1 Struts2 Webwork框架深入,Freemarker Velocity模板使用,XMLHTTP Ajax开发,Java Web开发,Java企业应用,Java设计模式,Java开源框架,Java应用服务器,Rich Client讨论,Ruby编程,Ruby DSL开发,Ruby on rails实践,JavaScript编程,敏捷软件开发XP TDD,软件配置管理,软件测试,项目管理UML,数据库,C#/.net C/C++ Erlang/FP PHP/Linux平台,精通Hibernate" />
+<meta name="keywords"  content="Java编程 Node.js框架 Spring框架 Ajax技术 agile敏捷软件开发 ruby on rails实践 ITeye深度技术社区" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="http://anode.aliapp.com/favicon.png" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" />
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Arizonia" />
+<link rel="stylesheet" type="text/css" href="http://obullxl.github.io/public/css/bootstrap.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="http://obullxl.github.io/public/css/bootstrap-responsive.css" />
+<link rel="stylesheet" type="text/css" href="http://obullxl.github.io/public/css/atom-front.css" />
+<script type="text/javascript" charset="utf-8" src="http://obullxl.github.io/public/js/jquery-2.0.3.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://obullxl.github.io/public/js/bootstrap.js"></script>
+<!--[if lt IE 9]>
+	<script type="text/javascript" charset="utf-8" src="http://obullxl.github.io/public/js/html5shiv.js"></script>
+<![endif]-->
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">Menu</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						
+							<li><a href="./index.html">首页</a></li>
+						
+						
+						
+							<li class="active"><a href="./index-blog.html">博客</a></li>
+						
+						
+						
+							<li><a href="./index-news.html">资讯</a></li>
+						
+						
+						
+							<li><a href="./index-album.html">图片</a></li>
+						
+					</ul>
+					<ul class="nav pull-right">
+						
+							<li><a href="./index-about.html">关于</a></li>
+						
+					</ul>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+		</div>
+	</div>
+	<!-- /.navbar -->
+
+<style type="text/css">
+.radius-block:after {
+	content: "发表评论";
+}
+</style>
+<div class="blog">
+	<div class="container">
+		<div class="row">
+			<div class="span8">
+				<div class="entry-ads">
+					<script type="text/javascript">
+<!--
+	google_ad_client = "ca-pub-2548953017344039";
+	/* GitIO列表1-728W */
+	google_ad_slot = "5847202679";
+	google_ad_width = 728;
+	google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+				</div>
+				<div class="entry">
+					<h2>使用MySQL的LAST_INSERT_ID来确定各分表的唯一ID值 - 老牛啊</h2>
+					<p class="meta">
+						<i class="icon-calendar"></i> 2013-09-05
+						- <i class="icon-user"></i> 老牛啊
+						
+					</p>
+					<p>MySQL数据表结构中，一般情况下，都会定义一个具有‘AUTO_INCREMENT’扩展属性的‘ID’字段，以确保数据表的每一条记录都可以用这个ID唯一确定；随着数据的不断扩张，为了提高数据库查询性能，降低查询热点，一般都会把一张表按照一定的规则分成多张数据表，即常说的分表；分</p>
+					<p>
+						<p>MySQL数据表结构中，一般情况下，都会定义一个具有&lsquo;AUTO_INCREMENT&rsquo;扩展属性的&lsquo;ID&rsquo;字段，以确保数据表的每一条记录都可以用这个ID唯一确定；</p><p><br />随着数据的不断扩张，为了提高数据库查询性能，降低查询热点，一般都会把一张表按照一定的规则分成多张数据表，即常说的分表；<br /><br />分表除了表名的索引不同之外，表结构都是一样的，如果各表的&lsquo;ID&rsquo;字段仍采用&lsquo;AUTO_INCREMENT&rsquo;的方式的话，ID就不能唯确定一条记录了。<br /><br />这时就需要一种处于各个分表之外的机制来生成ID，我们一般采用一张单独的数据表（不妨假设表名为&lsquo;ticket_mutex&rsquo;）来保存这个ID，无论哪个分表有数据增加时，都是先到ticket_mutex表把ID值加1，然后取得ID值。<br /><br />这个取ID的操作看似很复杂，所幸的是，MySQL提供了LAST_INSERT_ID机制，让我们能一步完成。<br /><br /><strong>1、新建数据表ticket_mutex</strong></p><div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;">CREATE TABLE ticket_mutex (<br/>    name varchar(32) NOT NULL PRIMARY KEY COMMENT '业务名称',<br/>    value bigint(20) UNSIGNED NOT NULL COMMENT 'ID值'<br/>)Engine=InnoDB DEFAULT CHARSET=UTF8 COMMENT '保存分表ID表';<br/></div>字段&lsquo;name&rsquo;用来说明这个ID是哪个业务的，比如&lsquo;用户&rsquo;的ID，我们可以定为&lsquo;USER&rsquo;；<br />字段&lsquo;value&rsquo;即该业务的ID值。<br /><br /><strong>2、初始化业务和其ID值</strong><br /><div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;">INSERT INTO ticket_mutex(name, value) values('USER', 0),('POST', 0);<br/>+------+-------+<br/>| name | value |<br/>+------+-------+<br/>| POST |     0 |<br/>| USER |     0 |<br/>+------+-------+<br/></div>我们初始化了2条记录，即有2个不同的业务，分别代表&lsquo;用户信息&rsquo;和&lsquo;主题信息&rsquo;，它们初始ID值均为&lsquo;0&rsquo;；<br /><br /><strong>3、获取分表唯一ID</strong><br />这个时候就要利用MySQL提供的LAST_INSERT_ID()机制了。<br />在往用户表里新增一条数据时，获取&lsquo;用户ID&rsquo;：<br /><div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;">UPDATE ticket_mutex SET value=LAST_INSERT_ID(value+1) WHERE name='USER';SELECT LAST_INSERT_ID();<br/>+------------------+<br/>| LAST_INSERT_ID() |<br/>+------------------+<br/>|                1 |<br/>+------------------+<br/></div>通过这条语句之后，我们得到结果为1，这个值就是我们所需要的值。再来查看数据记录，我们发现记录总数没有改变，但是&lsquo;用户&rsquo;的ID已经为1了；<br /><div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;">+------+-------+<br/>| name | value |<br/>+------+-------+<br/>| POST |     0 |<br/>| USER |     1 |<br/>+------+-------+<br/></div>同样的方法，我们可获取&lsquo;主题&rsquo;的ID：<br /><div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;">UPDATE ticket_mutex SET value=LAST_INSERT_ID(value+1) WHERE name='POST';SELECT LAST_INSERT_ID();<br/>+------------------+<br/>| LAST_INSERT_ID() |<br/>+------------------+<br/>|                1 |<br/>+------------------+<br/></div>查看所有的记录：<br /><div style="background-color: #F5F5F5;border: 1px solid #CCCCCC;padding:10px;">+------+-------+<br/>| name | value |<br/>+------+-------+<br/>| POST |     1 |<br/>| USER |     1 |<br/>+------+-------+<br/></div><br />从上可以看出，通过MySQL的LAST_INSERT_ID机制，我们可以保证在记录总数不增长的情况下，让业务ID在不断的增加，从而保证了分表ID的唯一性。<br /><br /><strong>4、LAST_INSERT_ID说明</strong><br />从名字可以看出，LAST_INSERT_ID即为最后插入的ID值，根据MySQL的官方手册说明，它有2种使用方法<br />一是不带参数：LAST_INSERT_ID()，这种方法和AUTO_INCREMENT属性一起使用，当往带有&lsquo;AUTO_INCREMENT&rsquo;属性字段的表中新增记录时，LAST_INSERT_ID()即返回该字段的值，大家可试下（我已经验证过）；<br />二是带有表达式：如上面介绍的LAST_INSERT_ID(value+1)，它返回的是表达式的值，即&lsquo;value+1&rsquo;；<br /><br />------------------------<br />欢迎大家批评指正:<br />http://obullxl.iteye.com<br />http://www.cnblogs.com/obullxl<br />http://hi.baidu.com/obullxl<br />-----------------------<img src="http://counter.cnblogs.com/blog/rss/2089416" width="1" height="1" alt=""/><br/><p>本文链接：<a href="http://www.cnblogs.com/obullxl/archive/2011/06/24/mysql-last-insert-id.html" target="_blank">http://www.cnblogs.com/obullxl/archive/2011/06/24/mysql-last-insert-id.html</a>，转载请注明。</p>
+					</p>
+				</div>
+				<div class="entry-ads">
+					<script type="text/javascript">
+<!--
+	google_ad_client = "ca-pub-2548953017344039";
+	/* GitIO列表2-728W */
+	google_ad_slot = "7323935870";
+	google_ad_width = 728;
+	google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+				</div>
+				
+			</div>
+			<div class="span4">
+				<div class="sidebar">
+	<div class="widget">
+		<h3>推荐排行榜Top5</h3>
+		<ul>
+			
+			<li><a href="./topic-blog-13.html" rel="bookmark">使用MySQL的LAST_INSERT_ID来确定各分表的唯一ID值 - 老牛啊</a></li>
+			
+			<li><a href="./topic-blog-17.html" rel="bookmark">Apache与Tomcat集群配置 - 老牛啊</a></li>
+			
+			<li><a href="./topic-blog-12.html" rel="bookmark">JMS服务器ActiveMQ的初体验并持久化消息到MySQL数据库中 - 老牛啊</a></li>
+			
+			<li><a href="./topic-blog-11.html" rel="bookmark">Spring集成Quartz定时任务框架介绍和Cron表达式详解 - 老牛啊</a></li>
+			
+			<li><a href="./topic-blog-10.html" rel="bookmark">JeeCMS 2012 Maven构建+Eclipse完整开发版 - 老牛啊</a></li>
+			
+		</ul>
+	</div>
+	<div class="widget-ads">
+		<script type="text/javascript">
+<!--
+	google_ad_client = "ca-pub-2548953017344039";
+	/* GitIO侧边栏-大幅 */
+	google_ad_slot = "4370469471";
+	google_ad_width = 300;
+	google_ad_height = 600;
+//-->
+</script>
+<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+	</div>
+	<div class="widget">
+		<h3>评论排行榜Top5</h3>
+		<ul>
+			
+			<li><a href="./topic-blog-18.html" rel="bookmark">Android源码下载并在Eclipse中方便查看 - 老牛啊</a></li>
+			
+			<li><a href="./topic-blog-17.html" rel="bookmark">Apache与Tomcat集群配置 - 老牛啊</a></li>
+			
+			<li><a href="./topic-blog-16.html" rel="bookmark">Android从SDCard中取得图片并设置为桌面背景 - 老牛啊</a></li>
+			
+			<li><a href="./topic-blog-15.html" rel="bookmark">Android动画之Frame动画实战 - 老牛啊</a></li>
+			
+			<li><a href="./topic-blog-14.html" rel="bookmark">Android动画之Tween动画实战 - 老牛啊</a></li>
+			
+		</ul>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#ufrom").val(window.location.href);
+	});
+</script>
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div id="footer-copyright" class="span6">
+					&copy; 2013 <a href="http://obullxl.github.io">obullxl@gmail.com</a>
+				</div>
+				<div id="footer-terms" class="span6">
+					<a href="http://anode.aliapp.com">云博客</a>
+					<a href="http://obullxl.cnblogs.com">博客园</a>
+					<script type="text/javascript" src="http://js.tongji.linezing.com/3298180/tongji.js"></script><noscript><a href="http://www.linezing.com"><img src="http://img.tongji.linezing.com/3298180/tongji.gif"/></a></noscript>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /footer -->
+</body>
+</html>

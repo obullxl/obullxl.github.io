@@ -8,7 +8,7 @@
 	<!-- ================================ -->
 	<entry key="HOST">http://localhost</entry>
 	<entry key="MIN-TOPIC-ID">0</entry>
-	<entry key="MAX-TOPIC-ID">100</entry>
+	<entry key="MAX-TOPIC-ID">18</entry>
 
 	<!-- ================================ -->
 	<!-- 数据源JDBC配置 -->
