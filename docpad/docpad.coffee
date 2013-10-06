@@ -3,6 +3,42 @@
 
 # Define the DocPad Configuration
 docpadConfig = {
+	# Root Path
+    # The root path of our our project
+    rootPath: process.cwd()
+	
+	# Out Path
+    # Where should we put our generated website files?
+    # If it is a relative path, it will have the resolved `rootPath` prepended to it
+    outPath: 'out/../../'
+
+    # Src Path
+    # Where can we find our source website files?
+    # If it is a relative path, it will have the resolved `rootPath` prepended to it
+    srcPath: 'src'
+
+    # Documents Paths
+    # An array of paths which contents will be treated as documents
+    # If it is a relative path, it will have the resolved `srcPath` prepended to it
+    documentsPaths: [
+        'documents'
+    ]
+
+    # Files Paths
+    # An array of paths which contents will be treated as files
+    # If it is a relative path, it will have the resolved `srcPath` prepended to it
+    filesPaths: [
+        'files'
+        'public'
+    ]
+
+    # Layouts Paths
+    # An array of paths which contents will be treated as layouts
+    # If it is a relative path, it will have the resolved `srcPath` prepended to it
+    layoutsPaths: [
+        'layouts'
+    ]
+	
 	# Port
     # Use to change the port that DocPad listens to
     # By default we will detect the appropriate port number for our environment
