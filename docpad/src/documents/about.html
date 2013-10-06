@@ -1,0 +1,7 @@
+---
+title: "About Me"
+layout: "default"
+isPage: true
+---
+
+<p>I like long walks on the beach. <strong>Plus I rock at DocPad!</strong></p>

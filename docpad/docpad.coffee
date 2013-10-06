@@ -12,6 +12,35 @@ docpadConfig = {
     # - VCAP_APP_PORT - AppFog
     # - VMC_APP_PORT - CloudFoundry
     port: 80
+	
+	# =================================
+    # Template Configuration
+
+    # Template Data
+    # Use to define your own template data and helpers that will be accessible to your templates
+    # Complete listing of default values can be found here: http://docpad.org/docs/template-data
+    templateData:
+        site:
+            url: "http://obullxl.github.io"
+            title: "OSN开源云-做最好的Java,Node.js,Bootstrap,Git,GitHub技术交流云博客"
+            description: """
+                Java编程,Node.js Bootstrap Semantic-UI Node Spring SpringMVC Struts1 Struts2 Webwork框架深入,Freemarker Velocity模板使用,XMLHTTP Ajax开发,Java Web开发,Java企业应用,Java设计模式,Java开源框架,Java应用服务器,Rich Client讨论,JavaScript编程
+                """
+            keywords: """
+                Java, Node.js, Bootstrap, Semantic-UI, GitHub, Git, JavaScript, Spring, SpringMVC, Ibatis, MyBatis
+                """
+
+        getPreparedTitle: ->
+            if @document.title
+                "#{@document.title} | #{@site.title}"
+            else
+                @site.title
+
+        getPreparedDescription: ->
+            @document.description or @site.description
+
+        getPreparedKeywords: ->
+            @site.keywords.concat(@document.keywords or []).join(', ')
 }
 
 # Export the DocPad Configuration
