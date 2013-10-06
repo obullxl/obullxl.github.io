@@ -1,4 +1,4 @@
-# Your [DocPad](http://docpad.org) Project
+# 站点[DocPad](http://docpad.org)插件
 
-## License
-Copyright &copy; 2013+ All rights reserved.
+## 建设中……
+详情参见：[http://obullxl.duapp.com](http://obullxl.duapp.com)
