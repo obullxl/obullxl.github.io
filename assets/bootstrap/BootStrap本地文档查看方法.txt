@@ -1,0 +1,20 @@
+下载源代码：
+git pull -f
+
+1、安装命令工具：
+sudo gem install bundler
+
+2、安装其他依赖：
+bundle install
+
+3、重新编译文档：
+grunt docs
+
+4、启动文档服务：
+sudo bundle exec jekyll serve
+
+5、查看文档：
+http://localhost:9001
+
+
+

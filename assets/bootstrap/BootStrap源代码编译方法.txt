@@ -1,0 +1,26 @@
+下载源代码：
+git pull -f
+
+
+命令行工具安装：
+1、安装grunt-cli：
+npm install -g grunt-cli
+
+2、进入/bootstrap根目录：
+npm install
+
+
+
+Bootstrap所提供的Grunt命令：
+1、仅编译CSS和JavaScript文件，重新生成/dist/目录，并将编译压缩后的CSS和JavaScript文件放入这个目录中
+grunt dist
+
+2、监测Less源码文件的改变，并自动重新将其编译为CSS文件
+grunt watch
+
+3、在PhantomJS环境中运行JSHint和QUnit自动化测试用例
+grunt test
+
+4、编译并压缩CSS和JavaScript文件、构建文档站点、对文档做HTML5校验、重新生成定制工具所需的资源文件等
+grunt
+

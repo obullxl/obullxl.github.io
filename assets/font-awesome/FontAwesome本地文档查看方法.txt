@@ -1,0 +1,12 @@
+下载源代码：
+git pull -f
+
+1、安装工具
+bundle install
+npm install
+
+2、启动服务
+sudo bundle exec jekyll serve
+
+3、查看文档
+http://localhost:7998/Font-Awesome/

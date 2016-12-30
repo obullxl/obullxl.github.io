@@ -1,0 +1,18 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+$enable-flex:               true;
+
+$body-bg:       #DADADA;
+
+// $navbar-border-radius:              0;
+
+.border-test {
+  border: 1px solid red;
+}
+
+.bg-white {
+  background-color: #fff;
+}

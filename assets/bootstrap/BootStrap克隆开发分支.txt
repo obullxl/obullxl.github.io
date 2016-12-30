@@ -1,0 +1,17 @@
+#
+# bootstrap
+#
+# 克隆 Bootstrap 仓库
+git clone https://github.com/twbs/bootstrap.git bootstrap-github
+
+# 进入到 Bootstrap
+cd bootstrap-github
+
+# 提取分支
+git fetch
+
+# 切换到 Bootstrap 4 的开发分支
+git checkout v4-dev
+
+# 启动本地环境
+bundle exec jekyll serve
