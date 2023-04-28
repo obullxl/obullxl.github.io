@@ -10,3 +10,8 @@
 /crawler/.classpath
 /crawler/.project
 /crawler/target
+
+.hugo_build.lock
+/public
+/resources/_gen
+
