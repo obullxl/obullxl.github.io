@@ -2,14 +2,14 @@ baseurl: https://ntopic.cn
 languageCode: zh-cn
 theme: hugo-theme-stack
 paginate: 5
-title: Example Site
+title: 奔跑的蜗牛
 
 languages:
     zh-cn:
         languageName: 中文
-        title: 演示站点
-        description: 演示说明
-        weight: 2
+        title: 奔跑的蜗牛
+        description: 奔跑的蜗牛，记录的点滴~
+        weight: 1
     #en:
     #    languageName: English
     #    title: Example Site
