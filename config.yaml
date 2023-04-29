@@ -55,8 +55,8 @@ params:
         subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         avatar:
             enabled: true
-            local: true
-            src: img/avatar-362x362.jpg
+            local: false
+            src: /avatar-362x362.jpg
 
     article:
         math: false
