@@ -6,7 +6,7 @@ title = "博客开通啦"
 description = "这是我的自定义域名博客，后面再次和大家进行沟通啦~"
 image = "https://picsum.photos/seed/2023042801/2000/400"
 tags = [ "杂谈" ]
-categories = [ "博客" ]
+categories = [ "博客空间" ]
 +++
 
 我的博客开通啦！
