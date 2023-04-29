@@ -43,8 +43,10 @@ params:
     favicon: /favicon.ico
 
     footer:
-        since: 2020
-        customText:
+        since: 2010
+        customText: 邮箱：obullxl@163.com
+            <br/>微信：imxulin（奔跑的蜗牛）
+            <br/>支付宝：obullxl@163.com
 
     dateFormat:
         published: 2006-01-02
@@ -52,14 +54,14 @@ params:
 
     sidebar:
         # emoji: 🍥
-        subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        subtitle: 奔跑的蜗牛，记录的点滴~
         avatar:
             enabled: true
             local: false
             src: /avatar-362x362.jpg
 
     article:
-        math: false
+        math: true
         toc: true
         readingTime: true
         license:
@@ -80,7 +82,7 @@ params:
         utterances:
             repo: obullxl/obullxl.github.io
             issueTerm: pathname
-            label: 请留下您的宝贵意见
+            label: none
 
         remark42:
             host:
@@ -177,7 +179,7 @@ params:
         toggle: true
 
         # Available values: auto, light, dark
-        default: auto
+        default: light
 
     imageProcessing:
         cover:
@@ -191,12 +193,12 @@ params:
 menu:
     main: []
 
-    social:
-        - identifier: github
-          name: GitHub
-          url: https://github.com/obullxl
-          params:
-              icon: brand-github
+    social: []
+        #- identifier: github
+        #  name: GitHub
+        #  url: https://github.com/obullxl
+        #  params:
+        #      icon: brand-github
 
         #- identifier: twitter
         #  name: Twitter
@@ -219,7 +221,7 @@ markup:
     goldmark:
         renderer:
             ## Set to true if you have HTML content inside Markdown
-            unsafe: false
+            unsafe: true
     tableOfContents:
         endLevel: 4
         ordered: true
