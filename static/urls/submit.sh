@@ -2,4 +2,6 @@ curl -H 'Content-Type:text/plain' --data-binary @20230429.txt "http://data.zz.ba
 
 # https://ziyuan.baidu.com/linksubmit/index
 
+# http://google.com/ping?sitemap=https://ntopic.cn/sitemap.xml
+
 
