@@ -4,7 +4,7 @@ date = "2023-03-14"
 #lastmod = "2023-04-29"
 title = "爸爸妈妈睡前应多和孩子聊的话题"
 description = "这24个宝藏话题，爸爸妈妈在睡前应多和孩子聊一聊~"
-image = "https://picsum.photos/id/360/2000/400"
+image = "https://picsum.photos/id/360/2000/400.jpg"
 tags = [ "成长", "情商" ]
 categories = [ "家有儿女" ]
 +++

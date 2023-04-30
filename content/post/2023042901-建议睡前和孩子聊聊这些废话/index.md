@@ -4,7 +4,7 @@ date = "2023-04-29"
 #lastmod = "2023-04-29"
 title = "爸爸妈妈们赶紧和孩子聊聊这些话题"
 description = "爸爸妈妈睡前多和孩子聊聊这些“废话”，孩子的变化惊人！"
-image = "https://picsum.photos/id/24/2000/400"
+image = "https://picsum.photos/id/24/2000/400.jpg"
 tags = [ "成长", "情商" ]
 categories = [ "家有儿女" ]
 +++
