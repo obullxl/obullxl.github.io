@@ -49,6 +49,15 @@ params:
             <br/>支付宝：obullxl@163.com
             <br/><a href="https://info.flagcounter.com/E9v3" target="_blank"><div style="height:24px;max-height:24px;padding:0;margin:0;background:url(https://s01.flagcounter.com/count2/E9v3/bg_F5F5FA/txt_747474/border_F5F5FA/columns_3/maxflags_3/viewers_3/labels_0/pageviews_0/flags_0/percent_0/) no-repeat;">&nbsp;</div></a>
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2548953017344039" crossorigin="anonymous"></script>
+            <script>
+                var _hmt = _hmt || [];
+                (function() {
+                    var hm = document.createElement("script");
+                    hm.src = "https://hm.baidu.com/hm.js?d095a3d4dfe9c1c4e8c65d3fe99b2589";
+                    var s = document.getElementsByTagName("script")[0]; 
+                    s.parentNode.insertBefore(hm, s);
+                })();
+            </script>
 
     dateFormat:
         published: 2006-01-02

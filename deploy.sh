@@ -6,5 +6,6 @@ git add --all
 git commit -m 'Deploy public'
 git push
 
+open -a '/Applications/Microsoft Edge.app' https://gitee.com/obullxl/obullxl/pages
 
 
