@@ -4,7 +4,8 @@ date = "2023-05-13"
 lastmod = "2023-05-13"
 title = "Java ForkJoin框架分析和实战"
 description = "Java 7的JUC包（java.util.concurrent）实现了高并发编程的Fork/Join框架，且该框架还是由「Doug Lea」大神亲自操刀编写，今天你还会使用吗？"
-image = "https://picsum.photos/id/201/2000/400.jpg"
+#image = "https://picsum.photos/id/201/1600/400.jpg"
+image = "images/01.jpg"
 tags = [ "Java", "并发编程", "ForkJoin框架" ]
 categories = [ "专业技术" ]
 +++
