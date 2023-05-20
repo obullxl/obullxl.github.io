@@ -1,26 +1,26 @@
 +++
 slug = "2023051301"
 date = "2023-05-13"
-#lastmod = "2023-05-13"
-title = "Java Fork Join框架分析和实战"
+lastmod = "2023-05-13"
+title = "Java ForkJoin框架分析和实战"
 description = "Java 7的JUC包（java.util.concurrent）实现了高并发编程的Fork/Join框架，且该框架还是由「Doug Lea」大神亲自操刀编写，今天你还会使用吗？"
 image = "https://picsum.photos/id/201/2000/400.jpg"
-tags = [ "Java", "并发编程", "Fork/Join框架", "编程" ]
+tags = [ "Java", "并发编程", "ForkJoin框架" ]
 categories = [ "专业技术" ]
 +++
 
-### Fork/Join框架：总分总思路
+## Fork/Join框架：总分总思路
 Java的Doug Lea大神在Java 7的JUC包中，已经实现了Fork/Join框架。
 
 该框架特别适合`总-分-总`的使用场景，类似于MapReduce思想：将大任务拆分成若干个小任务，最终汇总每个小任务的结果后得到最终大任务的结果。每个小任务直接相互独立。
 
-### Fork/Join框架：2个核心类
+## Fork/Join框架：2个核心类
 Fork/Join框架的核心只有两个：**ForkJoinPool**和**ForkJoinTask**
 
 * **ForkJoinPool**主要负责实现工作窃取算法、管理工作线程、提供关于任务的状态以及执行信息。
 * **ForkJoinTask**主要提供在任务中执行Fork（拆分任务）和Join（汇总任务）操作的机制。
 
-### Fork/Join框架实战：数值累加
+## Fork/Join框架实战：数值累加
 **任务目标：** 累加给定的a~b数字区间
 
 **Fork/Join实现思路：**
