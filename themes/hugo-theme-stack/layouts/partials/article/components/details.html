@@ -32,7 +32,7 @@
             <div>
                 {{ partial "helper/icon" "date" }}
                 <time class="article-time--published">
-                    {{- .Date.Format (or .Site.Params.dateFormat.published "Jan 02, 2006") -}}
+                    {{ T "article.publishedOn" }} {{ .Date.Format (or .Site.Params.dateFormat.published "Jan 02, 2006") }}
                 </time>
             </div>
         {{ end }}
@@ -45,6 +45,15 @@
                 </time>
             </div>
         {{ end }}
+
+        {{- if ne .Lastmod .Date -}}
+            <div>
+                {{ partial "helper/icon" "date" }}
+                <time class="article-time--published">
+                    {{ T "article.lastUpdatedOn" }} {{ .Lastmod.Format ( or .Site.Params.dateFormat.lastUpdated "Jan 02, 2006 15:04 MST" ) }}
+                </time>
+            </div>
+        {{- end -}}
     </footer>
     {{ end }}
 

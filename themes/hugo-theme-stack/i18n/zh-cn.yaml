@@ -14,11 +14,14 @@ article:
     relatedContent:
         other: 相关文章
 
+    publishedOn:
+        other: 发表于：
+
     lastUpdatedOn:
-        other: 最后更新于
+        other: 更新于：
 
     readingTime:
-        other: "阅读时长: {{ .Count }} 分钟"
+        other: "阅读时长：{{ .Count }} 分钟"
 
 notFound:
     title:

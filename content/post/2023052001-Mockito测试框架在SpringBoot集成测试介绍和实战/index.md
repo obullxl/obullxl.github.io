@@ -1,7 +1,7 @@
 +++
 slug = "2023052001"
 date = "2023-05-20"
-lastmod = "2023-05-20"
+lastmod = "2023-05-21"
 title = "Mockito测试框架在SpringBoot集成测试中的介绍和实战"
 description = "当系统依赖了另外系统时，为了保障本系统的集成测试用例集的运行稳定性和提升用例场景的覆盖面，最常见的做法是模拟依赖系统服务，以保障本系统功能逻辑的自闭环，让集成测试更聚焦于本系统的功能逻辑验证……"
 image = "images/01.jpg"
@@ -29,6 +29,26 @@ categories = [ "专业技术", "研发质量" ]
 **实战场景：** 订单查询服务可根据请求订单ID列表参数，对订单ID进行过滤，并调用另外远程客户端查询数据并返回订单信息，本服务存在以下逻辑点
 > 1. 订单ID过滤逻辑：属于本系统逻辑，需要测试覆盖
 > 2. 远程订单查询服务：依赖服务，服务不可控，应该进行模拟
+
+***
+
+**SpringBoot测试框架** 的注解：
+```java
+@SpringBootTest
+@RunWith(SpringRunner.class)
+public abstract class NTAbstractTest extends AbstractJUnit4SpringContextTests {
+```
+
+**Mockito依赖类** 的注解：Spring测试框架启动过程中，对于被 **@MockBean**注解的属性，在Spring上下文中替换原有真实的Bean，即被替换成 **Mockito.mock(xx.class)** 
+```java
+    /**
+     * Mock对象
+     */
+    @MockBean
+    @Autowired
+    @Qualifier("orderQueryClient")
+    private OrderQueryClient orderQueryClient;
+```
 
 ***
 
