@@ -1,11 +1,11 @@
 +++
 slug = "2023050601"
 date = "2023-05-06"
-#lastmod = "2023-04-30"
+lastmod = "2023-05-06"
 title = "房产中介开始自学编程(AIGC)"
 description = "我的卖房经理人，在与我和买家聊天过程中，发现我俩都是程序员，都是是自学编程工程技术，因此他也开始了自学编程之旅......"
 #image = "<https://picsum.photos/id/201/2000/400.jpg">
-image = "images/01.jpg"
+#image = "images/01.jpg"
 tags = [ "成长", "感想", "编程", "AIGC" ]
 categories = [ "点滴生活" ]
 +++
