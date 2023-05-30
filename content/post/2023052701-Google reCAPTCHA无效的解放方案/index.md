@@ -1,7 +1,7 @@
 +++
 slug = "2023052701"
 date = "2023-05-27"
-lastmod = "2023-05-27"
+lastmod = "2023-05-30"
 title = "Google reCAPTCHA无效的解放方案"
 description = "国内访问国外网站时，如果网站采用了Google的reCAPTCHA人机验证服务，经常发生如“ReCaptcha is not valid”、“Google recaptcha response is invalid”、“ReCaptcha error”等问题，导致我们的访问受阻……"
 #image = "images/01.jpg"
@@ -14,7 +14,7 @@ categories = [ "专业技术" ]
 
 ![](images/02.jpg)
 
-&emsp;&emsp;其原因是该网站采用了Google的人机验证ReCaptcha服务（简单类似于国内的验证码登），该服务需要加载的主要JS脚本为：**https://www.google.com/recaptcha/api.js** ，因国内网络屏蔽了Google服务，导致无法加载本JS脚本
+&emsp;&emsp;其原因是该网站采用了Google的人机验证ReCaptcha服务（简单类似于国内的验证码），该服务需要加载的主要JS脚本为：**https://www.google.com/recaptcha/api.js** ，因国内网络屏蔽了Google服务，导致无法加载本JS脚本
 
 
 ## 解决方案
@@ -41,4 +41,6 @@ categories = [ "专业技术" ]
 - 输出：**https://recaptcha.net/recaptcha/api.js**
 替换成功了。
 
-重新提交表单，就能看到人机校验的弹框了！
+重新提交表单，就能看到人机校验的弹框了：
+
+![](images/04.jpg)

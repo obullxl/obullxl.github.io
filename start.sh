@@ -1,1 +1,1 @@
-sudo hugo server -p 80 -D
+sudo hugo server -p 8088 -D
