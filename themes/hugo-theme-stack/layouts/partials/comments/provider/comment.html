@@ -1,0 +1,55 @@
+<div id="cmtIframeWrap" class="utterances" style="height: 260px;">
+    <iframe id="cmtIframe"
+            class="utterances-frame"
+            loading="lazy"
+            style="width:100%;"
+            frameborder="0"
+            scrolling="no"
+            crossorigin="anonymous"
+    ></iframe>
+</div>
+
+<style>
+    .utterances {
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: unset;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .utterances-frame {
+        color-scheme: light;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 1px;
+        min-width: 100%;
+        max-width: 100%;
+        height: 100%;
+        border: 0;
+    }
+</style>
+
+<script>
+    (function () {
+        const iframe = document.getElementById("cmtIframe");
+        // iframe.src = "{{ .Site.Params.comments.comment.url | safeHTML }}?cmtid=" + window.location.pathname;
+        iframe.src = "https://comment.infinityfreeapp.com/comment/index.html?cmtid=" + encodeURIComponent(window.location.pathname + window.location.search);
+
+        window.setInterval("reInitIframe()", 250);
+    })();
+
+    function reInitIframe() {
+        const iframe = document.getElementById("cmtIframe");
+        try {
+            const dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
+            document.getElementById("cmtIframeWrap").style.height = dHeight + "px";
+            iframe.style.height = dHeight + "px";
+
+            console.log("cmtIframe高度：" + dHeight);
+        } catch (e) {
+        }
+    }
+</script>

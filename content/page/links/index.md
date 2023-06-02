@@ -2,14 +2,27 @@
 title: 友链
 slug: links
 links:
-  - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-  - title: TypeScript
-    description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
-    website: https://www.typescriptlang.org
-    image: ts-logo-128.jpg
+  - title: ntopic.cn
+    description: 奔跑的蜗牛 - 个人博客，记录生活工作身边点滴.
+    website: https://ntopic.cn
+    image: obullxl-logo.jpg
+  - title: obullxl.csdn.net
+    description: 2007年到2011年期间，老牛的博客空间（目前已停更）.
+    website: https://blog.csdn.net/obullxl?type=blog
+    image: csdn-logo.jpg
+  - title: obullxl.cnblogs.com
+    description: 2011年到2013年期间，老牛的博客空间（目前已停更）.
+    website: https://obullxl.cnblogs.com
+    image: cnblogs-logo.jpg
+    #image: https://common.cnblogs.com/logo.svg
+  - title: obullxl.github.io
+    description: Github奔跑的蜗牛的个人博客托管空间（持续更新）.
+    website: https://obullxl.github.io
+    image: github-logo.jpg
+  - title: obullxl.gitee.io
+    description: Gitee奔跑的蜗牛的个人博客托管空间（持续更新，同步GitHub博客内容）.
+    website: https://obullxl.gitee.io
+    image: gitee-logo.jpg
 menu:
     main: 
         weight: -50
@@ -19,20 +32,4 @@ menu:
 comments: false
 ---
 
-To use this feature, add `links` section to frontmatter.
-
-This page's frontmatter:
-
-```yaml
-links:
-  - title: GitHub
-    description: GitHub is the world's largest software development platform.
-    website: https://github.com/obullxl
-    image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
-  - title: TypeScript
-    description: TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
-    website: https://github.com/obullxl
-    image: ts-logo-128.jpg
-```
-
-`image` field accepts both local and external images.
+欢迎互链：`obullxl@qq.com`
