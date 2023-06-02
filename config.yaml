@@ -48,16 +48,6 @@ params:
             <br/>微信：imxulin（奔跑的蜗牛）
             <br/>支付宝：obullxl@163.com
             <br/><a href="https://info.flagcounter.com/E9v3" target="_blank"><div style="height:24px;max-height:24px;padding:0;margin:0;background:url(https://s01.flagcounter.com/count2/E9v3/bg_F5F5FA/txt_747474/border_F5F5FA/columns_6/maxflags_6/viewers_3/labels_0/pageviews_0/flags_0/percent_0/) no-repeat;">&nbsp;</div></a>
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2548953017344039" crossorigin="anonymous"></script>
-            <script>
-                var _hmt = _hmt || [];
-                (function() {
-                    var hm = document.createElement("script");
-                    hm.src = "https://hm.baidu.com/hm.js?d095a3d4dfe9c1c4e8c65d3fe99b2589";
-                    var s = document.getElementsByTagName("script")[0]; 
-                    s.parentNode.insertBefore(hm, s);
-                })();
-            </script>
 
     dateFormat:
         published: 2006-01-02
@@ -68,8 +58,8 @@ params:
         subtitle: 奔跑的蜗牛，记录的点滴~
         avatar:
             enabled: true
-            local: false
-            src: /avatar-362x362.jpg
+            local: true
+            src: img/avatar-362x362.jpg
 
     article:
         math: true
@@ -190,7 +180,7 @@ params:
 
     colorScheme:
         # Display toggle
-        toggle: true
+        toggle: false
 
         # Available values: auto, light, dark
         default: light
@@ -202,10 +192,28 @@ params:
             enabled: true
 
 ### Custom menu
-### See https://docs.stack.jimmycai.com/configuration/custom-menu.html
+### See https://stack.jimmycai.com/config/menu
 ### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
 menu:
-    main: []
+    main:
+        - identifier: Category
+          name: 分类
+          url: /categories
+          weight: 444
+          params:
+              icon: categories
+        - identifier: Tag
+          name: 标签
+          url: /tags
+          weight: 555
+          params:
+              icon: tag
+        - identifier: Gallery
+          name: 相册
+          url: /gallery
+          weight: 666
+          params:
+              icon: gallery
 
     social: []
         #- identifier: github
