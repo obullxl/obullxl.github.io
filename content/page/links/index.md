@@ -1,6 +1,7 @@
 ---
 title: 友链
 slug: links
+description: 奔跑的蜗牛 - 个人博客，记录生活工作身边点滴.
 links:
   - title: ntopic.cn
     description: 奔跑的蜗牛 - 个人博客，记录生活工作身边点滴.
