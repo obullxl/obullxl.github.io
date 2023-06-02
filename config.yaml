@@ -31,6 +31,7 @@ DefaultContentLanguage: zh-cn
 hasCJKLanguage: true
 
 permalinks:
+    gallery: /g/:slug/
     post: /p/:slug/
     page: /:slug/
 
