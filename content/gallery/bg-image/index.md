@@ -2,6 +2,7 @@
 slug = "2023060201"
 date = "2023-06-02"
 lastmod = "2023-06-02"
+readingTime = false
 title = "10张精美高清的桌面背景图"
 #description = "10张精美的背景图……"
 #image = "bg-01.jpg"
