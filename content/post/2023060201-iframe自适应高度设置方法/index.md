@@ -4,7 +4,7 @@ date = "2023-06-02"
 lastmod = "2023-06-02"
 title = "iframe自适应高度设置方法"
 description = "为了更好运维和隔离影响，一般会把网站的公用模块抽取独立出来（如博客中常见的评论系统），通过iframe的方式集成到主页面。iframe集成的最大问题是页面的一致性保障，如样式风格一致、iframe内容高度能自适应（不能出现多个滚动条）等……"
-#image = "images/01.jpg"
+image = "01.jpg"
 tags = [ "博客空间", "iframe", "自适应" ]
 categories = [ "专业技术" ]
 +++

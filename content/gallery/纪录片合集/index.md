@@ -5,7 +5,8 @@ lastmod = "2023-06-04"
 readingTime = false
 title = "高分经典必看纪录片合集（收藏）"
 #description = "高分经典必看纪录片合集……"
-#image = "01.jpg"
+image = "00.jpg"
+#image = "https://picsum.photos/id/7/2000/400.jpg"
 tags = [ "博客空间", "纪录片" ]
 categories = [ "博客空间" ]
 +++
@@ -16,10 +17,9 @@ categories = [ "博客空间" ]
 ![03](03.jpg)
 ![04](04.jpg)
 
-![05](05.jpg)
+<!--![05](05.jpg)-->
 ![06](06.jpg)
-
 ![07](07.jpg)
-![08](08.jpg)
 
+![08](08.jpg)
 ![09](09.jpg)
