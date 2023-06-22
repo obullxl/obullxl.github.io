@@ -48,7 +48,7 @@ params:
         customText: 邮箱：obullxl@qq.com
             <br/>微信：imxulin（奔跑的蜗牛）
             <br/>支付宝：obullxl@163.com
-            <br/><a href="https://info.flagcounter.com/E9v3" target="_blank"><div style="height:24px;max-height:24px;padding:0;margin:0;background:url(https://s01.flagcounter.com/count2/E9v3/bg_F5F5FA/txt_747474/border_F5F5FA/columns_6/maxflags_6/viewers_3/labels_0/pageviews_0/flags_0/percent_0/) no-repeat;">&nbsp;</div></a>
+            <br/><a href="https://info.flagcounter.com/E9v3" target="_blank"><div style="height:24px;max-height:24px;padding:0;margin:0;background:url(https://s01.flagcounter.com/count2/E9v3/bg_F5F5FA/txt_747474/border_F5F5FA/columns_6/maxflags_6/viewers_3/labels_0/pageviews_0/flags_0/percent_0/) no-repeat -5px 0px;">&nbsp;</div></a>
 
     dateFormat:
         published: 2006-01-02
