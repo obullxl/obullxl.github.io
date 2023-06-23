@@ -5,9 +5,14 @@ lastmod = "2023-06-21"
 title = "开源通用高性能的分布式id序列组件"
 description = "业务数据的存储，少不了数据记录的id序列，id序列（或称序列）的生成方式有很多种，比如当前时间戳、数据库的序列值（Oracle的序列，MySQL的自增ID等）、UUID等方式，但这些生成方式均存在一定的局限性，本文介绍一种通用高性能的分布式id序列的设计思路……"
 image = "01.jpg"
-tags = [ "Java", "序列", "开源", "高性能" ]
-categories = [ "专业技术" ]
+tags = [ "Java", "id序列", "高性能" ]
+categories = [ "专业技术", "开源组件" ]
 +++
+
+- Gitee源代码仓库：[https://gitee.com/obullxl/sequence-jdbc](https://gitee.com/obullxl/sequence-jdbc)
+- GitHub源代码仓库：[https://github.com/obullxl/sequence-jdbc](https://github.com/obullxl/sequence-jdbc)
+
+---
 
 ## 分布式id序列说明
 业务数据的存储，少不了数据记录的id序列。
@@ -121,8 +126,8 @@ private long maxValue = 99999999L;
 ```
 
 ### 序列组件使用
-- Gitee源代码仓库：https://gitee.com/obullxl/sequence-jdbc
-- GitHub源代码仓库：https://github.com/obullxl/sequence-jdbc
+- Gitee源代码仓库：[https://gitee.com/obullxl/sequence-jdbc](https://gitee.com/obullxl/sequence-jdbc)
+- GitHub源代码仓库：[https://github.com/obullxl/sequence-jdbc](https://github.com/obullxl/sequence-jdbc)
 
 目前JAR包已经发布，通过Gitee进行仓库托管，也可直接使用，2步即可：
 - 第一步：在项目源代码的根`pom.xml`中，设置仓库地址：
@@ -131,7 +136,7 @@ private long maxValue = 99999999L;
 <repositories>
    <repository>
       <id>Gitee-obullxl</id>
-      <url>https://gitee.com/obullxl/maven-repository/raw/sequence-jdbc</url>
+      <url>https://gitee.com/obullxl/maven-repository/master/repository</url>
    </repository>
 </repositories>
 ```
