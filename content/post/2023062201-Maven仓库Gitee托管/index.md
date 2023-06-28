@@ -15,7 +15,7 @@ categories = [ "专业技术", "开源组件" ]
 ---
 
 ## 背景说明
-在上一篇博客中，我们介绍了通用分布式id序列组件（[ttps://ntopic.cn/p/2023062101/](https://ntopic.cn/p/2023062101/)）的设计思路，并把源代码托管在了Gitee（[https://gitee.com/obullxl/sequence-jdbc](https://gitee.com/obullxl/sequence-jdbc)）和GitHub（[https://github.com/obullxl/sequence-jdbc](https://github.com/obullxl/sequence-jdbc)）。
+在上一篇博客中，我们介绍了通用分布式id序列组件（[https://ntopic.cn/p/2023062101/](https://ntopic.cn/p/2023062101/)）的设计思路，并把源代码托管在了Gitee（[https://gitee.com/obullxl/sequence-jdbc](https://gitee.com/obullxl/sequence-jdbc)）和GitHub（[https://github.com/obullxl/sequence-jdbc](https://github.com/obullxl/sequence-jdbc)）。
 
 我们希望能让更多人便捷的使用本组件，那么把JAR包放到到Maven官方的中心仓库（[https://mvnrepository.com](https://mvnrepository.com)）是最好的选择。
 
