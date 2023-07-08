@@ -1,15 +1,16 @@
 ---
 title: 关于
 slug: about
-description: Hugo, the world's fastest framework for building websites
-date: '2023-01-01'
-aliases:
-  - about-us
-  - about-hugo
-  - contact
+description: 「奔跑的蜗牛」的自说自话 ☺☺☺
+# date: '2023-01-01'
+#aliases:
+#  - about-us
+#  - about-hugo
+#  - contact
 #license: CC BY-NC-ND
 #lastmod: '2020-10-09'
 comments: false
+readingTime: false
 menu:
     main: 
         weight: -90
@@ -17,8 +18,43 @@ menu:
             icon: user
 ---
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+---
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+我叫<big>**徐林**</big>，您正在访问我的博客：<big>[https://ntopic.cn](https://ntopic.cn)</big>
 
-Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+---
+
+## 我的网名
+<big>**老牛啊**</big>是我的网名，我的同学和好友基本上都叫我`老牛`、`牛总`，他们的孩子们都叫我`牛叔叔`、`牛伯伯`，他们似乎忘记了我本姓**徐**，不姓`牛`。
+
+<big>**老牛啊**</big>这么个奇怪的网名，要从2003年大一下学期我第一次使用腾讯QQ开始说起了。那时候新申请腾讯QQ号需要QQ会员邀请和注册，我的室友(周)帮我申请了一个号码。使用QQ聊天时需要设置一个昵称，便于大家相互辨识，那我的昵称叫啥好呢？另一个室友(郑)帮忙出了个主意说，你这么能吃苦耐劳就像一头老黄牛一样，就叫老黄牛吧。我没有完全采纳室友的这个昵称，而是想到了红牛饮料和red bull它的英文名，我想给自己的昵称叫老牛，但又觉得有点显老，于是乎在后面增加一个啊感叹字，即`老牛啊`，既不显老同时还有感叹的那种画面感，对应的英文名<big>**obullxl**</big>（即：old bull xu lin的缩写）。
+
+<big>**蜡笔小新**</big>头像比网名稍微晚一点，我在使用腾讯QQ的过程中，觉得QQ自带的头像有点不好看，研发发现可以是可以自定义头像。于是千挑万选的用了一张当时我们全宿舍都喜欢看的日本动画片《蜡笔小新》中的图片。千挑万选是因为我对头像的要求是既要有主人翁小新，也要小宠物小白。
+
+因此，<big>**老牛啊**</big>网名、<big>**obullxl**</big>英文名和<big>**蜡笔小新**</big>头像，从2003年开始一直沿用到今天。但凡是我在网络上注册时可自定义昵称和头像的地方，基本都是这三个内容，而这一晃差不多就是20年了。还记得在大学毕业典礼上，有几个同学已经只记得我网名了，我觉得太正常不过了！
+
+## 我的博客
+我印象中我写过很多的博客。2023年3月份，我根据<big>**obullxl**</big>这个我常用的个人域名部分，查找到我在博客园、CSDN、ITeye、百度、GitHub、OpenShift等均有我写博客的痕迹。而目前还能正常访问的博客，只有从2007年开始写的博客了。
+
+我有这么多的博客空间，我该选择哪个可长期正常使用和访问的空间？我有这么多过时的博客文章，我该如何整理和更新？博客空间里有这么多我不太喜欢的博客空间自带的内容，我该如何剔除？
+
+答案就是搭建**自主可控**的博客空间：<big>[https://ntopic.cn](https://ntopic.cn)</big>
+
+<big>**奔跑的蜗牛**</big>是我博客的名称，与<big>**老牛啊**</big>我的网名的相似之处，是蜗牛在名称上也有牛。如今80后的我们，上有老下有小，老人的养老和医疗、小孩的教育，这2座压在我们身上的大山，和压在蜗牛身上重重的壳，又有什么区别？我们就像那蜗牛一样，背着重重的壳一步一步地往前爬。我们都用蜗牛的速度来形容慢，可我们又怎么知道，那只蜗牛它不曾想跑呢？我只希望，那只蜗牛能爬得快一点，再快一点，最好是能<big>**奔跑**</big>起来！
+
+## 我的工作
+我从2010年1月开始在<big>**支付宝**</big>实习，到2010年6月研究生毕业后实习转正，一直在<big>**支付宝**</big>工作到现在。
+
+我的主技能是<big>**Java应用技术**</big>，在支付宝工作中，一直从事Java应用的架构设计和研发：
+1. 商家账单平台
+2. 服务商返佣平台
+3. 政策管理后台
+4. 服务商结算产品
+5. 支付宝记账本
+6. 支付宝小荷包
+
+---
+
+| 蜡笔小新头像（大）      | 蜡笔小新头像（小）|
+| -------------------- | --------------------- |
+| ![](Profile-BIG.jpg) | ![](Profile-MINI.jpg) | 
