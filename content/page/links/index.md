@@ -30,6 +30,9 @@ menu:
             icon: link
 
 comments: false
+readingTime: false
+---
+
 ---
 
 欢迎互链：`obullxl@qq.com`
