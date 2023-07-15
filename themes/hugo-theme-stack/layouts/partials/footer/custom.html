@@ -17,9 +17,15 @@
 
 <!-- 页面优化 -->
 <script>
-var ele = document.querySelector(".section-service-w");
-if(ele) {
-    ele.style.display = "none";
-    ele.parentNode.removeChild(ele);
-}
+    function ntopicTask() {
+        var ele = document.querySelector(".section-service-w");
+        if(ele) {
+            ele.style.display = "none";
+            ele.parentNode.removeChild(ele);
+        }
+    }
+
+    (function() {
+         window.setInterval("ntopicTask()", 1000);
+    })();
 </script>
