@@ -73,7 +73,11 @@ params:
 
     comments:
         enabled: true
-        provider: utterances
+        provider: changyan
+        #provider: utterances
+
+        changyan:
+            lable: none
 
         comment:
             label: none
