@@ -7,6 +7,9 @@
     <section class="article-list">
         {{ range $index, $element := $pag.Pages }}
             {{ partial "article-list/default" . }}
+            {{ if eq $index 1 }}
+                {{ partial "article-list/feed-ads" . }}
+            {{ end }}
         {{ end }}
     </section>
 
