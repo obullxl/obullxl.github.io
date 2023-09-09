@@ -7,7 +7,7 @@ title = "10张精美高清的桌面背景图"
 #description = "10张精美的背景图……"
 image = "01.jpg"
 #image = "https://picsum.photos/id/10/2000/400.jpg"
-tags = [ "博客空间", "背景图" ]
+tags = [ "背景图" ]
 categories = [ "博客空间" ]
 +++
 

@@ -5,7 +5,7 @@ lastmod = "2023-05-30"
 title = "Google reCAPTCHA无效的解放方案"
 description = "国内访问国外网站时，如果网站采用了Google的reCAPTCHA人机验证服务，经常发生如“ReCaptcha is not valid”、“Google recaptcha response is invalid”、“ReCaptcha error”等问题，导致我们的访问受阻……"
 image = "images/01.jpg"
-tags = [ "博客空间", "Google reCAPTCHA" ]
+tags = [ "Google reCAPTCHA" ]
 categories = [ "专业技术" ]
 +++
 

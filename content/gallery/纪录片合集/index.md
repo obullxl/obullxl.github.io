@@ -7,7 +7,7 @@ title = "高分经典必看纪录片合集（收藏）"
 #description = "高分经典必看纪录片合集……"
 image = "00.jpg"
 #image = "https://picsum.photos/id/7/2000/400.jpg"
-tags = [ "博客空间", "纪录片" ]
+tags = [ "纪录片" ]
 categories = [ "博客空间" ]
 +++
 
