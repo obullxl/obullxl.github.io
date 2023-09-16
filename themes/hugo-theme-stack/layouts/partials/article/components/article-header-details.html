@@ -1,4 +1,10 @@
 <div class="article-details">
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            {{- .Title -}}
+        </h2>
+    </div>
+
     {{ if .Params.categories }}
     <header class="article-category">
         {{ range (.GetTerms "categories") }}
@@ -9,19 +15,10 @@
     </header>
     {{ end }}
 
-    {{- $SlugLink := $.RelPermalink -}}
     <div class="article-title-wrapper">
-        <h2 class="article-title">
-            <a href="{{ .RelPermalink }}">
-                {{- .Title -}}
-            </a>
-        </h2>
-    
         {{ with .Params.description }}
         <h3 class="article-subtitle">
-            <a href="{{ $SlugLink }}">
-                {{ . }}
-            </a>
+            <b>摘要：</b>{{ . }}
         </h3>
         {{ end }}
     </div>
@@ -61,13 +58,13 @@
     {{ end }}
 
     {{ if .IsTranslated }}
-        <footer class="article-translations">
-            {{ partial "helper/icon" "language" }}
-            <div>
-                {{ range .Translations }}
-                    <a href="{{ .Permalink }}" class="link">{{ .Language.LanguageName }}</a>
-                {{ end }}
-            </div>
-        </footer>
+    <footer class="article-translations">
+        {{ partial "helper/icon" "language" }}
+        <div>
+            {{ range .Translations }}
+                <a href="{{ .Permalink }}" class="link">{{ .Language.LanguageName }}</a>
+            {{ end }}
+        </div>
+    </footer>
     {{ end }}
 </div>
