@@ -156,4 +156,3 @@ Hello, World!
 初试Dart，感觉和Java有点类似：main入口函数，print输出，列表对象和方法。
 
 接下来的博客中，我会专门通过Dart和Flutter编写一款应用程序，并发布到不同的应用市场！
-
