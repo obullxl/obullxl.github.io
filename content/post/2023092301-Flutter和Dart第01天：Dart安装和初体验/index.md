@@ -4,7 +4,7 @@ date = "2023-09-23"
 lastmod = "2023-09-23"
 title = "Flutter/Dart第01天：Dart安装和初体验"
 description = "编写一个App就能编译发布到iOS、Android和Web等各大平台的跨平台技术，各大厂商一直都有研究和发布对应技术产品，目前最热门的莫过于Flutter框架了。而Dart作为其唯一的编程语言，今天我们开始来体验一下……"
-image = "00.png"
+image = "00.jpg"
 tags = [ "Dart", "Flutter", "跨平台" ]
 categories = [ "专业技术" ]
 +++
@@ -156,3 +156,8 @@ Hello, World!
 初试Dart，感觉和Java有点类似：main入口函数，print输出，列表对象和方法。
 
 接下来的博客中，我会专门通过Dart和Flutter编写一款应用程序，并发布到不同的应用市场！
+
+---
+我的本博客原地址：[https://ntopic.cn/p/2023092301/](https://ntopic.cn/p/2023092301)
+
+---

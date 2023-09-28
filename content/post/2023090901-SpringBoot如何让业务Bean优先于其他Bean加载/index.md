@@ -297,3 +297,8 @@ public static void main(String[] args) {
  - 遍历beanDefinitionNames的时候，优先RootBeanDefinition初始化，手工定义的ParamUtils也是该类型
 
 至此，问题解决，能解决的原因也搞清楚了！
+
+---
+我的本博客原地址：[https://ntopic.cn/p/2023090901/](https://ntopic.cn/p/2023090901)
+
+---
