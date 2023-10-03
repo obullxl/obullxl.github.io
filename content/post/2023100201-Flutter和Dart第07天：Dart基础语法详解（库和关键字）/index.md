@@ -5,7 +5,7 @@ lastmod = "2023-10-02"
 title = "Flutter/Dart第07天：Dart基础语法详解（库、导入和关键字）"
 description = "我们前面完成了Dart语言基础特性的学习，包括基础语法概览、迭代集合、异步编程、Mixin高级特性和变量等。今天我们来学习Dart的库相关知识，包括如何导入库、指定库前缀、导入部分或者排除部分库、延迟导入库等，最后看下Dart中67个关键字作为标识符的一些约束……"
 image = "00.jpg"
-tags = [ "Dart", "Flutter" ]
+tags = [ "Dart", "Flutter", "跨平台" ]
 categories = [ "专业技术" ]
 +++
 
