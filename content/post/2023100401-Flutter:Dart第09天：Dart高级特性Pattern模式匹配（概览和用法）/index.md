@@ -2,7 +2,7 @@
 slug = "2023100401"
 date = "2023-10-04"
 lastmod = "2023-10-04"
-title = "Flutter/Dart第09天：Dart高级特殊Pattern模式的概览和用法"
+title = "Flutter/Dart第09天：Dart高级特性Pattern模式的概览和用法"
 description = "Dart 3.0在语法层面共发布了3个高级特性，第一个特性Record记录我们在前面已经学习和探究。今天我们来学习第二个高级类型Pattern模式，由于内容较多，共分2篇文章进行介绍，本文首先介绍模式的概览和用法，包括匹配、解构、在变量申明、赋值、循环、表达式等应用场景……"
 image = "00.jpg"
 tags = [ "Dart", "Flutter", "跨平台", "模式" ]
