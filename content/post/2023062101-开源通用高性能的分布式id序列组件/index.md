@@ -199,3 +199,9 @@ long newOrderId3 = ntSequence.next("ORDER");
 因为代码较大，请直接查看源代码：
 - Gitee测试源代码：[https://gitee.com/obullxl/sequence-jdbc/blob/master/src/test/java/cn/ntopic/sequence/NTSequenceTest.java](https://gitee.com/obullxl/sequence-jdbc/blob/master/src/test/java/cn/ntopic/sequence/NTSequenceTest.java)
 - GitHub测试源代码：[https://github.com/obullxl/sequence-jdbc/blob/master/src/test/java/cn/ntopic/sequence/NTSequenceTest.java](https://github.com/obullxl/sequence-jdbc/blob/master/src/test/java/cn/ntopic/sequence/NTSequenceTest.java)
+
+
+---
+我的本博客原地址：[https://ntopic.cn/p/2023062101](https://ntopic.cn/p/2023062101/)
+
+---
