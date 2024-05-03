@@ -1,5 +1,5 @@
 +++
-slug = "20240501AI"
+slug = "ai20240501"
 date = "2024-05-01"
 lastmod = "2024-05-01"
 title = "[每日AI·0501]GitHub 版 Devin，Transformer的强力挑战者 Mamba，Sora 制作细节与踩坑，OpenAI 记忆功能"
@@ -89,7 +89,7 @@ Phi-3 notebook 发布了！使用 @UnslothAI，相比于 HF+FA2，Phi 的调优�
 微软计划在接下来的四年内在印尼投资17亿美元，用于新的云计算和人工智能（AI）基础设施，以及为84万人提供AI技能培训，并支持该国日益增长的开发者社区。这是微软在印尼29年历史中的最大单笔投资。此举旨在帮助实现印尼政府的“2045年黄金印尼愿景”，该愿景旨在将印尼转变为全球经济强国。
 
 ---
-我的本博客原地址：[https://ntopic.cn/p/20240501AI](https://ntopic.cn/p/20240501AI/)
+我的本博客原地址：[https://ntopic.cn/p/ai20240501](https://ntopic.cn/p/ai20240501/)
 
 ---
 
