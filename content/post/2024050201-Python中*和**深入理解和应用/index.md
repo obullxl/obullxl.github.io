@@ -81,7 +81,7 @@ mprint(**{'x': 'x1', 'y': 'y1'})
 函数和方法调用是<b>可选</b>的，目的是为了简化编程（Python之禅：<b>Beautifulis better than ugly.</b>），不需要手工逐个参数设置，如调用函数入参`func(*my_lsit, **my_dict)`就明显比`func(my_list[0], my_list[1], my_list[2], my_dict['x'], my_dict['y'], my_dict['z'])`优雅太多了。
 
 ---
-我的本博客原地址：[https://ntopic.cn/p/2024050101](https://ntopic.cn/p/2024050101/)
+我的本博客原地址：[https://ntopic.cn/p/2024050201](https://ntopic.cn/p/2024050201/)
 
 ---
 
