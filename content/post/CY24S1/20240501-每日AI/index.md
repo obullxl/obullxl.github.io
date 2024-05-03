@@ -5,7 +5,7 @@ lastmod = "2024-05-01"
 title = "[每日AI·0501]GitHub 版 Devin，Transformer的强力挑战者 Mamba，Sora 制作细节与踩坑，OpenAI 记忆功能"
 description = ""
 image = "20240501-01.png"
-tags = [ "AI咨询", "AI论文与开源", "AI投资", "Sora" ]
+tags = [ "AI资讯", "AI论文与开源", "AI投资", "Sora" ]
 categories = [ "每日AI", "AI大模型" ]
 +++
 
