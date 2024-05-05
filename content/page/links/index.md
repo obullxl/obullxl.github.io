@@ -15,15 +15,15 @@ links:
     description: 博客园 - 老牛啊的博客空间
     website: https://obullxl.cnblogs.com
     image: cnblogs-logo.jpg
-  - title: https://www.zhihu.com/people/obullxl
+  - title: zhihu.com
     description: 知乎 - 老牛啊的个人主页
     website: https://www.zhihu.com/people/obullxl
     image: zhihu-logo.png
-  - title: https://juejin.cn/user/75219741713575
+  - title: juejin.cn
     description: 稀土掘金 - 老牛啊的个人主页
     website: https://juejin.cn/user/75219741713575
     image: juejin-logo.jpg
-  - title: https://www.jianshu.com/u/57612947d8ac
+  - title: jianshu.com
     description: 简书 - 老牛啊的个人主页
     website: https://www.jianshu.com/u/57612947d8ac
     image: jianshu-logo.png
