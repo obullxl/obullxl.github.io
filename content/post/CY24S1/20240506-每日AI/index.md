@@ -2,7 +2,7 @@
 slug = "ai20240506"
 date = "2024-05-06"
 lastmod = "2024-05-06"
-title = "[每日AI·0506]GitHub 版 Devin，Transformer的强力挑战者 Mamba，Sora 制作细节与踩坑，OpenAI 记忆功能"
+title = "[每日AI·0506]巴菲特谈 AI，李飞飞创业，苹果或将推出 AI 功能，ChatGPT 版搜索引擎"
 description = ""
 image = "20240506-01.png"
 tags = [ "AI资讯" ]
