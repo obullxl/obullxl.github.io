@@ -30,6 +30,8 @@ categories = [ "买房卖房" ]
 
 ## 提取方式一：长三角一网通办线上办理（不推荐）
 
+在线地址：[https://csj.sh.gov.cn/govService/column/zfgjj/index.html](https://csj.sh.gov.cn/govService/column/zfgjj/index.html)
+
 能线上办理那当然是优先选择，但是很不幸，提交表单过程中，系统频频出错，唯一的解决办法就是重试，直到重试 N 次也无解后放弃：
 
 我的第一个错误：婚姻关系校验错误，当时我就傻眼了，甚至一度以为我现在不是已婚，重试几次校验竟然通过了
