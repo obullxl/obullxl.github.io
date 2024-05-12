@@ -5,7 +5,7 @@ lastmod = "2024-05-11"
 title = "玩转AI，笔记本电脑安装属于自己的Llama 3 8B大模型和对话客户端"
 description = ""
 image = "01.jpg"
-tags = [ "AI工具", "Python", "游戏", "消消乐" ]
+tags = [ "AI工具", "Python", "Llama", "大模型" ]
 categories = [ "人工智能" ]
 +++
 
