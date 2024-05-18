@@ -15,6 +15,8 @@ categories = [ "人工智能" ]
 
 GTP-4o 官网：[https://openai.com/index/hello-gpt-4o/](https://openai.com/index/hello-gpt-4o/)
 
+![](https://ntopic.cn/p/2024051501/01.jpg)
+
 2024 年 4 月 14 日，一场不到 30 分钟的发布会，将又一次大大改变 AI 行业和我们未来的生活，也会让无数 AI 初创公司焦头烂额。
 
 这真不是标题党，因为这是 OpenAI 的发布会。
