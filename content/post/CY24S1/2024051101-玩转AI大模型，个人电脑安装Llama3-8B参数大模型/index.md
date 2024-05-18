@@ -189,6 +189,8 @@ python client.py
 
 关注本公众号，下次继续我们分享**Llama 模型**可视化对话的功能！
 
+问题，`Llama 3 8B`容易出现问中文，回答英文的问题，可下载中文微调版GGUF模型文件（**Llama3-Chinese-Chat**）：[https://hf-mirror.com/collections/shenzhi-wang/llama3-chinese-chat-663a2b15ab68e84aa355ca4d](https://hf-mirror.com/collections/shenzhi-wang/llama3-chinese-chat-663a2b15ab68e84aa355ca4d)
+
 ---
 
 我的本博客原地址：[https://ntopic.cn/p/2024051101](https://ntopic.cn/p/2024051101/)
