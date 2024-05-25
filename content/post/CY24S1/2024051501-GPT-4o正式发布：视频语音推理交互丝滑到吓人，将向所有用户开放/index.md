@@ -41,4 +41,4 @@ OpenAI 正式发布了 GPT-4o，其中的「o」代表「omni」（即全面、�
 
 ---
 
-![微信公众号：Python禅师](https://ntopic.cn/PythonCS/LOGO12.png)
+![微信公众号：老牛同学](https://ntopic.cn/WX-21.png)

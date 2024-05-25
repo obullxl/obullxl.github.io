@@ -402,4 +402,4 @@ D. eatting - 这是错误的拼写，正确的现在分词形式是“eating”�
 
 ---
 
-![微信公众号：Python禅师](https://ntopic.cn/PythonCS/LOGO12.png)
+![微信公众号：老牛同学](https://ntopic.cn/WX-21.png)
