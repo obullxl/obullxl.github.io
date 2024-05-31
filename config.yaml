@@ -62,7 +62,7 @@ params:
         avatar:
             enabled: true
             local: true
-            src: img/avatar-362x362.jpg
+            src: img/WX.jpg
 
     article:
         math: true
