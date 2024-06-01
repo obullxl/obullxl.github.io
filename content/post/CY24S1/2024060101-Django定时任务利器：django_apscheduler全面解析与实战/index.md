@@ -92,7 +92,7 @@ APSCHEDULER_RUN_NOW_TIMEOUT = 600
 python manage.py migrate
 ```
 
-![定时任务数据表](01.jpg)
+![定时任务数据表](https://ntopic.cn/p/2024053101/01.jpg)
 
 数据表的定义如下：
 
@@ -222,6 +222,6 @@ python manage.py start_tasks
 
 ---
 
-我的本博客原地址：[https://ntopic.cn/p/2024053101](https://ntopic.cn/p/2024053101/)
+我的本博客原地址：[https://mp.weixin.qq.com/s/vVK7KrvRPvOdDgRbbzFuAQ](https://mp.weixin.qq.com/s/vVK7KrvRPvOdDgRbbzFuAQ)
 
 ---
