@@ -5,8 +5,8 @@ lastmod = "2024-06-01"
 title = "【Django技术深潜】揭秘Django定时任务利器：django_apscheduler全面解析与实战"
 description = "本文分析了Django定时任务不同的实现方式的优劣，然后深入探讨Django定时任务解决方案，特别是django_apscheduler定时任务库，最后进行了实战应用。"
 image = "02.jpg"
-tags = [ "AI工具", "故事创意", "视频制作" ]
-categories = [ "人工智能" ]
+tags = [ "Python", "Django", "定时任务", "django_apscheduler" ]
+categories = [ "Python禅师" ]
 +++
 
 在现代Web开发中，定时任务是不可或缺的一部分，无论是定期数据分析、定时发送邮件、还是系统维护脚本，都需要精准的定时调度。Django作为Python世界中强大的Web框架，其对定时任务的支持自然也是开发者关注的重点。本文将深入探讨Django定时任务解决方案，特别是聚焦于`django_apscheduler`这一强大扩展库，带您领略其背后的运行原理与实战应用，助您在Django项目中高效驾驭定时任务。
