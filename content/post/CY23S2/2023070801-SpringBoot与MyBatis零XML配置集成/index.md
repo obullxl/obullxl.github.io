@@ -341,3 +341,15 @@ public class UserBaseDAOTest extends AbstractJUnit4SpringContextTests {
     }
 }
 ```
+
+---
+
+关注本公众号，我们共同学习进步 👇🏻👇🏻👇🏻
+
+![微信公众号：老牛同学](https://ntopic.cn/WX-21.png)
+
+---
+
+我的本博客原地址：[https://mp.weixin.qq.com/s/JpvF9PfihYDZffPRKMDWwg](https://mp.weixin.qq.com/s/JpvF9PfihYDZffPRKMDWwg)
+
+---
