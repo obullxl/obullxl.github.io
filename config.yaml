@@ -8,7 +8,7 @@ languages:
     zh-cn:
         languageName: 中文
         title: 奔跑的蜗牛
-        description: 奔跑的蜗牛，记录的点滴~
+        description: 微信公众号：老牛同学，欢迎关注~
         weight: 1
     #en:
     #    languageName: English
@@ -73,7 +73,7 @@ params:
             default: Licensed under CC BY-NC-SA 4.0
 
     comments:
-        enabled: true
+        enabled: false
         provider: changyan
         #provider: utterances
 
