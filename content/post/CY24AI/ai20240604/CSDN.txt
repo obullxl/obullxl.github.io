@@ -75,6 +75,6 @@ NEXAAI的Octopusv4模型利用functionaltoken整合多个开源模型，针对�
 
 ---
 
-我的本博客原地址：[https://mp.weixin.qq.com/s/q8B0sgyv8uu5cuYQmJy4lQ](https://mp.weixin.qq.com/s/q8B0sgyv8uu5cuYQmJy4lQ)
+我的本博客原地址：[https://mp.weixin.qq.com/s/kcvaZt92c9yNMMLUcghi7A](https://mp.weixin.qq.com/s/kcvaZt92c9yNMMLUcghi7A)
 
 ---
