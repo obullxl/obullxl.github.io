@@ -2,7 +2,7 @@
 slug = "2024060801"
 date = "2024-06-08"
 lastmod = "2024-06-08"
-title = "本地部署GLM-4-9B开源大模型教程和对话体验效果"
+title = "本地部署GLM-4-9B清华智谱开源大模型方法和对话效果体验"
 description = "清华大学和智谱AI推出了全面升级的新一代基座大模型GLM-4，整体性能相比GLM3提升60%，支持128K上下文，可根据用户意图自主理解和规划复杂指令、完成复杂任务……"
 image = "00.jpg"
 tags = [ "AI工具", "GLM", "大模型", "Llama" ]
@@ -98,6 +98,6 @@ GLM-4:
 
 ---
 
-我的本博客原地址：[https://mp.weixin.qq.com/s/kcvaZt92c9yNMMLUcghi7A](https://mp.weixin.qq.com/s/kcvaZt92c9yNMMLUcghi7A)
+我的本博客原地址：[https://mp.weixin.qq.com/s/g7lDfnRRGdrHqN7WGMSkAg](https://mp.weixin.qq.com/s/g7lDfnRRGdrHqN7WGMSkAg)
 
 ---
