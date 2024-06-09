@@ -287,4 +287,10 @@ if __name__ == '__main__':
 
 我的本博客原地址：[https://mp.weixin.qq.com/s/rL3vyJ_xEj7GGoKaxUh8_A](https://mp.weixin.qq.com/s/rL3vyJ_xEj7GGoKaxUh8_A)
 
+部署**Llama 3 8B**开源大模型：[玩转 AI，笔记本电脑安装属于自己的 Llama 3 8B 大模型和对话客户端](https://mp.weixin.qq.com/s/MekCUJDhKzuUnoykkGoH2g)
+
+部署**Llama 3 8B**Web版对话机器人：[一文彻底整明白，基于 Ollama 工具的 LLM 大语言模型 Web 可视化对话机器人部署指南](https://mp.weixin.qq.com/s/2DVYO75h0o5EHN_K_GF4Eg)
+
+部署中文版**Llama 3（Llama3-Chinese-Chat）**大模型：[基于Llama 3搭建中文版（Llama3-Chinese-Chat）大模型对话聊天机器人](https://mp.weixin.qq.com/s/idcdIr8mMWDQ_iZU5r_UEQ)
+
 ---
