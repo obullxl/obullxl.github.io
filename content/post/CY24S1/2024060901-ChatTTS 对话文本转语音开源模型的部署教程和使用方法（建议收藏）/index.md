@@ -2,8 +2,8 @@
 slug = "2024060901"
 date = "2024-06-09"
 lastmod = "2024-06-09"
-title = "ChatTTS 开源文本转语音模型本地部署、使用和搭建WebUI界面（建议收藏）"
-description = "ChatTTS是一款专为对话场景设计的支持中英文的文本转语音（TTS）模型，能够生成高质量、自然流畅的对话语音，同时还支持笑声、停顿等韵律特征，超越了大部分TTS开源模型。本文手把手部署、使用、搭建可视化WebUI界面体验ChatTTS能力……"
+title = "ChatTTS 开源文本转语音模型本地部署、API使用和搭建WebUI界面（建议收藏）"
+description = "ChatTTS是一款专为对话场景设计的支持中英文的文本转语音（TTS）模型，能够生成高质量、自然流畅的对话语音，同时还支持笑声、停顿等韵律特征，超越了大部分TTS开源模型。本文手把手部署、AIP使用、搭建可视化WebUI界面体验ChatTTS能力……"
 image = "00.jpg"
 tags = [ "AI工具", "ChatTTS", "大模型", "TTS" ]
 categories = [ "人工智能" ]
@@ -285,6 +285,6 @@ if __name__ == '__main__':
 
 ---
 
-我的本博客原地址：[https://mp.weixin.qq.com/s/g7lDfnRRGdrHqN7WGMSkAg](https://mp.weixin.qq.com/s/g7lDfnRRGdrHqN7WGMSkAg)
+我的本博客原地址：[https://mp.weixin.qq.com/s/rL3vyJ_xEj7GGoKaxUh8_A](https://mp.weixin.qq.com/s/rL3vyJ_xEj7GGoKaxUh8_A)
 
 ---
