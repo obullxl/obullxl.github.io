@@ -2,7 +2,7 @@
 slug = "2024061201"
 date = "2024-06-12"
 lastmod = "2024-06-12"
-title = "Qwen2阿里最强开源大模型（Qwen2-7B）部署、API调用和WebUI对话机器人"
+title = "Qwen2 阿里最强开源大模型（Qwen2-7B）本地部署、API调用和WebUI对话机器人"
 description = "阿里云正式开源通义千问Qwen2系列模型，其中Qwen2-72B成为全球性能最强的开源模型，在全球权威测评中，性能超过美国最强开源模型Llama3-70B，也超过文心4.0、豆包pro、混元pro等众多中国闭源大模型。今天老牛同学部署和体验Qwen2-7B中等尺寸模型，包括部署、API嗲用和WebUI对话客户端……"
 image = "01.jpg"
 tags = [ "AI工具", "Qwen2", "大模型", "Llama" ]
@@ -259,7 +259,7 @@ curl http://localhost:11434/api/chat -d '{
 
 ### Qwen2-7B 开源大模型
 
-[Qwen2阿里最强开源大模型（Qwen2-7B）部署、API调用和WebUI对话机器人](https://mp.weixin.qq.com/s/MekCUJDhKzuUnoykkGoH2g)
+[Qwen2阿里最强开源大模型（Qwen2-7B）部署、API调用和WebUI对话机器人](https://mp.weixin.qq.com/s/u_Uw88dpQRgbtfI4_1OOwQ)
 
 ### Llama-3-8B 开源大模型
 
