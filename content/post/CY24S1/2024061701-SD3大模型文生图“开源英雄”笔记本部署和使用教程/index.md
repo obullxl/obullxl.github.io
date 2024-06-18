@@ -1,11 +1,11 @@
 +++
 slug = "2024061701"
 date = "2024-06-17"
-lastmod = "2024-06-17"
+lastmod = "2024-06-18"
 title = "Stable Diffusion 3 大模型文生图“开源英雄”笔记本部署和使用教程，轻松实现AI绘图自由"
 description = "Stability AI正式开源了 Stable Diffusion 3 Medium 文生图大模型，它仅20亿参数，就能够生成更高质量和更细腻的图片。得益于较小的模型尺寸，Stable Diffusion 3 Medium尤其适合在个人PC、笔记本电脑和企业级GPU上运行。老牛同学同过本教程，手把手部署和体验Stable Diffusion 3 Medium大模型……"
 image = "00.jpg"
-tags = [ "AI工具", "Stable Diffusion", "大模型", "文生图" ]
+tags = [ "AI工具", "Stable Diffusion", "大模型", "文生图", "ComfyUI" ]
 categories = [ "人工智能" ]
 +++
 
