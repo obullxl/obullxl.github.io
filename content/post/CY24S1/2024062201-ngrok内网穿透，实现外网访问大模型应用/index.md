@@ -136,6 +136,10 @@ ngrok tcp 22
 
 [ChatTTS 开源文本转语音模型本地部署、API使用和搭建WebUI界面](https://mp.weixin.qq.com/s/rL3vyJ_xEj7GGoKaxUh8_A)
 
+**Stable Diffusion 3 文生图模型**
+
+[Stable Diffusion 3 文生图“开源英雄”大模型本地部署和使用教程，轻松实现AI绘图自由](https://mp.weixin.qq.com/s/Sax4z2k8Dvn82h15jf51Hw)
+
 **大模型应用案例**
 
 [借助AI大模型，三分钟原创一部儿童故事短视频（附完整操作步骤）](https://mp.weixin.qq.com/s/m_O2OSoXWLL0PJurLCdzng)
