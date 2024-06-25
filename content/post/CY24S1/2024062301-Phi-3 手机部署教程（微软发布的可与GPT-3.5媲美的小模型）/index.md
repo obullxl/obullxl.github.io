@@ -5,7 +5,7 @@ lastmod = "2024-06-23"
 title = "Phi-3 模型手机部署教程（微软发布的可与GPT-3.5媲美的小模型）"
 description = "Phi 是微软AI研究院新推出的开源小型语言模型，适用于商业使用，其优势在于体积小、资源需求少，被称为“一个能跑在手机上的大模型”，我们通过Termux和Ollama工具，在我们手机上部署和体验……"
 image = "00.jpg"
-tags = [ "AI工具", "Phi", "大模型" ]
+tags = [ "AI工具", "Phi", "大模型", "Termux", "Ollama" ]
 categories = [ "人工智能" ]
 +++
 
