@@ -125,6 +125,9 @@ REPOSITORY                 TAG       IMAGE ID       CREATED      SIZE
 mintplexlabs/anythingllm   latest    d950fa3b8011   2 days ago   2.94GB
 ```
 
+![Docker镜像列表](09.png)
+
+
 【**第二步：** 启动 AnythingLLM 框架】
 
 **Windows 系统：** AnythingLLM 镜像挂载和启动命令（因为命令有多行，需要通过**PowerShell**执行）：
