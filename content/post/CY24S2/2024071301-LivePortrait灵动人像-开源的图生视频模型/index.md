@@ -3,9 +3,9 @@ slug = "2024071401"
 date = "2024-07-14"
 lastmod = "2024-07-14"
 title = "LivePortrait 数字人：开源的图生视频模型，本地部署和专业视频制作详细教程"
-description = "最近数字人比较火，LivePortrait 是快手、中科大和复旦大学联合研发的开源的图生视频模型，比较适合个人、小团体和企业等用于生成自己的数字化人物视频。老牛同学尝试通过本教程，详细介绍如何在本地部署和生成专业视频……"
+description = "数字人最近比较火，LivePortrait 是快手、中科大和复旦大学联合研发的开源的图生视频模型，比较适合个人、小团体和企业等用于生成自己的数字化人物视频。老牛同学尝试通过本教程，详细介绍如何在本地部署和生成专业视频……"
 image = "https://modelscope.cn/api/v1/models/AI-ModelScope/LivePortrait/repo?Revision=master&FilePath=.%2Fdocs%2Fshowcase2.gif&View=true"
-tags = [ "AI", "LivePortrait", "图生视频" ]
+tags = [ "AI", "LivePortrait", "图生视频", "大模型" ]
 categories = [ "人工智能" ]
 +++
 
