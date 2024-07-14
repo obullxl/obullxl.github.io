@@ -16,7 +16,7 @@ categories = [ "人工智能" ]
 看到上面面部表情动态图片，是不是感觉挺有有意思？它就是通过快手、中科大和复旦大学联合研发的**图生视频**开源大模型**LivePortrait**（灵动人像）生成的视频。通过**LivePortrait**大模型，我们只需要一张人脸正面图片和一段文字或音频，即可制作专业的视频内容，例如产品介绍、教学课程、趣味视频等。
 
 <video autoplay controls muted loop width="100%">
-    <source src="https://liveportrait.github.io/src/video/image_animation_3_opt.mp4" type="video/mp4">
+    <source src="https://liveportrait.github.io/src/video/image_animation_3_opt.mp4" type="video/mp4"></source>
 </video>
 
 老牛同学将和大家一起，在本地部署**LivePortrait**图生视频大模型，并且生成我们自己的视频。本文将包括以下几部分：
