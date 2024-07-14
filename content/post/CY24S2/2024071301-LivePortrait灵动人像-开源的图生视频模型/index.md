@@ -9,9 +9,15 @@ tags = [ "AI", "LivePortrait", "图生视频" ]
 categories = [ "人工智能" ]
 +++
 
-![动画图片](10.gif)
+![](10.gif)
+
+![脸部动画](11.gif)
 
 看到上面面部表情动态图片，是不是感觉挺有有意思？它就是通过快手、中科大和复旦大学联合研发的**图生视频**开源大模型**LivePortrait**（灵动人像）生成的视频。通过**LivePortrait**大模型，我们只需要一张人脸正面图片和一段文字或音频，即可制作专业的视频内容，例如产品介绍、教学课程、趣味视频等。
+
+<video autoplay controls muted loop width="100%">
+    <source src="https://liveportrait.github.io/src/video/image_animation_3_opt.mp4" type="video/mp4">
+</video>
 
 老牛同学将和大家一起，在本地部署**LivePortrait**图生视频大模型，并且生成我们自己的视频。本文将包括以下几部分：
 
@@ -204,7 +210,9 @@ Running on local URL:  http://127.0.0.1:8890
 
 **LivePortrait**开源的图生视频模型不仅在技术上取得了重要进展，也对图生视频的商业应用和社会影响提出了新的思考。随着技术的进一步成熟和社会应用的深入，未来图生视频技术将在多个领域展现更广阔的应用前景。
 
-ModelScope 模搭社区提供了在线体验 Web 界面，如果我们没有 GPU 本地部署推理太慢了，也可以去体验一下：[https://s5k.cn/inner/studio/gradio?backend_url=/api/v1/studio/DAMOXR/LivePortrait/gradio/&sdk_version=3.39.0&t=1720835552002&studio_token=b6666f2a-6d65-4ca5-a46f-54d275ddd685](https://s5k.cn/inner/studio/gradio?backend_url=/api/v1/studio/DAMOXR/LivePortrait/gradio/&sdk_version=3.39.0&t=1720835552002&studio_token=b6666f2a-6d65-4ca5-a46f-54d275ddd685)
+ModelScope 模搭社区提供了在线体验 Web 界面，如果我们没有 GPU 本地部署推理太慢了，也可以去体验一下：[https://modelscope.cn/studios/DAMOXR/LivePortrait](https://modelscope.cn/studios/DAMOXR/LivePortrait)
+
+![LivePortrait使用体验](03.png)
 
 有关**LivePortrait**更多的展示样例参见：[https://liveportrait.github.io/](https://liveportrait.github.io)
 
