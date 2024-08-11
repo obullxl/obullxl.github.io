@@ -5,7 +5,7 @@ lastmod = "2024-08-02"
 title = "PyTorch 训练自定义功能齐全的神经网络模型的详细教程"
 description = "PyTorch 是一个开源的机器学习框架，可以方便地进行神经网络模型训练和推理。本文基于 PyTorch 演示了一个非常简单但是功能齐全的神经网络训练过程，无论模型权重有多大，使用 TyTorch 训练的过程是类似的，期望本文能启到抛砖引玉的作用……"
 image = "01.jpg"
-tags = [ "AI", "PyTorch" ]
+tags = [ "AI", "PyTorch", "神经网络" ]
 categories = [ "人工智能" ]
 +++
 
