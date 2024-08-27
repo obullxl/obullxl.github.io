@@ -2,7 +2,7 @@
 slug = "2024082701"
 date = "2024-08-27"
 lastmod = "2024-08-27"
-title = "GLM-4-Flash 大模型API免费了，手把手构建“儿童绘本”应用实战"
+title = "GLM-4-Flash 大模型API免费了，手把手构建“儿童绘本”应用实战（附源码）"
 description = "GLM-4-Flash 大模型API免费了，我们本文基于免费API构建一个“儿童绘本”应用，包括使用文生图产出绘本故事插图……"
 image = "00.jpg"
 tags = [ "AI", "GLM-4", "CogView", "AI应用" ]
