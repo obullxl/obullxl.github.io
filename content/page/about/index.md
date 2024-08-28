@@ -1,7 +1,7 @@
 ---
 title: 关于
 slug: about
-description: 「奔跑的蜗牛」的自说自话 ☺☺☺
+description: 公众号：老牛同学，合作：imxulin（奔跑的蜗牛）
 # date: '2023-01-01'
 #aliases:
 #  - about-us
@@ -21,6 +21,8 @@ menu:
 ---
 
 我叫<big>**徐林**</big>，您正在访问我的博客：<big>[https://ntopic.cn](https://ntopic.cn)</big>
+
+![微信公众号：老牛同学](https://ntopic.cn/WX-21.png)
 
 ---
 
