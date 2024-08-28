@@ -1,7 +1,7 @@
 ---
 title: 友链
 slug: links
-description: 公众号：老牛同学，合作：imxulin（奔跑的蜗牛）
+# description: 公众号：老牛同学，微信：imxulin（奔跑的蜗牛）
 links:
   - title: ntopic.cn
     description: 奔跑的蜗牛 - 个人博客，记录生活和工作中的点点滴滴
@@ -39,10 +39,9 @@ menu:
 
 comments: false
 readingTime: false
----
 
 ---
 
-欢迎互链：`obullxl@qq.com`
+我的公众号：**老牛同学**，我的微信：**imxulin**（奔跑的蜗牛）
 
 ![微信公众号：老牛同学](https://ntopic.cn/WX-21.png)

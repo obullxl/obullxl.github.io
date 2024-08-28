@@ -2,13 +2,13 @@ baseurl: https://ntopic.cn
 languageCode: zh-cn
 theme: hugo-theme-stack
 paginate: 5
-title: 老牛同学
+title: 奔跑的蜗牛
 
 languages:
     zh-cn:
         languageName: 中文
         title: 老牛同学
-        #description: 微信公众号：老牛同学，欢迎关注~
+        description: 微信公众号：老牛同学，欢迎关注~
         weight: 1
     #en:
     #    languageName: English
@@ -58,7 +58,7 @@ params:
 
     sidebar:
         # emoji: 🍥
-        subtitle: 合作WX：imxulin
+        subtitle: 微信：imxulin（奔跑的蜗牛）
         avatar:
             enabled: true
             local: true
