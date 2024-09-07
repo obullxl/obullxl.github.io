@@ -1,3 +1,10 @@
+Hi 推荐2篇应用实战文章：
+
+ChatTTS最新版本地部署，合成长时音频，让“儿童绘本”转长音频详细教程（含源码）：https://blog.csdn.net/obullxl/article/details/141757256
+
+GLM-4-Flash 大模型 API 免费了，手把手构建“儿童绘本”应用实战（附源码）：https://blog.csdn.net/obullxl/article/details/141585056
+
+
 
 笔记本电脑安装属于自己的Llama 3 8B大模型：https://blog.csdn.net/obullxl/article/details/138755287
 

@@ -5,7 +5,7 @@ lastmod = "2024-08-31"
 title = "ChatTTS 长音频合成和本地部署2种方式，让你的“儿童绘本”发声的实战教程（文末有福利）"
 description = "本文介绍 ChatTTS 最新版本的 2 种本地部署方式，并通过短音频合成长音频的技术手段，解决 ChatTTS 合成音频最长 30 秒时长的限制，同时，我们让绘本故事文本转长音频……"
 image = "00.jpg"
-tags = [ "AI", "ChatTTS", "文转音频", "福利活动", "AI应用" ]
+tags = [ "AI", "ChatTTS", "文生音频", "福利活动", "AI应用" ]
 categories = [ "人工智能" ]
 +++
 
