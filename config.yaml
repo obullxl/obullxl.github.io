@@ -58,7 +58,7 @@ params:
 
     sidebar:
         # emoji: 🍥
-        subtitle: 微信：imxulin（奔跑的蜗牛）
+        subtitle: 微信号：imxulin（奔跑的蜗牛）
         avatar:
             enabled: true
             local: true
