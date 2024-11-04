@@ -2,9 +2,9 @@
 slug = "2024110401"
 date = "2024-11-04"
 lastmod = "2024-11-04"
-title = "告别 PPT 配图难题！Napkin.ai 轻松打造生动演示文档"
+title = "告别 PPT 配图难题！Napkin.ai 轻松打造生动演示文档（文末免费送书）"
 description = "还在为 PPT 配图发愁？Napkin.ai 来救场！它是强大的文本自动配图工具，能自动摘要文本、生成并自定义配图，下载方式多样。文中详细介绍其使用方法，包括注册、创建 Napkin、选择和设置配图等。此外，还有免费送书活动，关注、留言点赞就有机会获得《OpenAI API 接口应用实战》。快来参与……"
-image = "00.png"
+image = "00.jpg"
 tags = [ "AI", "自动配图", "Napkin.ai" ]
 categories = [ "人工智能" ]
 +++
