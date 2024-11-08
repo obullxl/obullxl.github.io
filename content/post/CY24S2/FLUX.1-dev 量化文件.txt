@@ -1,0 +1,13 @@
+# FLUX.1-dev 量化文件
+https://hf-mirror.com/city96/FLUX.1-dev-gguf/tree/main
+
+# FLUX.1-schnell 量化文件
+https://hf-mirror.com/city96/FLUX.1-schnell-gguf/tree/main
+
+
+https://github.com/city96/ComfyUI-GGUF
+
+
+
+
+conda create -n ComfyUI python=3.10 -y
