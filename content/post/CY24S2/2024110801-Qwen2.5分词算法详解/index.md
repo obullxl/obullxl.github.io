@@ -2,7 +2,7 @@
 slug = "2024110801"
 date = "2024-11-08"
 lastmod = "2024-11-08"
-title = "深入解析 Transformers 框架（四）：Qwen2.5 分词流程与 BPE 分词算法技术细节"
+title = "深入解析 Transformers 框架（四）：Qwen2.5/GPT 分词流程与 BPE 分词算法详解"
 description = "本文深入解析 Qwen2.5 大语言模型的分词流程和 BPE 分词算法。通过中英文混合文本示例，详细介绍了从文本规范化、初步分词、字节编码与映射到 BPE 分词的每一步骤。结合代码实现，揭示了 Qwen2.5 如何高效处理多语言文本，帮助读者全面理解 BPE 分词算法的原理和应用……"
 image = "00.jpg"
 tags = [ "AI", "Qwen2.5", "分词算法", "BPE", "transformers" ]
