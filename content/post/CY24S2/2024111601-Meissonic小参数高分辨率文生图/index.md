@@ -62,7 +62,13 @@ git+https://github.com/huggingface/diffusers.git
 
 # Meissonic 模型生成图片
 
-基础环境准备就绪，马上开启图片生成之旅！以下是老牛同学根据笔记本电脑修改后的 WebUI 界面代码（`app.py`）：
+基础环境准备就绪，我们开始准备图片生产代码。首先下载 Meissonic 源代码（目录：`Meissonic`）：
+
+```shell
+git clone https://github.com/viiika/Meissonic.git
+```
+
+然后，修改源代码目录`Meissonic`下的`app.py`文件，以下是老牛同学根据本地部署修改后的代码内容，大家可直接覆盖即可：
 
 ```python
 # app.py
