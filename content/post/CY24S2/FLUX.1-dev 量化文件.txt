@@ -11,3 +11,9 @@ https://github.com/city96/ComfyUI-GGUF
 
 
 conda create -n ComfyUI python=3.10 -y
+
+
+
+
+2024112001-Llama3.2-Vision本地部署推理和API调用
+
