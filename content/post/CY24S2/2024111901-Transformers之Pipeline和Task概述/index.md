@@ -2,8 +2,8 @@
 slug = "2024111901"
 date = "2024-11-19"
 lastmod = "2024-11-19"
-title = "Transformers框架任务概览：从零开始掌握Pipeline（管道）与Task（任务）"
-description = "Transformers框架支持多种NLP任务，如何高效使用Pipeline？本文从零开始，逐步介绍Transformers框架中的Pipeline和任务配置。通过实际案例和源代码分析，帮助你快速掌握Transformers框架的核心功能……"
+title = "Transformers 框架任务概览：从零开始掌握 Pipeline（管道）与 Task（任务）"
+description = "Transformers 框架支持多种 NLP 任务，如何高效使用 Pipeline？本文从零开始，逐步介绍 Transformers 框架中的 Pipeline 和任务配置。通过实际案例和源代码分析，帮助你快速掌握 Transformers 框架的核心功能……"
 image = "00.jpg"
 tags = [ "AI", "transformers", "Pipeline", "Task" ]
 categories = [ "人工智能" ]
