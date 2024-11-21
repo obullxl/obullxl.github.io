@@ -9,21 +9,23 @@ tags = [ "AI", "transformers", "Pipeline", "Task" ]
 categories = [ "人工智能" ]
 +++
 
-在前面的四篇文章中，老牛同学基于 Qwen2.5 大模型，对 Transformers 框架进行了初步分析，涵盖了以下几个方面：
+在前面的四篇 Transformers 框架文章中，老牛同学基于 Qwen2.5 大模型，通过走读源代码，对 Transformers 框架进行了初步分析，主要涵盖了以下几个方面：
 
 - **Transformers 模块的懒加载设计**
-- **BPE 分词算法**
 - **AutoConfig、AutoModel 和 AutoTokenizer 这三个基础组件**
+- **BPE 分词算法**
 
 这些基础组件是预训练大模型推理的基石。在此基础上，Transformers 框架提供了更高层次的组件——**Pipeline**（管道），它封装了模型加载、数据预处理、模型推理和结果后处理的完整流程。通过 Pipeline，用户可以极简地使用预训练模型来处理具体的自然语言处理（NLP）任务，而无需深入了解模型的内部细节。
 
-在 Hugging Face 官网上，这些 NLP 任务被归为六大类：多模态（Multimodal）、自然语言处理（Natural Language Processing，NLP）、计算机视觉（Computer Vision）、音频（Audio）、表格（Tabular）和强化学习（Reinforcement Learning）。
+在 Hugging Face 官网上，这些任务被归为六大类：多模态（Multimodal）、自然语言处理（Natural Language Processing，NLP）、计算机视觉（Computer Vision）、音频（Audio）、表格（Tabular）和强化学习（Reinforcement Learning）。
 
-![NLP任务分类](task.jpg)
+![Hugging Face 官网任务分类](task.jpg)
+
+本文我们将初步了解一下 Pipeline 和 Task 的配置和技术，老牛同计划在后续文章进行详细分析介绍。
 
 # 1. Task 配置源代码
 
-我们打开 Transformers 包的源代码，可以看到当前支持的 Task 列表和配置（模块：`./pipelines/__init__.py`，常量：`SUPPORTED_TASKS`字典）：
+我们打开 Transformers 包的源代码，就可以看到当前支持的 Task 列表和配置（模块：`./pipelines/__init__.py`，常量：`SUPPORTED_TASKS`字典）：
 
 ```python
 # Transformers框架支持的Task列表和配置
@@ -70,13 +72,13 @@ SUPPORTED_TASKS = {
 
 - **字典键**：代表任务名，应用时代表这个任务。
 - **type**：代表任务分类，如`audio`表示这是一个处理音频数据的任务。
-- **impl**：指定任务的实现类，这个类封装了任务的所有逻辑，包括数据预处理、模型推理和结果后处理。
+- **impl**：代表Pipeline实现类，它封装了任务的所有逻辑，包括数据预处理、模型推理和结果后处理。
 - **tf**或**pt**：代表支持该任务的 TensorFlow 模型类或 PyTorch 模型类。
 - **default**：代表任务的默认配置，包括默认使用的模型及其版本。
 
 # 2. Pipeline 和 Task 使用示例
 
-下面，我们通过一个常见的情感分类任务来演示如何使用 Pipeline：
+下面，我们通过一个常见的情感分类任务来演示如何使用 Pipeline 进行任务处理：
 
 ```python
 import os
@@ -112,15 +114,15 @@ print(result)
 上面的代码展示了使用 Pipeline 处理任务的标准框架：
 
 - **tokenizer**：分词器，我们在前面的文章中详细介绍了其技术细节和 BPE 算法逻辑，这里不再赘述。
-- **model**：与前面介绍的 AutoModel 使用方式完全一致，`AutoModelForSequenceClassification`是 Task 配置中 PyTorch 模型类。`AutoModelForSequenceClassification.from_pretrained()`的逻辑与我们前面介绍的 AutoModel 文章一致，最终返回`Qwen2ForSequenceClassification`实例。
+- **model**：与前面介绍的 AutoModel 使用方式完全一致，`AutoModelForSequenceClassification`是 Task 配置中 PyTorch 模型类。`AutoModelForSequenceClassification.from_pretrained()`的逻辑与我们前面介绍的 AutoModel 基本一致。对于 Qwen2 大模型，它最终返回`Qwen2ForSequenceClassification`实例（具体实现老牛同学将在接下来的系列文章中进行详细分析）。
 - **nlp**：Pipeline 的实例化，可以指定任务名处理单个任务，也可以指定任务列表处理多个任务。
-- **result**：任务结果，返回标签和置信度分数。
+- **result**：任务结果，返回`label`标签和`score`置信度分数。
 
 # 3. Pipeline 技术细节
 
 接下来，我们通过阅读源代码，分析 Pipeline 执行的技术细节。
 
-**第 1 行代码**：`nlp = pipeline("text-classification", tokenizer=tokenizer, model=model)`。Pipeline 初始化时，根据任务名`text-classification`映射到任务配置信息，然后根据配置中的`impl`字段获取到 Pipeline 的实现类（如`TextClassificationPipeline`类）。
+**第 1 行代码**：`nlp = pipeline("text-classification", tokenizer=tokenizer, model=model)` Pipeline 初始化时，根据任务名`text-classification`映射到任务配置信息，然后根据配置中的`impl`字段获取到 Pipeline 的实现类（如`TextClassificationPipeline`类）。
 
 ![Pipeline初始化](31.jpg)
 
@@ -130,7 +132,7 @@ Pipeline 初始化完成后，加载对应的模型（如`AutoModelForSequenceCl
 
 最终，Pipeline 实例化：`pipeline_class(model=model, framework=framework, task=task, **kwargs)`
 
-**第 2 行代码**：`result = nlp("我觉得使用Transformers库Pipeline处理NLP任务非常方便！")`。开始执行 Pipeline 任务。
+**第 2 行代码**：`result = nlp("我觉得使用Transformers库Pipeline处理NLP任务非常方便！")` 开始执行 Pipeline 任务。
 
 ![Task执行](33.jpg)
 
@@ -198,6 +200,14 @@ for task_type in task_types:
 
 往期推荐文章：
 
+<small>[深入解析 Transformers 框架（一）：包和对象加载中的设计巧思与实用技巧](https://mp.weixin.qq.com/s/lAAIfl0YJRNrppp5-Vuusw)</small>
+
+<small>[深入解析 Transformers 框架（二）：AutoModel 初始化及 Qwen2.5 模型加载全流程](https://mp.weixin.qq.com/s/WIbbrkf1HjVC1CtBNcU8Ow)</small>
+
+<small>[深入解析 Transformers 框架（三）：Qwen2.5 大模型的 AutoTokenizer 技术细节](https://mp.weixin.qq.com/s/Shg30uUFByM0tKTi0rETfg)</small>
+
+<small>[深入解析 Transformers 框架（四）：Qwen2.5/GPT 分词流程与 BPE 分词算法技术细节详解](https://mp.weixin.qq.com/s/GnoHXsIYKYFU1Xo4u5sE1w)</small>
+
 <small>[基于 Qwen2.5-Coder 模型和 CrewAI 多智能体框架，实现智能编程系统的实战教程](https://mp.weixin.qq.com/s/8f3xna9TRmxMDaY_cQhy8Q)</small>
 
 <small>[vLLM CPU 和 GPU 模式署和推理 Qwen2 等大语言模型详细教程](https://mp.weixin.qq.com/s/KM-Z6FtVfaySewRTmvEc6w)</small>
@@ -209,13 +219,5 @@ for task_type in task_types:
 <small>[基于 Qwen2 大模型微调技术详细教程（LoRA 参数高效微调和 SwanLab 可视化监控）](https://mp.weixin.qq.com/s/eq6K8_s9uX459OeUcRPEug)</small>
 
 <small>[ChatTTS 长音频合成和本地部署 2 种方式，让你的“儿童绘本”发声的实战教程](https://mp.weixin.qq.com/s/9ldLuh3YLvx8oWvwnrSGUA)</small>
-
-<small>[深入解析 Transformers 框架（一）：包和对象加载中的设计巧思与实用技巧](https://mp.weixin.qq.com/s/lAAIfl0YJRNrppp5-Vuusw)</small>
-
-<small>[深入解析 Transformers 框架（二）：AutoModel 初始化及 Qwen2.5 模型加载全流程](https://mp.weixin.qq.com/s/WIbbrkf1HjVC1CtBNcU8Ow)</small>
-
-<small>[深入解析 Transformers 框架（三）：Qwen2.5 大模型的 AutoTokenizer 技术细节](https://mp.weixin.qq.com/s/Shg30uUFByM0tKTi0rETfg)</small>
-
-<small>[深入解析 Transformers 框架（四）：Qwen2.5/GPT 分词流程与 BPE 分词算法技术细节详解](https://mp.weixin.qq.com/s/GnoHXsIYKYFU1Xo4u5sE1w)</small>
 
 ![微信公众号：老牛同学](https://ntopic.cn/WX-21.png)
