@@ -11,6 +11,8 @@ categories = [ "人工智能" ]
 
 在上一篇文章（[Transformers 框架任务概览：从零开始掌握 Pipeline（管道）与 Task（任务）](https://mp.weixin.qq.com/s/FR4384AZV2FE2xtweSh9bA)），我们深入探讨了 Transformers 框架中的 Pipeline 和 Task 分类、配置及执行流程。今天，我们将聚焦于五大任务之一的`text-to-audio`或`text-to-speech`（TTS），探索如何利用 Transformers 将文本转换为自然流畅的语音。
 
+![文本转音频任务](01.jpg)
+
 # 1. 应用场景
 
 文本转音频技术通过深度学习模型从海量语音数据中学习发音规律，能够生成逼真的声音。根据 Hugging Face 官网的数据，当前已有超过**2,148**个文本转音频模型供选择：
@@ -129,6 +131,8 @@ nlp = pipeline("text-to-audio", tokenizer=tokenizer, model=model)
 # 总结
 
 本文详细介绍了 Transformers 框架中`text-to-audio`任务的应用场景、配置方法以及实战案例。无论是使用默认的**suno/bark-small**模型还是其他模型，Pipeline 都提供了简单而强大的接口来实现文本到音频的转换。未来，老牛同学将继续推出更多关于 Transformers 框架 Pipeline 任务的文章，敬请期待！
+
+![Transformers 框架 Pipeline 任务](91.jpg)
 
 **好书推荐**
 
