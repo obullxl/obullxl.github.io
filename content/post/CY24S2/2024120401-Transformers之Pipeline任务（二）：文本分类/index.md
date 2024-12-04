@@ -143,8 +143,10 @@ nlp = pipeline("text-classification", tokenizer=tokenizer, model=model)
 
 # 后续用法与自动下载相同
 result = nlp("这里的环境真不错！")
-print(result)  # 输出：[{'label': 'POSITIVE', 'score': 0.9987}]
+print(result)
 ```
+
+我们可以看到，任务的输出结果，和自动下载是一样的。
 
 # 5. 总结
 
