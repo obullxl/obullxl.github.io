@@ -92,15 +92,18 @@ pip install transformers torch
 
 ```python
 import os
-from transformers import pipeline
 
-# 设置代理和本地缓存目录
+# 设置代理
 os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
+
+# 设置本地缓存目录
 cache_dir = os.path.join('D:', os.path.sep, 'ModelSpace', 'Cache')
 os.environ['HF_HOME'] = cache_dir
 
+from transformers import pipeline
+
 # 创建Pipeline任务
-nlp = pipeline("text-classification", model="distilbert-base-uncased-finetuned-sst-2-english")
+nlp = pipeline("text-classification", model="distilbert/distilbert-base-uncased-finetuned-sst-2-english")
 
 # 执行文本分类任务
 result = nlp("I like Transformers.")
