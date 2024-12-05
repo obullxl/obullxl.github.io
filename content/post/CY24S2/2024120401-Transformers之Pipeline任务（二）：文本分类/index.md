@@ -146,7 +146,7 @@ nlp = pipeline("text-classification", tokenizer=tokenizer, model=model)
 
 我们可以看到，任务的输出结果，和自动下载是一样的。
 
-# 4. WebUI 页面
+# 5. WebUI 页面
 
 通过 Gradio，我们可以轻松地为 Transformers 框架中的`text-classification`任务创建一个可视化的 WebUI 界面，用户可以通过浏览器输入文本并实时获得分类结果。
 
@@ -216,7 +216,7 @@ To create a public link, set `share=True` in `launch()`.
 
 ![WebUI界面](41.jpg)
 
-# 5. 总结
+# 6. 总结
 
 本文详细介绍了 Transformers 框架中的`text-classification`任务，涵盖了任务描述、应用场景、示例代码以及具体的实战案例。通过使用 Transformers 的 Pipeline API，我们可以轻松地实现文本分类任务，而无需深入了解复杂的模型结构和算法。无论是情感分析、垃圾邮件检测还是主题分类，Transformers 框架都能提供强大的支持，帮助您快速构建高效的文字处理系统。
 
