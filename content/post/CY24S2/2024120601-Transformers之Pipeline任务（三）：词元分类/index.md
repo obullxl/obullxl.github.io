@@ -1,15 +1,17 @@
 +++
-slug = "2024120401"
+slug = "2024120601"
 date = "2024-12-04"
 lastmod = "2024-12-04"
-title = "Transformers 框架 Pipeline 任务详解：词元分类（token-classification）"
-description = "本文深入浅出地介绍了Transformers框架中的text-classification任务，并结合Gradio库搭建一个可视化的Web界面，帮助您快速掌握文本分类的最佳实践。通过Pipeline API，您可以轻松使用预训练模型进行情感分析、垃圾邮件检测等任务……"
+title = "Transformers 框架 Pipeline 任务详解：词元分类（token-classification）和命名实体识别"
+description = "本文深入简出介绍了 Transformers 框架中的 token-classification 任务，从基础概念到实际应用，包括命名实体识别、分词和词性标注，最后还会提供详细的代码示例和 WebUI 界面操作，帮助你快速上手词元分类和命名实体识别……"
 image = "00.jpg"
 tags = [ "AI", "transformers", "Pipeline", "词元分类" ]
 categories = [ "人工智能" ]
 +++
 
 在自然语言处理（NLP）领域，Token-Classification（词元分类）任务是一项关键的技术，这项技术广泛应用于命名实体识别（NER）、分词、词性标注等场景。借助Transformers框架的Pipeline API，我们可以轻松地使用预训练模型执行词元分类，而无需深入了解底层复杂的模型结构和算法。本文将详细介绍Transformers框架中`token-classification`任务的各个方面，包括任务简介、应用场景、任务配置、实战案例以及Web UI界面。
+
+![Hugging Face任务介绍](01.jpg)
 
 # 1. 任务简介
 
@@ -20,9 +22,9 @@ categories = [ "人工智能" ]
 3. **模型训练**：使用标注好的数据训练一个分类模型，模型会学习如何根据输入的文本特征预测正确的类别。
 4. **模型推理**：对于新的未见过的文本，模型会根据学到的特征为每个词元进行分类预测。
 
-根据Hugging Face官网的数据，当前已有超过**74,737**个词元分类模型供选择，涵盖了多种语言和应用场景：
+根据Hugging Face官网的数据，当前已有超过**20,531**个词元分类模型供选择，涵盖了多种语言和应用场景：
 
-[Hugging Face模型列表](11.jpg)
+![Hugging Face模型列表](11.jpg)
 
 # 2. 应用场景
 
@@ -36,9 +38,19 @@ categories = [ "人工智能" ]
 
 # 3. 任务配置
 
-在Transformers框架中，`token-classification`任务的Pipeline配置允许用户指定要使用的预训练模型和分词器。下面是一个典型的配置示例（源代码文件：`./transformers/pipelines/__init__.py`）：
+在 Transformers 框架中，`ner`和`token-classification`都是**词元分类任务**的不同名称。尽管两者在 Pipeline 配置中有别名关系，但在实际使用时没有区别，框架最终统一使用`token-classification`作为任务名称。
+
+我们可以在 Transformers 框架的源代码中看到以下配置（源代码文件：`./transformers/pipelines/__init__.py`）：
 
 ```python
+TASK_ALIASES = {
+    # 其他省略......
+
+    "ner": "token-classification",
+
+    # 其他省略......
+}
+
 SUPPORTED_TASKS = {
     # 其他省略......
 
@@ -48,8 +60,8 @@ SUPPORTED_TASKS = {
         "pt": (AutoModelForTokenClassification,) if is_torch_available() else (),
         "default": {
             "model": {
-                "pt": ("dbmdz/bert-large-cased-finetuned-conll03-english", "58a66a3"),
-                "tf": ("dbmdz/bert-large-cased-finetuned-conll03-english", "58a66a3"),
+                "pt": ("dbmdz/bert-large-cased-finetuned-conll03-english", "4c53496"),
+                "tf": ("dbmdz/bert-large-cased-finetuned-conll03-english", "4c53496"),
             },
         },
         "type": "text",
@@ -61,7 +73,36 @@ SUPPORTED_TASKS = {
 
 从上面的配置可以看出，Transformers框架默认使用的是`dbmdz/bert-large-cased-finetuned-conll03-english`模型，这是一个在CoNLL-2003 NER数据集上微调过的BERT大模型，专门用于英文命名实体识别任务。该模型是Hugging Face上下载量较大的词元分类模型之一，具有较高的准确性和效率。
 
-# 4. 词元分类实战
+# 4. 实体类型解释
+
+在命名实体识别任务中，实体（entity）指的是文本中被标记为特定类别的词或短语。常用的实体标签遵循一种叫做 IOB 标记格式，其中 I 表示 Inside，O 表示 Outside，B 表示 Begin。IOB 标记法允许我们区分实体内部的词和实体开始的词。以下是一些常见的实体标签及其含义：
+
+- **O**: 不属于任何命名实体。
+- **B-PER**: 个人名字的开始部分，例如 "B-PER" 可能标记 "John"。
+- **I-PER**: 个人名字的中间或结尾部分，例如 "I-PER" 可能标记 "Doe"。
+- **B-ORG**: 组织机构名称的开始部分，例如公司、政府机关等。
+- **I-ORG**: 组织机构名称的中间或结尾部分。
+- **B-LOC**: 地理位置的开始部分，例如国家、城市、州等。
+- **I-LOC**: 地理位置的中间或结尾部分。
+- **B-MISC**: 各种杂项实体的开始部分，如事件、产品等，不属于上述三类。
+- **I-MISC**: 杂项实体的中间或结尾部分。
+
+此外，还有可能遇到更细化的标签，例如：
+
+- **B-DATE**: 日期的开始部分。
+- **I-DATE**: 日期的中间或结尾部分。
+- **B-TIME**: 时间的开始部分。
+- **I-TIME**: 时间的中间或结尾部分。
+- **B-MONEY**: 货币金额的开始部分。
+- **I-MONEY**: 货币金额的中间或结尾部分。
+- **B-PERCENT**: 百分数的开始部分。
+- **I-PERCENT**: 百分数的中间或结尾部分。
+- **B-LANGUAGE**: 语言名称的开始部分。
+- **I-LANGUAGE**: 语言名称的中间或结尾部分。
+
+请注意，不同的数据集可能会有不同的标签集合。例如，CoNLL-2003 数据集主要关注 PER（人名）、ORG（组织）、LOC（地点）和 MISC（杂项）四个类别。而在其他数据集中，可能会有更多或更少的类别，以及不同类型的实体。
+
+# 5. 词元分类实战
 
 首先，确保安装了Transformers库和其他必要的依赖包：
 
@@ -69,7 +110,7 @@ SUPPORTED_TASKS = {
 pip install transformers torch
 ```
 
-#### 方法一：自动下载模型
+## 方法一：自动下载模型
 
 我们可以直接从Hugging Face下载模型。如果您的网络环境允许，可以直接下载；否则，可以通过设置镜像来加速下载过程：
 
@@ -92,17 +133,19 @@ nlp = pipeline("token-classification", model="dbmdz/bert-large-cased-finetuned-c
 result = nlp("My name is Wolfgang and I live in Berlin.")
 for entity in result:
     print(f"Word: {entity['word']}, Entity: {entity['entity']}")
+    # 输出：Word: Wolfgang, Entity: I-PER
+    # 输出：Word: Berlin, Entity: I-LOC
 ```
 
 Pipeline任务的输出结果将类似于以下格式：
 
 ```python
-[{'word': 'Wolfgang', 'entity': 'B-PER'}, {'word': 'Berlin', 'entity': 'B-LOC'}]
+[{'word': 'Wolfgang', 'entity': 'I-PER'}, {'word': 'Berlin', 'entity': 'I-LOC'}]
 ```
 
-其中，`word`表示被分类的词元，`entity`表示对应的类别标签，例如`B-PER`表示一个人名的开始，`B-LOC`表示一个地名的开始。
+其中，`word`表示被分类的词元，`entity`表示对应的类别标签，例如`I-PER`表示一个人名中间或结尾部分，`I-LOC`表示一个地名的中间或结尾部分。
 
-#### 方法二：自主下载模型
+## 方法二：自主下载模型
 
 如果您希望通过本地模型文件进行推理，可以按照以下步骤操作。实际上，与自动下载相比，唯一的区别是指定分词器和模型即可。假设我们下载的模型目录是`/models/pipeline`，则用法如下：
 
@@ -125,7 +168,7 @@ nlp = pipeline("token-classification", tokenizer=tokenizer, model=model)
 
 我们可以看到，任务的输出结果，和自动下载是一样的。
 
-# 5. WebUI 页面
+# 6. WebUI 页面
 
 通过Gradio，我们可以轻松地为Transformers框架中的`token-classification`任务创建一个可视化的WebUI界面，用户可以通过浏览器输入文本并实时获得分类结果。
 
@@ -142,7 +185,7 @@ import sys
 
 # 直接复用Pipeline实例
 sys.path.append("./")
-pipeline = __import__("02-token-classification")
+pipeline = __import__("03-token-classification")
 
 import gradio as gr
 
@@ -198,7 +241,7 @@ To create a public link, set `share=True` in `launch()`.
 
 [WebUI界面](41.jpg)
 
-# 6. 总结
+# 7. 总结
 
 本文详细介绍了Transformers框架中的`token-classification`任务，涵盖了任务描述、应用场景、示例代码以及具体的实战案例。通过使用Transformers的Pipeline API，我们可以轻松地实现词元分类任务，而无需深入了解复杂的模型结构和算法。无论是命名实体识别、分词还是词性标注，Transformers框架都能提供强大的支持，帮助您快速构建高效的文字处理系统。
 
