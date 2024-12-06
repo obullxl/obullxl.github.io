@@ -1,3 +1,4 @@
+<!--
 {{- $query := first 1 (where .Context.Site.Pages "Layout" "==" "archives") -}}
 {{- $context := .Context -}}
 {{- $limit := default 5 .Params.limit -}}
@@ -33,3 +34,4 @@
 {{- else -}}
     {{- warnf "Archives page not found. Create a page with layout: archives." -}}
 {{- end -}}
+-->

@@ -1,4 +1,16 @@
 <section class="article-content">
+    <div class="widget--toc" style="margin-top:15px;">
+        <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-format="fluid"
+         data-ad-layout-key="-6s+ed+2g-1n-4q"
+         data-ad-client="ca-pub-2548953017344039"
+         data-ad-slot="5835685264"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    
     <!-- Refer to https://discourse.gohugo.io/t/responsive-tables-in-markdown/10639/5 -->
     {{ $wrappedTable := printf "<div class=\"table-wrapper\">${1}</div>" }}
     {{ .Content | replaceRE "(<table>(?:.|\n)+?</table>)" $wrappedTable | safeHTML }}

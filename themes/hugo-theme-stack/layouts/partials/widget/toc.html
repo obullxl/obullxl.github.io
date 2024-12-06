@@ -1,3 +1,4 @@
+<!--
 {{ if (.Context.Scratch.Get "TOCEnabled") }}
     <section class="widget archives">
         <div class="widget-icon">
@@ -10,3 +11,26 @@
         </div>
     </section>
 {{ end }}
+-->
+
+<section class="widget archives">
+    <div class="widget-icon">
+        <img width="100%" src="/WX-21.png" />
+    </div>
+
+    <div class="widget--toc" style="margin-top:15px;">
+        <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-format="fluid"
+         data-ad-layout-key="-6s+ed+2g-1n-4q"
+         data-ad-client="ca-pub-2548953017344039"
+         data-ad-slot="5835685264"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <div class="widget--toc" style="margin-top:15px;">
+        {{ .Context.TableOfContents }}
+    </div>
+</section>
