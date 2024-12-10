@@ -1,7 +1,7 @@
 +++
 slug = "2024120901"
-date = "2024-12-09"
-lastmod = "2024-12-09"
+date = "2024-12-31"
+lastmod = "2024-12-31"
 title = "Transformers 框架 Pipeline 任务详解：词元分类（token-classification）和命名实体识别"
 description = "本文深入简出介绍了 Transformers 框架中的 token-classification 任务，从基础概念到实际应用，包括命名实体识别、分词和词性标注，最后还会提供详细的代码示例和 WebUI 界面操作，帮助你快速上手词元分类和命名实体识别……"
 image = "00.jpg"
