@@ -1,7 +1,7 @@
 +++
-slug = "2024120901"
-date = "2024-12-31"
-lastmod = "2024-12-31"
+slug = "2024121101"
+date = "2024-12-11"
+lastmod = "2024-12-11"
 title = "Transformers 框架 Pipeline 任务详解：词元分类（token-classification）和命名实体识别"
 description = "本文深入简出介绍了 Transformers 框架中的 token-classification 任务，从基础概念到实际应用，包括命名实体识别、分词和词性标注，最后还会提供详细的代码示例和 WebUI 界面操作，帮助你快速上手词元分类和命名实体识别……"
 image = "00.jpg"
@@ -239,7 +239,7 @@ To create a public link, set `share=True` in `launch()`.
 
 通过浏览器打开地址，就可以通过可视化的方式进行词元分类了：
 
-[WebUI界面](41.jpg)
+![WebUI界面](41.jpg)
 
 # 7. 总结
 
@@ -247,7 +247,7 @@ To create a public link, set `share=True` in `launch()`.
 
 老牛同学将继续推出更多关于Transformers框架Pipeline任务的文章，敬请期待！大家若有任何问题或建议，欢迎在评论区留言交流！
 
-[Transformers 框架 Pipeline 任务](91.jpg)
+![Transformers 框架 Pipeline 任务](91.jpg)
 
 ---
 
