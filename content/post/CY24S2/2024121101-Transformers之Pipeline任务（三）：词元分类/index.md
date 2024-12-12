@@ -2,7 +2,7 @@
 slug = "2024121101"
 date = "2024-12-11"
 lastmod = "2024-12-11"
-title = "Transformers 框架 Pipeline 任务详解：词元分类（token-classification）和命名实体识别"
+title = "Transformers 框架 Pipeline 任务详解（三）：词元分类（token-classification）和命名实体识别"
 description = "本文深入简出介绍了 Transformers 框架中的 token-classification 任务，从基础概念到实际应用，包括命名实体识别、分词和词性标注，最后还会提供详细的代码示例和 WebUI 界面操作，帮助你快速上手词元分类和命名实体识别……"
 image = "00.jpg"
 tags = [ "AI", "transformers", "Pipeline", "词元分类" ]
@@ -253,11 +253,11 @@ To create a public link, set `share=True` in `launch()`.
 
 Pipeline任务：
 
-<small>[Transformers 框架任务概览：从零开始掌握 Pipeline（管道）与 Task（任务）](https://mp.weixin.qq.com/s/FR4384AZV2FE2xtweSh9bA)</small>
+<small>[Transformers 框架任务概览（零）：从零开始掌握 Pipeline（管道）与 Task（任务）](https://mp.weixin.qq.com/s/FR4384AZV2FE2xtweSh9bA)</small>
 
-<small>[Transformers框架 Pipeline 任务详解：文本转音频（text-to-audio或text-to-speech）](https://mp.weixin.qq.com/s/uN2BFIOxDFEh4T-W7tsPbg)</small>
+<small>[Transformers框架 Pipeline 任务详解（一）：文本转音频（text-to-audio或text-to-speech）](https://mp.weixin.qq.com/s/uN2BFIOxDFEh4T-W7tsPbg)</small>
 
-<small>[Transformers 框架 Pipeline 任务详解：文本分类（text-classification）](https://mp.weixin.qq.com/s/9ccEDNfeGNf_Q9pO0Usg2w)</small>
+<small>[Transformers 框架 Pipeline 任务详解（二）：文本分类（text-classification）](https://mp.weixin.qq.com/s/9ccEDNfeGNf_Q9pO0Usg2w)</small>
 
 往期推荐文章：
 
