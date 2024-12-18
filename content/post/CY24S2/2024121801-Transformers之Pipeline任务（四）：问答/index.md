@@ -1,8 +1,8 @@
 +++
-slug = "2024121201"
-date = "2024-12-20"
-lastmod = "2024-12-20"
-title = "Transformers 框架 Pipeline 任务详解（四）：问答（question-answering）系统"
+slug = "2024121801"
+date = "2024-12-18"
+lastmod = "2024-12-18"
+title = "Transformers 框架 Pipeline 任务详解（四）：问答（question-answering）"
 description = "本文深入介绍了 Transformers 框架中的 question-answering 任务，涵盖任务简介、应用场景如智能助手和客户服务、任务配置与模型选择、实战代码示例，以及如何利用 Gradio 创建 WebUI 界面，使用户能通过浏览器实时获取问答结果。文章旨在帮助读者快速掌握使用 Transformers 构建高效问答系统的方法……"
 image = "00.jpg"
 tags = [ "AI", "transformers", "Pipeline", "问答" ]
@@ -220,7 +220,9 @@ Transformers 框架：
 
 <small>[03.Qwen2.5 大模型的 AutoTokenizer 技术细节](https://mp.weixin.qq.com/s/Shg30uUFByM0tKTi0rETfg)</small>
 
-<small>[04.Qwen2.5/GPT 分词流程与 BPE 分词算法技术细节详解](https://mp.weixin.qq.com/s/GnoHXsIYKYFU1Xo4u5sE1w)</small>
+<small>[04.Qwen2.5/GPT 分词流程与 BPE 分词算法技术细节](https://mp.weixin.qq.com/s/GnoHXsIYKYFU1Xo4u5sE1w)</small>
+
+<small>[05.嵌入（Embedding）机制和 Word2Vec 实战](https://mp.weixin.qq.com/s/qL9vpmNIM1eO9_lQq7QwlA)</small>
 
 Pipeline NLP 任务：
 
