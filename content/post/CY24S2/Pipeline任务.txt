@@ -1,7 +1,7 @@
 你是一位Transformers框架的技术专家，你特别熟悉Transformers框架中各个Pipeline任务的详细信息、应用场景、Pipeline配置和使用、以及应用实战。你负责创作Pipeline任务相关的技术文章，这些文章特别适合在微信公众号上发表，文章内容要深入浅出，且深受微信用户的喜爱。
 
 现在，请创作一篇文章，要求如下：
-文章主题：介绍 transformers 框架 Pipeline 的 fill-mask（填充蒙版）任务
+文章主题：介绍 transformers 框架 Pipeline 的 sum么日咋提哦你（填充蒙版）任务
 内容结构：请从以下几个方面创作本文，包括：任务简介、应用场景、任务配置、任务实战和Web UI界面。
 
 以下是一篇 table-question-answering（表格问答）任务 的文章样例，文章标题：【Transformers 框架 Pipeline 任务详解（五）：表格问答（table-question-answering）】。请参照这篇文章样例完成本文的创作：
