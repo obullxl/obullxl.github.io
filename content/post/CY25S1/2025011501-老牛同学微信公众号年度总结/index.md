@@ -4,7 +4,7 @@ date = "2025-01-15"
 lastmod = "2025-01-15"
 title = "感恩有你，共赴未来：2024年微信公众号总结 · 老牛同学"
 description = ""
-image = "03.jpg"
+image = "00.png"
 categories = [ "年度总结" ]
 +++
 

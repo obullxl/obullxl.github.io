@@ -1,6 +1,6 @@
 *.zip
 *.png
 resources/
-!02.jpg
+!00.png
 !book.png
 .DS_Store
