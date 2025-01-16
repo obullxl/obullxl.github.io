@@ -1,0 +1,6 @@
+*.zip
+*.png
+resources/
+!02.jpg
+!book.png
+.DS_Store
