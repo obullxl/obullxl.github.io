@@ -4,7 +4,7 @@ date = "2025-01-22"
 lastmod = "2025-01-22"
 title = "感谢有你，共赴未来：2024年CSDN技术博客创作总结 · 老牛同学"
 description = ""
-image = "00.png"
+image = "00.jpg"
 categories = [ "年度总结" ]
 +++
 
