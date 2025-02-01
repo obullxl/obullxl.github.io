@@ -1,6 +1,25 @@
 {
     "key1": "value1",
     "sourceCodeList": [{
+        "codeKey": "Cocos3D-01",
+        "codeName": "新春“码”启 | Cocos 3D 小游戏",
+        "articleList": [{
+            "title": "03. 新春“码”启 | Cocos 3D 小游戏总体设计方案和场景链路研发",
+            "url": "https://mp.weixin.qq.com/s/V3CIhswW3CVcTY1aPaALTw"
+        }, {
+            "title": "02. 新春“码”启 | 微信小游戏研发框架熟悉和Cocos 3D 研发框架了解",
+            "url": "https://mp.weixin.qq.com/s/qlOYpjREXBKb7vl1kuujlg"
+        }, {
+            "title": "01. 新春“码”启 | 0 基础开发微信小游戏技术选型（Cocos 游戏引擎）",
+            "url": "https://mp.weixin.qq.com/s/TlgNKvGYMuGMmU0dIBPn4A"
+        }],
+        "versionList": [{
+            "version": "v20250201",
+            "content": "1.研发框架搭建和基础代码研发；2.开始菜单功能研发。",
+            "storgeName": "百度云盘",
+            "storgeLink": "https://pan.baidu.com/s/14sn8EY5ffr50Wmy5unLDJA?pwd=LNTX",
+            "fetchCode": "LNTX"
+        }, {
         "codeKey": "DockerInstall",
         "codeName": "Docker安装程序（Win/Mac/Debian）",
         "articleList": [{
@@ -9,6 +28,7 @@
         }],
         "versionList": [{
             "version": "v20240706",
+            "content": "AnythingLLM镜像安装依赖",
             "storgeName": "百度云盘",
             "storgeLink": "https://pan.baidu.com/s/1wOppmGnq9MOwncBUdXEEzw?pwd=LNTX",
             "fetchCode": "LNTX"
