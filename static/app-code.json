@@ -10,26 +10,26 @@
                     "url": "https://mp.weixin.qq.com/s/8jxPxJ2-9UnFsLMGh9h0fQ"
                 },
                 {
-                    "title": "04. 新春“码”启 | Cocos 3D 小游戏场景层级设计和框架源代码",
+                    "title": "04. 新春“码”启 | Cocos 3D 小游戏场景设计和框架源代码",
                     "url": "https://mp.weixin.qq.com/s/8f3GZNd7qjwIhfTcsVruYQ"
                 },
                 {
-                    "title": "03. 新春“码”启 | Cocos 3D 小游戏总体设计方案和场景链路研发",
+                    "title": "03. 新春“码”启 | Cocos 3D 小游戏总体设计和场景链路研发",
                     "url": "https://mp.weixin.qq.com/s/V3CIhswW3CVcTY1aPaALTw"
                 },
                 {
-                    "title": "02. 新春“码”启 | 微信小游戏研发框架熟悉和Cocos 3D 研发框架了解",
+                    "title": "02. 新春“码”启 | 熟悉微信小游戏和 Cocos 3D 研发框架",
                     "url": "https://mp.weixin.qq.com/s/qlOYpjREXBKb7vl1kuujlg"
                 },
                 {
-                    "title": "01. 新春“码”启 | 0 基础开发微信小游戏技术选型（Cocos 游戏引擎）",
+                    "title": "01. 新春“码”启 | 微信小游戏0基础技术选型（Cocos 3D）",
                     "url": "https://mp.weixin.qq.com/s/TlgNKvGYMuGMmU0dIBPn4A"
                 }
             ],
             "versionList": [
                 {
-                    "version": "v20250201-1.0.1",
-                    "content": "第1个发布版本",
+                    "version": "v20250205-1.0.1",
+                    "content": "v1.0.1第1个发布版本",
                     "storgeName": "百度云盘",
                     "storgeLink": "https://pan.baidu.com/s/14lBfWLaiTiF6Yk1PCHU6CQ?pwd=LNTX",
                     "fetchCode": "LNTX"
