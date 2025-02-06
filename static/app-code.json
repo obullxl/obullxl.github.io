@@ -24,6 +24,13 @@
             ],
             "versionList": [
                 {
+                    "version": "v20250201-1.0.1",
+                    "content": "第1个发布版本",
+                    "storgeName": "百度云盘",
+                    "storgeLink": "https://pan.baidu.com/s/14lBfWLaiTiF6Yk1PCHU6CQ?pwd=LNTX",
+                    "fetchCode": "LNTX"
+                },
+                {
                     "version": "v20250201",
                     "content": "1.研发框架搭建和基础代码研发；2.开始菜单功能研发。",
                     "storgeName": "百度云盘",
