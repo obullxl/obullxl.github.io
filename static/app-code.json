@@ -28,6 +28,13 @@
             ],
             "versionList": [
                 {
+                    "version": "v20250207-1.0.2",
+                    "content": "v1.0.2：优化：游戏开始菜单移到主包中，游戏关卡根据远程配置动态生成。",
+                    "storgeName": "百度云盘",
+                    "storgeLink": "https://pan.baidu.com/s/1-QxnFaUiS9fLITDbkLhGoQ?pwd=LNTX",
+                    "fetchCode": "LNTX"
+                },
+                {
                     "version": "v20250205-1.0.1",
                     "content": "v1.0.1第1个发布版本",
                     "storgeName": "百度云盘",
