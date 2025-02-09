@@ -2,7 +2,7 @@
 slug = "2025020901"
 date = "2025-02-09"
 lastmod = "2025-02-09"
-title = "DeepSeek vs. Qwen 大模型编程能力比拼，谁更适合你的 AI 辅助编程助手？"
+title = "DeepSeek vs. Qwen 大模型编程能力比拼，谁更适合作为你的 AI 辅助编程助手？"
 description = "通过实际使用体验，对DeepSeek和Qwen大模型在价格、Web页面、Python、微信小程序和Cocos小游戏编程等方面进行了详细评测。结果显示，Qwen编程能力更胜一筹。特别是Web和Python编程测试中，Qwen的表现明显优于DeepSeek。文章还分享了具体的编程测试案例和源码，供读者参考和验证……"
 image = "00.jpg"
 tags = [ "AI", "DeepSeek", "Qwen", "大模型" ]
