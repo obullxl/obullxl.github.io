@@ -2,6 +2,25 @@
     "key1": "value1",
     "sourceCodeList": [
         {
+            "codeKey": "EulerAngle-Quat-01",
+            "codeName": "欧拉角和四元数",
+            "articleList": [
+                {
+                    "title": "欧拉角和四元数，3D 游戏开发中“旋转”难题的通俗讲解和应用实战",
+                    "url": "https://mp.weixin.qq.com/s/Y7xyIIquc5DbYfk58BcYqw"
+                }
+            ],
+            "versionList": [
+                {
+                    "version": "v20250215",
+                    "content": "欧拉角和四元数比较和实战源代码",
+                    "storgeName": "百度云盘",
+                    "storgeLink": "https://pan.baidu.com/s/1qkMKPgWGLtN4azPiBsbcSg?pwd=LNTX",
+                    "fetchCode": "LNTX"
+                }
+            ]
+        },
+        {
             "codeKey": "Qwen-DeepSeek-01",
             "codeName": "Qwen vs. DeepSeek 编程能力评测",
             "articleList": [
