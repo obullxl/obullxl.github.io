@@ -6,7 +6,7 @@ git push
 REM Check the error level after git push
 if %ERRORLEVEL% neq 0 (
     echo Git push failed, trying again in 1 second.
-    echo --------------------------------------------
+    echo ------------------------------------------------------------------------------------------
     timeout /t 1 >nul
     goto loop
 ) else (
@@ -16,6 +16,6 @@ if %ERRORLEVEL% neq 0 (
 
 :end
 echo Script completed.
-echo =========================
-echo Git push ‰ª£Á†ÅÊàêÂäü
-echo =========================
+echo ==================================================
+echo Git push ≥…π¶£°
+echo ==================================================
