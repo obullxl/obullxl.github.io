@@ -1,93 +1,95 @@
 {
     "version": "1.0.1",
-    "appName": "诗词填空",
+    "appName": "古诗词",
     "poemList": [
         {
             "title": "静夜思",
             "dynasty": "唐",
-            "author ":"李白",
+            "author": "李白",
             "verseList": [
                 {
-                    "lineNo": 1,
                     "verse": "床前明月光",
-                    "pinyin": "chuáng qián míng yuè guāng"
+                    "pinyin": "chuáng qián míng yuè guāng",
+                    "mark": "，"
                 },
                 {
-                    "lineNo": 2,
-                    "title": "疑是地上霜",
-                    "pinyin": "yí shì dì shàng shuāng"
+                    "verse": "疑是地上霜",
+                    "pinyin": "yí shì dì shàng shuāng",
+                    "mark": "。"
                 },
                 {
-                    "lineNo": 3,
-                    "title": "举头望明月",
-                    "pinyin": "jǔ tóu wàng míng yuè"
+                    "verse": "举头望明月",
+                    "pinyin": "jǔ tóu wàng míng yuè",
+                    "mark": "，"
                 },
                 {
-                    "lineNo": 4,
-                    "title": "低头思故乡",
-                    "pinyin": "dī tóu sī gù xiāng"
+                    "verse": "低头思故乡",
+                    "pinyin": "dī tóu sī gù xiāng",
+                    "mark": "。"
                 }
             ]
-        }, {
+        },
+        {
             "title": "稚子弄冰",
             "dynasty": "宋",
-            "author ":"杨万里",
+            "author": "杨万里",
             "verseList": [
                 {
-                    "lineNo": 1,
                     "verse": "稚子金盆脱晓冰",
-                    "pinyin": "zhì zǐ jīn pén tuō xiǎo bīng"
+                    "pinyin": "zhì zǐ jīn pén tuō xiǎo bīng",
+                    "mark": "，"
                 },
                 {
-                    "lineNo": 2,
-                    "title": "彩丝穿取当银钲",
-                    "pinyin": "cǎi sī chuān qǔ dāng yín zhēng"
+                    "verse": "彩丝穿取当银钲",
+                    "pinyin": "cǎi sī chuān qǔ dāng yín zhēng",
+                    "mark": "。"
                 },
                 {
-                    "lineNo": 3,
-                    "title": "敲成玉磬穿林响",
-                    "pinyin": "qiāo chéng yù qìng chuān lín xiǎng"
+                    "verse": "敲成玉磬穿林响",
+                    "pinyin": "qiāo chéng yù qìng chuān lín xiǎng",
+                    "mark": "，"
                 },
                 {
-                    "lineNo": 4,
-                    "title": "忽作玻璃碎地声",
-                    "pinyin": "hū zuò bō lí suì dì shēng"
+                    "verse": "忽作玻璃碎地声",
+                    "pinyin": "hū zuò bō lí suì dì shēng",
+                    "mark": "。"
                 }
             ]
-        }, {
+        },
+        {
             "title": "游子吟",
             "dynasty": "唐",
-            "author ":"孟郊",
+            "author": "孟郊",
             "verseList": [
                 {
-                    "lineNo": 1,
                     "verse": "慈母手中线",
-                    "pinyin": "cí mǔ shǒu zhōng xiàn"
+                    "pinyin": "cí mǔ shǒu zhōng xiàn",
+                    "mark": "，"
                 },
                 {
-                    "lineNo": 2,
-                    "title": "游子身上衣",
-                    "pinyin": "yóu zǐ shēn shàng yī"
+                    "verse": "游子身上衣",
+                    "pinyin": "yóu zǐ shēn shàng yī",
+                    "mark": "。"
                 },
                 {
-                    "lineNo": 3,
-                    "title": "临行密密缝",
-                    "pinyin": "lín xíng mì mì fèng"
+                    "verse": "临行密密缝",
+                    "pinyin": "lín xíng mì mì fèng",
+                    "mark": "，"
                 },
                 {
-                    "lineNo": 4,
-                    "title": "意恐迟迟归",
-                    "pinyin": "yì kǒng chí chí guī"
+                    "verse": "意恐迟迟归",
+                    "pinyin": "yì kǒng chí chí guī",
+                    "mark": "。"
                 },
                 {
-                    "lineNo": 5,
-                    "title": "谁言寸草心",
-                    "pinyin": "shuí yán cùn cǎo xīn"
+                    "verse": "谁言寸草心",
+                    "pinyin": "shuí yán cùn cǎo xīn",
+                    "mark": "，"
                 },
                 {
-                    "lineNo": 6,
-                    "title": "报得三春晖",
-                    "pinyin": "bào dé sān chūn huī"
+                    "verse": "报得三春晖",
+                    "pinyin": "bào dé sān chūn huī",
+                    "mark": "。"
                 }
             ]
         }
