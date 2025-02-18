@@ -1,0 +1,97 @@
+{
+    "version": "1.0.1",
+    "appName": "古诗词",
+    "poemList": [
+        {
+            "title": "静夜思",
+            "dynasty": "唐",
+            "author": "李白",
+            "verseList": [
+                {
+                    "verse": "床前明月光",
+                    "pinyin": "chuáng qián míng yuè guāng",
+                    "mark": "，"
+                },
+                {
+                    "verse": "疑是地上霜",
+                    "pinyin": "yí shì dì shàng shuāng",
+                    "mark": "。"
+                },
+                {
+                    "verse": "举头望明月",
+                    "pinyin": "jǔ tóu wàng míng yuè",
+                    "mark": "，"
+                },
+                {
+                    "verse": "低头思故乡",
+                    "pinyin": "dī tóu sī gù xiāng",
+                    "mark": "。"
+                }
+            ]
+        },
+        {
+            "title": "稚子弄冰",
+            "dynasty": "宋",
+            "author": "杨万里",
+            "verseList": [
+                {
+                    "verse": "稚子金盆脱晓冰",
+                    "pinyin": "zhì zǐ jīn pén tuō xiǎo bīng",
+                    "mark": "，"
+                },
+                {
+                    "verse": "彩丝穿取当银钲",
+                    "pinyin": "cǎi sī chuān qǔ dāng yín zhēng",
+                    "mark": "。"
+                },
+                {
+                    "verse": "敲成玉磬穿林响",
+                    "pinyin": "qiāo chéng yù qìng chuān lín xiǎng",
+                    "mark": "，"
+                },
+                {
+                    "verse": "忽作玻璃碎地声",
+                    "pinyin": "hū zuò bō lí suì dì shēng",
+                    "mark": "。"
+                }
+            ]
+        },
+        {
+            "title": "游子吟",
+            "dynasty": "唐",
+            "author": "孟郊",
+            "verseList": [
+                {
+                    "verse": "慈母手中线",
+                    "pinyin": "cí mǔ shǒu zhōng xiàn",
+                    "mark": "，"
+                },
+                {
+                    "verse": "游子身上衣",
+                    "pinyin": "yóu zǐ shēn shàng yī",
+                    "mark": "。"
+                },
+                {
+                    "verse": "临行密密缝",
+                    "pinyin": "lín xíng mì mì fèng",
+                    "mark": "，"
+                },
+                {
+                    "verse": "意恐迟迟归",
+                    "pinyin": "yì kǒng chí chí guī",
+                    "mark": "。"
+                },
+                {
+                    "verse": "谁言寸草心",
+                    "pinyin": "shuí yán cùn cǎo xīn",
+                    "mark": "，"
+                },
+                {
+                    "verse": "报得三春晖",
+                    "pinyin": "bào dé sān chūn huī",
+                    "mark": "。"
+                }
+            ]
+        }
+    ]
+}
