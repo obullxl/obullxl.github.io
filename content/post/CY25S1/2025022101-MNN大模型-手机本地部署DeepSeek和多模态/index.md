@@ -5,7 +5,7 @@ lastmod = "2025-02-21"
 title = "MNN 手机本地部署 DeepSeek R1 和多模态大模型，告别服务器繁忙！"
 description = "本文介绍了MNN Chat这款由阿里巴巴开源的多模态大模型应用。它支持本地运行，无需依赖外部服务器，确保数据隐私，同时兼容DeepSeek R1、Qwen等主流模型。通过实际测试，MNN Chat在文本生成、图像识别等任务中表现出色，推理速度远超传统方法。无论是车牌识别还是 Stable Diffusion 图像生成，MNN Chat都能为用户提供流畅的AI体验……"
 image = "00.jpg"
-tags = [ "AI", "欧拉角", "四元数", "旋转" ]
+tags = [ "AI", "MNN", "DeepSeek" ]
 categories = [ "人工智能" ]
 +++
 
