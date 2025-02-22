@@ -1,0 +1,49 @@
+下面是一篇小学课文内容的JSON配置，配置项说明如下：
+1. wordList 是生字列表的配置，每个配置项：
+ - word 代表具体单个中文生字，wordPinYin 是对应的拼音内容
+ - termList 是word生字的常见词语列表，termPinYinList 是词语列表的拼音
+2. sentenceList 是包含生字的句子，目的是让小学生更容易记住生字。
+
+请根据目前JSON配置，完成以下工作：
+1. 补充 wordPinYin 生字拼音，补充 termPinYinList 常见词语拼音。
+2. 参考 termList 词语列表的形式，额外补充3个常见词语，放入到 extTermList 配置项中，extTermPinYinList 则为额外词语的拼音。
+3. 参考 sentenceList 内容形式和格式，额外补充5个常见句子，放入到 extSentenceList 配置项中。
+
+要求：
+1. 拼音需要增加对应的声调。
+2. 配置项每个汉字的拼音之间，使用英文空格分隔。
+3. 严格按照JSON格式返回，禁止返回其他任何内容。
+
+```json
+{
+  "version": "1.0.1",
+  "subject": "语文",
+  "useGrade": {
+    "id": 100012,
+    "text": "一年级（下）"
+  },
+  "moduleList": [
+    {
+      "title": "第一单元",
+      "object": "识字",
+      "unitList": [
+        {
+          "page": "",
+          "title": "春夏秋冬",
+          "titlePinYin": "chūn xià qiū dōng",
+          "wordList": [
+            {"word":"春", "wordPinYin": "chūn", "termList": ["春日","春节","春雨如油"],"termPinYinList": [], "extTermList":[], "extTermPinYinList": []},
+            {"word":"冬", "wordPinYin": "dōng", "termList": ["冬天","冬日","寒冬腊月"],"termPinYinList": [], "extTermList":[], "extTermPinYinList": []},
+            {"word":"吹", "wordPinYin": "chuī", "termList": ["吹风","吹牛","风吹雨打"],"termPinYinList": [], "extTermList":[], "extTermPinYinList": []},
+            {"word":"花", "wordPinYin": "huā", "termList": ["花草","花朵","五花八门"],"termPinYinList": [], "extTermList":[], "extTermPinYinList": []},
+            {"word":"飞", "wordPinYin": "fēi", "termList": ["飞虫","飞机","龙凤凤舞"],"termPinYinList": [], "extTermList":[], "extTermPinYinList": []},
+            {"word":"入", "wordPinYin": "rù", "termList": ["加入","出入","入木三分"],"termPinYinList": [], "extTermList":[], "extTermPinYinList": []}
+          ],
+          "sentenceList": ["春天到了，花儿红了，草儿绿了。"],
+          "extSentenceList": []
+        }
+      ]
+    }
+  ]
+}
+```

@@ -1,0 +1,79 @@
+{
+  "version": "1.0.1",
+  "subject": "语文",
+  "useGrade": {
+    "id": 100012,
+    "text": "一年级（下）"
+  },
+  "moduleList": [
+    {
+      "title": "第一单元",
+      "object": "识字",
+      "unitList": [
+        {
+          "page": "",
+          "title": "春夏秋冬",
+          "titlePinYin": "chūn xià qiū dōng",
+          "wordList": [
+            {
+              "word": "春",
+              "wordPinYin": "chūn",
+              "termList": ["春日", "春节", "春雨如油"],
+              "termPinYinList": ["chūn rì", "chūn jié", "chūn yǔ rú yóu"],
+              "extTermList": ["春风拂面", "春暖花开", "春华秋实"],
+              "extTermPinYinList": ["chūn fēng fú miàn", "chūn nuǎn huā kāi", "chūn huá qiū shí"]
+            },
+            {
+              "word": "冬",
+              "wordPinYin": "dōng",
+              "termList": ["冬天", "冬日", "寒冬腊月"],
+              "termPinYinList": ["dōng tiān", "dōng rì", "hán dōng là yuè"],
+              "extTermList": ["冬去春来", "冬眠动物", "冬雪皑皑"],
+              "extTermPinYinList": ["dōng qù chūn lái", "dōng mián dòng wù", "dōng xuě ái ái"]
+            },
+            {
+              "word": "吹",
+              "wordPinYin": "chuī",
+              "termList": ["吹风", "吹牛", "风吹雨打"],
+              "termPinYinList": ["chuī fēng", "chuī niú", "fēng chuī yǔ dǎ"],
+              "extTermList": ["吹气球", "吹喇叭", "吹毛求疵"],
+              "extTermPinYinList": ["chuī qì qiú", "chuī lǎ ba", "chuī máo qiú cī"]
+            },
+            {
+              "word": "花",
+              "wordPinYin": "huā",
+              "termList": ["花草", "花朵", "五花八门"],
+              "termPinYinList": ["huā cǎo", "huā duǒ", "wǔ huā bā mén"],
+              "extTermList": ["花香四溢", "花红柳绿", "百花争艳"],
+              "extTermPinYinList": ["huā xiāng sì yì", "huā hóng liǔ lǜ", "bǎi huā zhēng yàn"]
+            },
+            {
+              "word": "飞",
+              "wordPinYin": "fēi",
+              "termList": ["飞虫", "飞机", "龙飞凤舞"],
+              "termPinYinList": ["fēi chóng", "fēi jī", "lóng fēi fèng wǔ"],
+              "extTermList": ["飞黄腾达", "飞檐走壁", "一飞冲天"],
+              "extTermPinYinList": ["fēi huáng téng dá", "fēi yán zǒu bì", "yī fēi chōng tiān"]
+            },
+            {
+              "word": "入",
+              "wordPinYin": "rù",
+              "termList": ["加入", "出入", "入木三分"],
+              "termPinYinList": ["jiā rù", "chū rù", "rù mù sān fēn"],
+              "extTermList": ["入门基础", "深入浅出", "不入虎穴，焉得虎子"],
+              "extTermPinYinList": ["rù mén jī chǔ", "shēn rù qiǎn chū", "bù rù hǔ xué, yān dé hǔ zǐ"]
+            }
+          ],
+          "sentenceList": ["春天到了，花儿红了，草儿绿了。"],
+          "extSentenceList": [
+            "冬天来了，北风呼啸，雪花飘落。",
+            "风吹过田野，带来了阵阵清香。",
+            "花儿在阳光下绽放，蜜蜂和蝴蝶翩翩起舞。",
+            "小鸟在天空中自由自在地飞翔。",
+            "小明加入了学校的足球队，每天练习踢球。"
+          ]
+        }
+      ]
+    }
+  ]
+}
