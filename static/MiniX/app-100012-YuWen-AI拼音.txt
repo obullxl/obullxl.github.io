@@ -16,34 +16,127 @@
 
 ```json
 {
-  "version": "1.0.1",
-  "subject": "语文",
-  "useGrade": {
-    "id": 100012,
-    "text": "一年级（下）"
-  },
-  "moduleList": [
-    {
-      "title": "第一单元",
-      "object": "识字",
-      "unitList": [
-        {
           "page": "",
-          "title": "春夏秋冬",
-          "titlePinYin": "chūn xià qiū dōng",
+          "title": "语文园地一",
+          "titlePinYin": "",
+          "checkTermCount": 4,
           "wordList": [
-            {"word":"春", "wordPinYin": "chūn", "termList": ["春日","春节","春雨如油"],"termPinYinList": [], "extTermList":[], "extTermPinYinList": []},
-            {"word":"冬", "wordPinYin": "dōng", "termList": ["冬天","冬日","寒冬腊月"],"termPinYinList": [], "extTermList":[], "extTermPinYinList": []},
-            {"word":"吹", "wordPinYin": "chuī", "termList": ["吹风","吹牛","风吹雨打"],"termPinYinList": [], "extTermList":[], "extTermPinYinList": []},
-            {"word":"花", "wordPinYin": "huā", "termList": ["花草","花朵","五花八门"],"termPinYinList": [], "extTermList":[], "extTermPinYinList": []},
-            {"word":"飞", "wordPinYin": "fēi", "termList": ["飞虫","飞机","龙凤凤舞"],"termPinYinList": [], "extTermList":[], "extTermPinYinList": []},
-            {"word":"入", "wordPinYin": "rù", "termList": ["加入","出入","入木三分"],"termPinYinList": [], "extTermList":[], "extTermPinYinList": []}
-          ],
-          "sentenceList": ["春天到了，花儿红了，草儿绿了。"],
-          "extSentenceList": []
+            {
+              "word": "文",
+              "wordPinYin": "",
+              "termList": ["文字", "公文", "一文不值"],
+              "termPinYinList": [],
+              "extTermList": [],
+              "extTermPinYinList": []
+            },
+            {
+              "word": "卡",
+              "wordPinYin": "",
+              "termList": ["卡片", "卡车", "信用卡"],
+              "termPinYinList": [],
+              "extTermList": [],
+              "extTermPinYinList": []
+            },
+            {
+              "word": "片",
+              "wordPinYin": "",
+              "termList": ["卡片", "名片", "只言片语"],
+              "termPinYinList": [],
+              "extTermList": [],
+              "extTermPinYinList": []
+            },
+            {
+              "word": "合",
+              "wordPinYin": "",
+              "termList": ["合力", "一拍即合"],
+              "termPinYinList": [],
+              "extTermList": [],
+              "extTermPinYinList": []
+            }
+          ]
         }
-      ]
-    }
-  ]
-}
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "page": "",
+  "title": "姓氏歌",
+  "titlePinYin": "",
+  "checkTermCount": 4,
+  "wordList": [
+    {
+      "word": "什",
+      "wordPinYin": "",
+      "termList": ["什么", "为什么", ""],
+      "termPinYinList": [],
+      "extTermList": [],
+      "extTermPinYinList": []
+    },
+    {
+      "word": "么",
+      "wordPinYin": "",
+      "termList": ["什么", "多么", ""],
+      "termPinYinList": [],
+      "extTermList": [],
+      "extTermPinYinList": []
+    },
+    {
+      "word": "古",
+      "wordPinYin": "",
+      "termList": ["千古", "古老", "古今中外"],
+      "termPinYinList": [],
+      "extTermList": [],
+      "extTermPinYinList": []
+    },
+    {
+      "word": "胡",
+      "wordPinYin": "",
+      "termList": ["胡子", "二胡", "胡思乱想"],
+      "termPinYinList": [],
+      "extTermList": [],
+      "extTermPinYinList": []
+    },
+    {
+      "word": "双",
+      "wordPinYin": "",
+      "termList": ["双人", "双手", "举世无双"],
+      "termPinYinList": [],
+      "extTermList": [],
+      "extTermPinYinList": []
+    },
+    {
+      "word": "言",
+      "wordPinYin": "",
+      "termList": ["名言", "语言", "自言自语"],
+      "termPinYinList": [],
+      "extTermList": [],
+      "extTermPinYinList": []
+    }
+  ],
+  "sentenceList": ["你姓什么？我姓王"],
+  "extSentenceList": []
+}
