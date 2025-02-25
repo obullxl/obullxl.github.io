@@ -61,8 +61,8 @@
               "wordPinYin": "rù",
               "termList": ["加入", "出入", "入木三分"],
               "termPinYinList": ["jiā rù", "chū rù", "rù mù sān fēn"],
-              "extTermList": ["入门基础", "深入浅出", "不入虎穴，焉得虎子"],
-              "extTermPinYinList": ["rù mén jī chǔ", "shēn rù qiǎn chū", "bù rù hǔ xué, yān dé hǔ zǐ"]
+              "extTermList": ["入门基础", "深入浅出", "不入虎穴", "焉得虎子"],
+              "extTermPinYinList": ["rù mén jī chǔ", "shēn rù qiǎn chū", "bù rù hǔ xué", "yān dé hǔ zǐ"]
             }
           ],
           "sentenceList": ["春天到了，花儿红了，草儿绿了。"],
