@@ -313,6 +313,12 @@
             "大家齐心协力，终于完成了任务。",
             "我们一家人围坐在一起看春节联欢晚会。"
           ]
+        },
+        {
+          "page": "./learn-yuwen-module",
+          "title": "综合",
+          "subTitle": "第一单元",
+          "checkTermCount": 4
         }
       ]
     }, {
