@@ -1,0 +1,9 @@
+*.zip
+*.png
+resources/
+!book.png
+.DS_Store
+images/
+*.mp3
+*.mp4
+*.py
