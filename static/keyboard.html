@@ -590,6 +590,10 @@
                 progressFillEl.style.width = `${progress}%`;
                 overallProgressEl.textContent = progress;
 
+                // const progress = Math.round(((currentGroup * groupSize) + currentIndex + 1) / (groups * groupSize) * 100);
+                // progressFillEl.style.width = `${progress}%`;
+                // overallProgressEl.textContent = progress;
+
                 // 高亮当前键
                 highlightCurrentKey();
             }
@@ -675,6 +679,10 @@
                     if (currentGroup >= groups) {
                         // 所有组完成
                         completionEl.style.display = 'block';
+
+                        // 确保进度条显示100%
+                        progressFillEl.style.width = '100%';
+                        overallProgressEl.textContent = '100';
                         return;
                     }
                 }
