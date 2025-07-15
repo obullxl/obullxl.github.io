@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>键盘字母练习 - 专为初学者设计的键盘训练工具 - 通过练习提高打字速度和准确性</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --cm-primary: #4361ee;
+            --cm-success: #06d6a0;
+            --cm-error: #ef476f;
+            --cm-warning: #ffd166;
+            --cm-light: #f8f9fa;
+            --cm-dark: #212529;
+            --cm-key-width: 55px;
+            --cm-key-height: 55px;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e0e7ff 0%, #d1e0fd 100%);
+            min-height: 100vh;
+            /* padding: 10px; */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .cm-container {
+            max-width: 1000px;
+            background-color: white;
+            border-radius: 18px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            padding: 30px;
+            margin: 5px auto;
+        }
+
+        .cm-header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--cm-primary);
+        }
+
+        .cm-header h1 {
+            font-weight: 800;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+            font-size: 2.5rem;
+        }
+
+        .cm-header p {
+            font-size: 1.2rem;
+            color: #4a5568;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cm-progress-container {
+            background-color: var(--cm-light);
+            border-radius: 12px;
+            padding: 18px;
+            margin-bottom: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cm-progress-bar {
+            height: 22px;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #e9ecef;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.08);
+        }
+
+        .cm-progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--cm-primary), #5a6fdb);
+            border-radius: 12px;
+            transition: width 0.5s ease;
+        }
+
+        .cm-exercise-area {
+            background: linear-gradient(to bottom, #f9fafb, #f0f4f8);
+            border-radius: 15px;
+            padding: 30px 20px;
+            margin-bottom: 25px;
+            box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .cm-letters-row {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .cm-target-letter {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: bold;
+            background-color: white;
+            border: 3px solid #dee2e6;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .cm-target-letter.current {
+            border-color: var(--cm-primary);
+            background-color: rgba(67, 97, 238, 0.08);
+            transform: scale(1.08);
+            box-shadow: 0 6px 18px rgba(67, 97, 238, 0.2);
+        }
+
+        .cm-target-letter.error {
+            border-color: var(--cm-error);
+            background-color: rgba(239, 71, 111, 0.1);
+            animation: cm-pulse 0.6s ease;
+        }
+
+        .cm-target-letter.correct {
+            border-color: var(--cm-success);
+            background-color: rgba(6, 214, 160, 0.08);
+        }
+
+        .cm-target-letter::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: transparent;
+            transition: background-color 0.3s;
+        }
+
+        .cm-target-letter.correct::after {
+            background-color: var(--cm-success);
+        }
+
+        .cm-target-letter.error::after {
+            background-color: var(--cm-error);
+        }
+
+        .cm-keyboard-container {
+            background-color: #2b2d42;
+            border-radius: 15px;
+            padding: 25px 35px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            margin-top: 10px;
+        }
+
+        .cm-keyboard {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .cm-keyboard-row {
+            display: flex;
+            gap: 6px;
+            position: relative;
+        }
+
+        .cm-key {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(145deg, #4a4d64, #3a3c50);
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.35);
+            user-select: none;
+            transition: all 0.2s ease;
+            font-size: 18px;
+            height: var(--cm-key-height);
+        }
+
+        .cm-key.standard {
+            width: var(--cm-key-width);
+        }
+
+        .cm-key.highlight {
+            background: linear-gradient(145deg, #4895ef, #4361ee);
+            box-shadow: 0 0 20px rgba(67, 97, 238, 0.8);
+            transform: scale(1.12);
+            z-index: 10;
+        }
+
+        .cm-key.error {
+            animation: cm-blink 0.6s ease;
+        }
+
+        .cm-stats-container {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e2e8f0;
+        }
+
+        .cm-stats {
+            display: flex;
+            gap: 30px;
+            justify-content: space-around;
+            margin-bottom: 10px;
+
+            /*
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            */
+        }
+
+        .cm-stat-box {
+            text-align: center;
+            padding: 0 15px;
+        }
+
+        .cm-stat-value {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--cm-primary);
+            margin-bottom: 5px;
+        }
+
+        .cm-stat-label {
+            font-size: 15px;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .cm-shortcut-hint {
+            text-align: center;
+            font-size: 14px;
+            color: #64748b;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 15px auto 0;
+        }
+
+        .cm-shortcut-key {
+            display: inline-block;
+            padding: 2px 8px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            border: 1px solid #dee2e6;
+            font-family: monospace;
+            margin: 0 3px;
+        }
+
+        @keyframes cm-blink {
+            0% {
+                box-shadow: 0 0 0 0 rgba(239, 71, 111, 0.7);
+            }
+
+            50% {
+                box-shadow: 0 0 0 12px rgba(239, 71, 111, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(239, 71, 111, 0);
+            }
+        }
+
+        @keyframes cm-pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .cm-completion {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #4361ee, #3f37c9);
+            color: white;
+            border-radius: 15px;
+            margin-top: 30px;
+            display: none;
+            box-shadow: 0 10px 25px rgba(67, 97, 238, 0.4);
+        }
+
+        .cm-completion h2 {
+            font-weight: 800;
+            margin-bottom: 15px;
+            font-size: 36px;
+        }
+
+        .cm-completion p {
+            font-size: 20px;
+            /* margin-bottom: 25px; */
+        }
+
+        .cm-row-2 {
+            margin-left: 25px;
+        }
+
+        .cm-row-3 {
+            margin-left: 50px;
+        }
+
+        .cm-instruction {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 16px;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        @media (max-width: 992px) {
+            .cm-target-letter {
+                width: 50px;
+                height: 50px;
+                font-size: 26px;
+            }
+
+            :root {
+                --cm-key-width: 45px;
+                --cm-key-height: 45px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cm-letters-row {
+                gap: 6px;
+            }
+
+            .cm-target-letter {
+                width: 45px;
+                height: 45px;
+                font-size: 24px;
+            }
+
+            .cm-stats {
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .cm-stat-box {
+                min-width: 80px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .cm-container {
+                padding: 20px;
+            }
+
+            .cm-header h1 {
+                font-size: 2rem;
+            }
+
+            .cm-header p {
+                font-size: 1rem;
+            }
+
+            .cm-target-letter {
+                width: 40px;
+                height: 40px;
+                font-size: 22px;
+            }
+
+            :root {
+                --cm-key-width: 35px;
+                --cm-key-height: 35px;
+            }
+
+            .cm-keyboard-container {
+                padding: 15px 20px;
+            }
+
+            .cm-stat-value {
+                font-size: 22px;
+            }
+
+            .cm-stat-box {
+                padding: 0 5px;
+            }
+
+            .cm-stats {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cm-container">
+        <div class="cm-header">
+            <h1>键盘字母练习</h1>
+            <p>专为初学者设计的键盘训练工具 - 通过练习提高打字速度和准确性</p>
+        </div>
+
+        <div class="cm-progress-container">
+            <div class="d-flex justify-content-between mb-2">
+                <span class="fw-medium">第 <span id="cm-current-group">1</span> 组 / 共 10 组</span>
+                <span class="fw-medium">进度: <span id="cm-overall-progress">0</span>%</span>
+            </div>
+            <div class="cm-progress-bar">
+                <div class="cm-progress-fill" id="cm-progress-fill" style="width: 0%"></div>
+            </div>
+        </div>
+
+        <div class="cm-exercise-area">
+            <div class="cm-letters-row" id="cm-letters-row">
+                <!-- 字母将通过JS动态生成 -->
+            </div>
+            <!--
+            <div class="cm-instruction">
+                请按上方高亮显示的字母键开始练习
+            </div>
+            -->
+        </div>
+
+        <div class="cm-keyboard-container">
+            <div class="cm-keyboard" id="cm-keyboard">
+                <!-- 键盘将通过JS动态生成 -->
+            </div>
+        </div>
+
+        <div class="cm-stats-container" id="cm-stats-container">
+            <div class="cm-stats">
+                <div class="cm-stat-box">
+                    <div class="cm-stat-value" id="cm-accuracy">0%</div>
+                    <div class="cm-stat-label">准确率</div>
+                </div>
+                <div class="cm-stat-box">
+                    <div class="cm-stat-value" id="cm-completed">0</div>
+                    <div class="cm-stat-label">已完成</div>
+                </div>
+                <div class="cm-stat-box">
+                    <div class="cm-stat-value" id="cm-errors">0</div>
+                    <div class="cm-stat-label">错误次数</div>
+                </div>
+            </div>
+            <!--
+            <div class="cm-shortcut-hint">
+                提示：按 <span class="cm-shortcut-key">R</span> 键可重新开始练习
+            </div>
+            -->
+        </div>
+
+        <div class="cm-completion" id="cm-completion">
+            <h2>恭喜！练习完成！</h2>
+            <p>您已成功完成所有10组字母练习</p>
+            <!--p>按 <span class="cm-shortcut-key">R</span> 键可重新开始练习</p-->
+        </div>
+    </div>
+
+    <!-- 音频元素 -->
+    <audio id="cm-type-sound" preload="auto">
+        <source src="./keyboard/type.wav" type="audio/mpeg">
+    </audio>
+    <audio id="cm-error-sound" preload="auto">
+        <source src="./keyboard/error.wav" type="audio/mpeg">
+    </audio>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 初始化变量
+            const groups = 10;
+            const groupSize = 10;
+            let currentGroup = 0;
+            let currentIndex = 0;
+            let exerciseData = [];
+            let completed = 0;
+            let errors = 0;
+
+            // DOM 元素
+            const lettersRowEl = document.getElementById('cm-letters-row');
+            const keyboardEl = document.getElementById('cm-keyboard');
+            const completionEl = document.getElementById('cm-completion');
+            const statsContainerEl = document.getElementById('cm-stats-container');
+            const currentGroupEl = document.getElementById('cm-current-group');
+            const progressFillEl = document.getElementById('cm-progress-fill');
+            const overallProgressEl = document.getElementById('cm-overall-progress');
+            const accuracyEl = document.getElementById('cm-accuracy');
+            const completedEl = document.getElementById('cm-completed');
+            const errorsEl = document.getElementById('cm-errors');
+
+            // 音频元素
+            const typeSound = document.getElementById('cm-type-sound');
+            const errorSound = document.getElementById('cm-error-sound');
+
+            // 键盘布局 - 更接近真实键盘
+            const keyboardLayout = [
+                // 第一行
+                {
+                    keys: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
+                    className: ''
+                },
+                // 第二行（带偏移）
+                {
+                    keys: ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'],
+                    className: 'cm-row-2'
+                },
+                // 第三行（更大偏移）
+                {
+                    keys: ['z', 'x', 'c', 'v', 'b', 'n', 'm'],
+                    className: 'cm-row-3'
+                }
+            ];
+
+            // 生成练习数据
+            function generateExerciseData() {
+                exerciseData = [];
+                for (let i = 0; i < groups; i++) {
+                    const group = [];
+                    for (let j = 0; j < groupSize; j++) {
+                        // 生成随机小写字母 (a-z)
+                        const charCode = Math.floor(Math.random() * 26) + 97;
+                        group.push(String.fromCharCode(charCode));
+                    }
+                    exerciseData.push(group);
+                }
+            }
+
+            // 渲染键盘
+            function renderKeyboard() {
+                keyboardEl.innerHTML = '';
+
+                keyboardLayout.forEach(row => {
+                    const rowEl = document.createElement('div');
+                    rowEl.className = `cm-keyboard-row ${row.className}`;
+
+                    row.keys.forEach(key => {
+                        const keyEl = document.createElement('div');
+                        keyEl.className = 'cm-key standard';
+                        keyEl.textContent = key;
+                        keyEl.id = `cm-key-${key}`;
+                        rowEl.appendChild(keyEl);
+                    });
+
+                    keyboardEl.appendChild(rowEl);
+                });
+            }
+
+            // 渲染当前练习组
+            function renderCurrentGroup() {
+                lettersRowEl.innerHTML = '';
+
+                const currentGroupData = exerciseData[currentGroup];
+
+                currentGroupData.forEach((letter, index) => {
+                    // 创建字母元素
+                    const letterEl = document.createElement('div');
+                    letterEl.className = 'cm-target-letter';
+                    letterEl.textContent = letter;
+                    letterEl.id = `cm-letter-${index}`;
+
+                    if (index === currentIndex) {
+                        letterEl.classList.add('current');
+                    } else if (index < currentIndex) {
+                        letterEl.classList.add('correct');
+                    }
+
+                    lettersRowEl.appendChild(letterEl);
+                });
+
+                // 更新进度
+                currentGroupEl.textContent = currentGroup + 1;
+                const progress = Math.round(((currentGroup * groupSize) + currentIndex) / (groups * groupSize) * 100);
+                progressFillEl.style.width = `${progress}%`;
+                overallProgressEl.textContent = progress;
+
+                // 高亮当前键
+                highlightCurrentKey();
+            }
+
+            // 高亮当前键
+            function highlightCurrentKey() {
+                // 移除所有高亮
+                document.querySelectorAll('.cm-key').forEach(key => {
+                    key.classList.remove('highlight');
+                });
+
+                // 高亮当前键
+                const currentLetter = exerciseData[currentGroup][currentIndex];
+                const currentKey = document.getElementById(`cm-key-${currentLetter}`);
+                if (currentKey) {
+                    currentKey.classList.add('highlight');
+                }
+            }
+
+            // 处理键盘输入
+            function handleKeyPress(key) {
+                // 重新开始快捷键
+                /*
+                if (key === 'r' || key === 'R') {
+                    startExercise();
+                    return;
+                }
+                */
+
+                const currentLetter = exerciseData[currentGroup][currentIndex];
+                const letterEl = document.getElementById(`cm-letter-${currentIndex}`);
+
+                if (key === currentLetter) {
+                    // 正确输入
+                    letterEl.classList.remove('error');
+                    letterEl.classList.add('correct');
+
+                    // 播放音效
+                    typeSound.currentTime = 0; // 重置播放位置
+                    typeSound.play();
+
+                    completed++;
+                    completedEl.textContent = completed;
+
+                    // 移动到下一个
+                    moveToNext();
+                } else {
+                    // 错误输入
+                    letterEl.classList.add('error');
+
+                    // 播放错误音效
+                    errorSound.currentTime = 0; // 重置播放位置
+                    errorSound.play();
+
+                    // 键盘闪烁效果
+                    const currentKey = document.getElementById(`cm-key-${currentLetter}`);
+                    if (currentKey) {
+                        currentKey.classList.add('error');
+                        setTimeout(() => {
+                            currentKey.classList.remove('error');
+                        }, 600);
+                    }
+
+                    errors++;
+                    errorsEl.textContent = errors;
+
+                    // 更新准确率
+                    const total = completed + errors;
+                    const accuracy = total === 0 ? 0 : Math.round((completed / total) * 100);
+                    accuracyEl.textContent = `${accuracy}%`;
+                }
+            }
+
+            // 移动到下一个字母
+            function moveToNext() {
+                currentIndex++;
+
+                if (currentIndex >= groupSize) {
+                    // 完成当前组
+                    currentGroup++;
+                    currentIndex = 0;
+
+                    if (currentGroup >= groups) {
+                        // 所有组完成
+                        completionEl.style.display = 'block';
+                        return;
+                    }
+                }
+
+                renderCurrentGroup();
+            }
+
+            // 开始练习
+            function startExercise() {
+                generateExerciseData();
+                currentGroup = 0;
+                currentIndex = 0;
+                completed = 0;
+                errors = 0;
+
+                completedEl.textContent = '0';
+                errorsEl.textContent = '0';
+                accuracyEl.textContent = '0%';
+
+                completionEl.style.display = 'none';
+
+                renderCurrentGroup();
+            }
+
+            // 键盘事件处理
+            document.addEventListener('keydown', function (e) {
+                // 只处理字母键
+                if (e.key.length === 1 && e.key.match(/[a-z]/i)) {
+                    e.preventDefault();
+                    handleKeyPress(e.key.toLowerCase());
+                }
+
+                // 处理重新开始快捷键
+                if (e.key === 'r' || e.key === 'R') {
+                    handleKeyPress(e.key);
+                }
+            });
+
+            // 初始化
+            renderKeyboard();
+            startExercise();
+        });
+    </script>
+</body>
+
+</html>

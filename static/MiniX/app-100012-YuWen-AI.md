@@ -299,20 +299,47 @@
 
 
 
+https://ntopic.cn/MiniX/100012/一共.mp3
+
+EdgeOne Pages:
+项目名称: obullxl
+根目录: ./
+输出目录: public
+构建命令: HUGO_VERSION=0.108.0 HUGO_ENV=production hugo
 
 
 
+请继续增加功能，并提供完整的文件内容：
+1. 支持用户调整每个词语重复次数（默认3次），和每次播放的间隔时长（单位秒，默认3秒钟，最少1秒钟，最长30秒钟）
+2. 支持用户调整每个词语播放完成之后，暂停时长（单位秒，默认5秒钟，最小1秒钟，最长30秒钟）
+3. 开始听写之后，所有设置均不可修改
+4. 开始听写之后，支持用户取消本次听写，页面恢复可设置状态
+5. 开始听写之后，展示当前听写的是第几个词语
+6. 听写结束，用户可以点击查看词语列表，按照当前听写的顺序展示词语列表
 
 
 
+/**
+     * 初始化
+     */
+    onLoad: function (opt) {
+        // 当前年级
+        const useGrade = LearnUtils.fetchUseGrade(app);
+        this.setData({
+            useGrade: useGrade,
+            useGradeId: useGrade.id,
+        }, () => {
+            wx.setNavigationBarTitle({
+                title: `语文 · ${useGrade.text}`,
+            });
+        });
 
-
-
-
-
-
-
-
-
-
-
+        // 加载配置（年级ID）
+        LearnUtils.fetchYuWenList(useGrade.id, (data) => {
+            const { moduleList } = data;
+            this.setData({
+                moduleList: moduleList,
+                moduleTitles: data.moduleList.map(m => m.title),
+            });
+        });
+    },
