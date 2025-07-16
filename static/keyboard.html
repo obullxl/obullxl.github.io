@@ -513,17 +513,17 @@
             const keyboardLayout = [
                 // 第一行
                 {
-                    keys: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
+                    keys: ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
                     className: ''
                 },
                 // 第二行（带偏移）
                 {
-                    keys: ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'],
+                    keys: ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
                     className: 'cm-row-2'
                 },
                 // 第三行（更大偏移）
                 {
-                    keys: ['z', 'x', 'c', 'v', 'b', 'n', 'm'],
+                    keys: ['Z', 'X', 'C', 'V', 'B', 'N', 'M'],
                     className: 'cm-row-3'
                 }
             ];
@@ -590,10 +590,6 @@
                 progressFillEl.style.width = `${progress}%`;
                 overallProgressEl.textContent = progress;
 
-                // const progress = Math.round(((currentGroup * groupSize) + currentIndex + 1) / (groups * groupSize) * 100);
-                // progressFillEl.style.width = `${progress}%`;
-                // overallProgressEl.textContent = progress;
-
                 // 高亮当前键
                 highlightCurrentKey();
             }
@@ -616,17 +612,15 @@
             // 处理键盘输入
             function handleKeyPress(key) {
                 // 重新开始快捷键
-                /*
-                if (key === 'r' || key === 'R') {
+                if (key === 'R') {
                     startExercise();
                     return;
                 }
-                */
 
                 const currentLetter = exerciseData[currentGroup][currentIndex];
                 const letterEl = document.getElementById(`cm-letter-${currentIndex}`);
 
-                if (key === currentLetter) {
+                if (key === currentLetter.toLowerCase()) {
                     // 正确输入
                     letterEl.classList.remove('error');
                     letterEl.classList.add('correct');
