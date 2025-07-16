@@ -602,7 +602,7 @@
                 });
 
                 // 高亮当前键
-                const currentLetter = exerciseData[currentGroup][currentIndex];
+                const currentLetter = exerciseData[currentGroup][currentIndex].toUpperCase();
                 const currentKey = document.getElementById(`cm-key-${currentLetter}`);
                 if (currentKey) {
                     currentKey.classList.add('highlight');
