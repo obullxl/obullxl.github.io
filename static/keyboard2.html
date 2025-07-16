@@ -21,7 +21,7 @@
         body {
             background: linear-gradient(135deg, #e0e7ff 0%, #d1e0fd 100%);
             min-height: 100vh;
-            padding: 20px;
+            /* padding: 10px; */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             overflow-x: hidden;
         }
@@ -32,7 +32,7 @@
             border-radius: 18px;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
             padding: 30px;
-            margin: 20px auto;
+            margin: 5px auto;
         }
 
         .cm-header {
@@ -214,9 +214,18 @@
         .cm-stats {
             display: flex;
             gap: 30px;
-            /* justify-content: center; */
             justify-content: space-around;
             margin-bottom: 10px;
+
+            /*
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            */
         }
 
         .cm-stat-box {
@@ -287,122 +296,42 @@
             }
         }
 
+        .cm-completion {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #4361ee, #3f37c9);
+            color: white;
+            border-radius: 15px;
+            margin-top: 30px;
+            display: none;
+            box-shadow: 0 10px 25px rgba(67, 97, 238, 0.4);
+        }
+
+        .cm-completion h2 {
+            font-weight: 800;
+            margin-bottom: 15px;
+            font-size: 36px;
+        }
+
+        .cm-completion p {
+            font-size: 20px;
+            /* margin-bottom: 25px; */
+        }
+
+        .cm-row-2 {
+            margin-left: 25px;
+        }
+
+        .cm-row-3 {
+            margin-left: 50px;
+        }
+
         .cm-instruction {
             text-align: center;
             margin-top: 15px;
             font-size: 16px;
             color: #64748b;
             font-weight: 500;
-        }
-
-        /* 手指选择区域样式 */
-        .cm-finger-selection {
-            background-color: #f8f9fa;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 25px;
-            border: 1px solid #e2e8f0;
-        }
-
-        .cm-finger-title {
-            text-align: center;
-            margin-bottom: 15px;
-            font-weight: 600;
-            color: #4361ee;
-        }
-
-        .cm-finger-options {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .cm-finger-option {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .cm-finger-btn {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-            border: 3px solid #dee2e6;
-            background-color: white;
-            transition: all 0.3s ease;
-        }
-
-        .cm-finger-btn.active {
-            border-color: #4361ee;
-            background-color: rgba(67, 97, 238, 0.1);
-            transform: scale(1.05);
-            box-shadow: 0 4px 10px rgba(67, 97, 238, 0.2);
-        }
-
-        .cm-finger-label {
-            margin-top: 8px;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        /* 模态框样式 */
-        .cm-modal-content {
-            border-radius: 15px;
-            overflow: hidden;
-        }
-
-        .cm-modal-header {
-            background: linear-gradient(135deg, #4361ee, #3f37c9);
-            color: white;
-            border-bottom: none;
-            padding: 20px;
-        }
-
-        .cm-modal-body {
-            padding: 30px;
-            text-align: center;
-        }
-
-        .cm-modal-footer {
-            border-top: none;
-            padding: 20px;
-            justify-content: center;
-        }
-
-        .cm-modal-icon {
-            font-size: 60px;
-            margin-bottom: 20px;
-            color: #06d6a0;
-        }
-
-        .cm-modal-stats {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 20px 0;
-        }
-
-        .cm-modal-stat {
-            text-align: center;
-            min-width: 100px;
-        }
-
-        .cm-modal-stat-value {
-            font-size: 24px;
-            font-weight: bold;
-            color: #4361ee;
-        }
-
-        .cm-modal-stat-label {
-            font-size: 14px;
-            color: #64748b;
         }
 
         @media (max-width: 992px) {
@@ -436,15 +365,6 @@
 
             .cm-stat-box {
                 min-width: 80px;
-            }
-
-            .cm-finger-options {
-                gap: 10px;
-            }
-
-            .cm-finger-btn {
-                width: 60px;
-                height: 60px;
             }
         }
 
@@ -487,10 +407,6 @@
             .cm-stats {
                 gap: 10px;
             }
-
-            .cm-modal-stat {
-                min-width: 80px;
-            }
         }
     </style>
 </head>
@@ -500,69 +416,6 @@
         <div class="cm-header">
             <h1>键盘字母练习</h1>
             <p>专为初学者设计的键盘训练工具 - 通过练习提高打字速度和准确性</p>
-        </div>
-
-        <!-- 手指选择区域 -->
-        <div class="cm-finger-selection">
-            <div class="cm-finger-title">选择练习的手指</div>
-            <div class="cm-finger-options">
-                <div class="cm-finger-option">
-                    <div class="cm-finger-btn" data-finger="left-pinky">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234361ee'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-1v-6h1v6zm3 0h-1v-6h1v6z'/%3E%3C/svg%3E"
-                            width="30" height="30">
-                    </div>
-                    <div class="cm-finger-label">左小指</div>
-                </div>
-                <div class="cm-finger-option">
-                    <div class="cm-finger-btn" data-finger="left-ring">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234361ee'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-1v-6h1v6zm3 0h-1v-6h1v6z'/%3E%3C/svg%3E"
-                            width="30" height="30">
-                    </div>
-                    <div class="cm-finger-label">左无名指</div>
-                </div>
-                <div class="cm-finger-option">
-                    <div class="cm-finger-btn" data-finger="left-middle">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234361ee'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-1v-6h1v6zm3 0h-1v-6h1v6z'/%3E%3C/svg%3E"
-                            width="30" height="30">
-                    </div>
-                    <div class="cm-finger-label">左中指</div>
-                </div>
-                <div class="cm-finger-option">
-                    <div class="cm-finger-btn" data-finger="left-index">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234361ee'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-1v-6h1v6zm3 0h-1v-6h1v6z'/%3E%3C/svg%3E"
-                            width="30" height="30">
-                    </div>
-                    <div class="cm-finger-label">左食指</div>
-                </div>
-                <div class="cm-finger-option">
-                    <div class="cm-finger-btn" data-finger="right-index">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234361ee'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-1v-6h1v6zm3 0h-1v-6h1v6z'/%3E%3C/svg%3E"
-                            width="30" height="30">
-                    </div>
-                    <div class="cm-finger-label">右食指</div>
-                </div>
-                <div class="cm-finger-option">
-                    <div class="cm-finger-btn" data-finger="right-middle">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234361ee'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-1v-6h1v6zm3 0h-1v-6h1v6z'/%3E%3C/svg%3E"
-                            width="30" height="30">
-                    </div>
-                    <div class="cm-finger-label">右中指</div>
-                </div>
-                <div class="cm-finger-option">
-                    <div class="cm-finger-btn" data-finger="right-ring">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234361ee'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-1v-6h1v6zm3 0h-1v-6h1v6z'/%3E%3C/svg%3E"
-                            width="30" height="30">
-                    </div>
-                    <div class="cm-finger-label">右无名指</div>
-                </div>
-                <div class="cm-finger-option">
-                    <div class="cm-finger-btn" data-finger="right-pinky">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234361ee'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-1v-6h1v6zm3 0h-1v-6h1v6z'/%3E%3C/svg%3E"
-                            width="30" height="30">
-                    </div>
-                    <div class="cm-finger-label">右小指</div>
-                </div>
-            </div>
         </div>
 
         <div class="cm-progress-container">
@@ -579,10 +432,11 @@
             <div class="cm-letters-row" id="cm-letters-row">
                 <!-- 字母将通过JS动态生成 -->
             </div>
-
+            <!--
             <div class="cm-instruction">
                 请按上方高亮显示的字母键开始练习
             </div>
+            -->
         </div>
 
         <div class="cm-keyboard-container">
@@ -606,48 +460,15 @@
                     <div class="cm-stat-label">错误次数</div>
                 </div>
             </div>
-
             <div class="cm-shortcut-hint">
                 提示：按 <span class="cm-shortcut-key">Ctrl</span>+<span class="cm-shortcut-key">R</span> 键可重新开始练习
             </div>
         </div>
-    </div>
 
-    <!-- 完成练习的Modal -->
-    <div class="modal fade" id="cm-completion-modal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content cm-modal-content">
-                <div class="modal-header cm-modal-header">
-                    <h2 class="modal-title">练习完成！</h2>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body cm-modal-body">
-                    <div class="cm-modal-icon">🎉</div>
-                    <h3>恭喜！您已完成所有练习</h3>
-                    <p>您已成功完成所有10组字母练习</p>
-
-                    <div class="cm-modal-stats">
-                        <div class="cm-modal-stat">
-                            <div class="cm-modal-stat-value" id="cm-modal-accuracy">0%</div>
-                            <div class="cm-modal-stat-label">准确率</div>
-                        </div>
-                        <div class="cm-modal-stat">
-                            <div class="cm-modal-stat-value" id="cm-modal-completed">0</div>
-                            <div class="cm-modal-stat-label">已完成字母</div>
-                        </div>
-                        <div class="cm-modal-stat">
-                            <div class="cm-modal-stat-value" id="cm-modal-errors">0</div>
-                            <div class="cm-modal-stat-label">错误次数</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer cm-modal-footer">
-                    <button type="button" class="btn btn-primary cm-restart-modal-btn"
-                        data-bs-dismiss="modal">继续练习</button>
-                    <!-- <button type="button" class="btn btn-outline-primary" id="cm-new-exercise-btn">新练习</button> -->
-                </div>
-            </div>
+        <div class="cm-completion" id="cm-completion">
+            <h2>恭喜！练习完成！</h2>
+            <p>您已成功完成所有10组字母练习</p>
+            <p>按 <span class="cm-shortcut-key">Ctrl</span>+<span class="cm-shortcut-key">R</span> 键可重新开始练习</p>
         </div>
     </div>
 
@@ -658,11 +479,7 @@
     <audio id="cm-error-sound" preload="auto">
         <source src="./keyboard/error.wav" type="audio/mpeg">
     </audio>
-    <audio id="cm-finish-sound" preload="auto">
-        <source src="./keyboard/finish.mp3" type="audio/mpeg">
-    </audio>
 
-    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.7/js/bootstrap.bundle.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // 初始化变量
@@ -673,28 +490,11 @@
             let exerciseData = [];
             let completed = 0;
             let errors = 0;
-            let selectedFingers = new Set();
-
-            // 手指对应的字母
-            const fingerLetters = {
-                'left-pinky': ['q', 'a', 'z'],
-                'left-ring': ['w', 's', 'x'],
-                'left-middle': ['e', 'd', 'c'],
-                'left-index': ['r', 't', 'f', 'g', 'v', 'b'],
-                'right-index': ['y', 'u', 'h', 'j', 'n', 'm'],
-                // 'right-middle': ['i', 'k', ','],
-                // 'right-ring': ['o', 'l', '.'],
-                // 'right-pinky': ['p', ';', '/']
-                'right-middle': ['i', 'k'],
-                'right-ring': ['o', 'l'],
-                'right-pinky': ['p']
-            };
 
             // DOM 元素
             const lettersRowEl = document.getElementById('cm-letters-row');
             const keyboardEl = document.getElementById('cm-keyboard');
-            const completionModalEl = document.getElementById('cm-completion-modal');
-            const completionModal = new bootstrap.Modal(completionModalEl);
+            const completionEl = document.getElementById('cm-completion');
             const statsContainerEl = document.getElementById('cm-stats-container');
             const currentGroupEl = document.getElementById('cm-current-group');
             const progressFillEl = document.getElementById('cm-progress-fill');
@@ -702,101 +502,39 @@
             const accuracyEl = document.getElementById('cm-accuracy');
             const completedEl = document.getElementById('cm-completed');
             const errorsEl = document.getElementById('cm-errors');
+
+            // 音频元素
             const typeSound = document.getElementById('cm-type-sound');
             const errorSound = document.getElementById('cm-error-sound');
-            const finishSound = document.getElementById('cm-finish-sound');
-            const fingerButtons = document.querySelectorAll('.cm-finger-btn');
-            const restartModalBtn = document.querySelector('.cm-restart-modal-btn');
-            // const newExerciseBtn = document.getElementById('cm-new-exercise-btn');
-
-            // 模态框统计元素
-            const modalAccuracyEl = document.getElementById('cm-modal-accuracy');
-            const modalCompletedEl = document.getElementById('cm-modal-completed');
-            const modalErrorsEl = document.getElementById('cm-modal-errors');
 
             // 键盘布局 - 更接近真实键盘
             const keyboardLayout = [
                 // 第一行
                 {
-                    keys: ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
+                    keys: ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
                     className: ''
                 },
                 // 第二行（带偏移）
                 {
-                    keys: ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'],
+                    keys: ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
                     className: 'cm-row-2'
                 },
                 // 第三行（更大偏移）
                 {
-                    keys: ['z', 'x', 'c', 'v', 'b', 'n', 'm'],
+                    keys: ['Z', 'X', 'C', 'V', 'B', 'N', 'M'],
                     className: 'cm-row-3'
                 }
             ];
 
-            // 手指选择事件
-            fingerButtons.forEach(btn => {
-                btn.addEventListener('click', function () {
-                    const finger = this.dataset.finger;
-                    this.classList.toggle('active');
-
-                    if (this.classList.contains('active')) {
-                        selectedFingers.add(finger);
-                    } else {
-                        selectedFingers.delete(finger);
-                    }
-
-                    // 如果有选中的手指，重新开始练习
-                    if (selectedFingers.size > 0) {
-                        startExercise();
-                    }
-                });
-            });
-
-            // 添加模态框事件监听
-            completionModalEl.addEventListener('shown.bs.modal', function () {
-                // 设置循环播放并开始播放
-                finishSound.loop = true;
-                finishSound.currentTime = 0; // 确保每次从头播放
-                finishSound.play().catch(error => {
-                    console.error("音频播放失败:", error);
-                });
-            });
-
-            completionModalEl.addEventListener('hidden.bs.modal', function () {
-                // 停止播放并重置
-                finishSound.pause();
-                finishSound.currentTime = 0;
-                finishSound.loop = false;
-            });
-
-            // 生成练习数据（基于选择的手指）
+            // 生成练习数据
             function generateExerciseData() {
                 exerciseData = [];
-
-                // 获取所有选中手指对应的字母
-                let availableLetters = [];
-                selectedFingers.forEach(finger => {
-                    if (fingerLetters[finger]) {
-                        availableLetters = [...availableLetters, ...fingerLetters[finger]];
-                    }
-                });
-
-                // 如果没有选择手指，使用所有字母
-                if (availableLetters.length === 0) {
-                    availableLetters = Object.values(fingerLetters).flat();
-                }
-
-                // 确保有可用的字母
-                if (availableLetters.length === 0) {
-                    availableLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'];
-                }
-
                 for (let i = 0; i < groups; i++) {
                     const group = [];
                     for (let j = 0; j < groupSize; j++) {
-                        // 从可用字母中随机选择一个
-                        const randomIndex = Math.floor(Math.random() * availableLetters.length);
-                        group.push(availableLetters[randomIndex]);
+                        // 生成随机小写字母 (a-z)
+                        const charCode = Math.floor(Math.random() * 26) + 97;
+                        group.push(String.fromCharCode(charCode));
                     }
                     exerciseData.push(group);
                 }
@@ -844,10 +582,11 @@
                     lettersRowEl.appendChild(letterEl);
                 });
 
-                // 更新进度（确保计算时包含当前正在输入的字母）
-                const progress = Math.round(((currentGroup * groupSize) + currentIndex + 1) / (groups * groupSize) * 100);
-                progressFillEl.style.width = `${Math.min(progress, 100)}%`;
-                overallProgressEl.textContent = Math.min(progress, 100);
+                // 更新进度
+                currentGroupEl.textContent = currentGroup + 1;
+                const progress = Math.round(((currentGroup * groupSize) + currentIndex) / (groups * groupSize) * 100);
+                progressFillEl.style.width = `${progress}%`;
+                overallProgressEl.textContent = progress;
 
                 // 高亮当前键
                 highlightCurrentKey();
@@ -861,7 +600,7 @@
                 });
 
                 // 高亮当前键
-                const currentLetter = exerciseData[currentGroup][currentIndex];
+                const currentLetter = exerciseData[currentGroup][currentIndex].toUpperCase();
                 const currentKey = document.getElementById(`cm-key-${currentLetter}`);
                 if (currentKey) {
                     currentKey.classList.add('highlight');
@@ -871,21 +610,21 @@
             // 处理键盘输入
             function handleKeyPress(key) {
                 // 重新开始快捷键
-                // if (key === 'r' || key === 'R') {
-                //     startExercise();
-                //     return;
-                // }
+                if (key === 'R') {
+                    startExercise();
+                    return;
+                }
 
                 const currentLetter = exerciseData[currentGroup][currentIndex];
                 const letterEl = document.getElementById(`cm-letter-${currentIndex}`);
 
-                if (key === currentLetter) {
+                if (key === currentLetter.toLowerCase()) {
                     // 正确输入
                     letterEl.classList.remove('error');
                     letterEl.classList.add('correct');
 
-                    // 播放正确音效
-                    typeSound.currentTime = 0;
+                    // 播放音效
+                    typeSound.currentTime = 0; // 重置播放位置
                     typeSound.play();
 
                     completed++;
@@ -898,7 +637,7 @@
                     letterEl.classList.add('error');
 
                     // 播放错误音效
-                    errorSound.currentTime = 0;
+                    errorSound.currentTime = 0; // 重置播放位置
                     errorSound.play();
 
                     // 键盘闪烁效果
@@ -931,26 +670,16 @@
 
                     if (currentGroup >= groups) {
                         // 所有组完成
-                        showCompletionModal();
+                        completionEl.style.display = 'block';
+
+                        // 确保进度条显示100%
+                        progressFillEl.style.width = '100%';
+                        overallProgressEl.textContent = '100';
                         return;
                     }
                 }
 
                 renderCurrentGroup();
-            }
-
-            // 显示完成模态框
-            function showCompletionModal() {
-                // 更新模态框中的统计数据
-                const total = completed + errors;
-                const accuracy = total === 0 ? 0 : Math.round((completed / total) * 100);
-
-                modalAccuracyEl.textContent = `${accuracy}%`;
-                modalCompletedEl.textContent = completed;
-                modalErrorsEl.textContent = errors;
-
-                // 显示模态框
-                completionModal.show();
             }
 
             // 开始练习
@@ -965,57 +694,30 @@
                 errorsEl.textContent = '0';
                 accuracyEl.textContent = '0%';
 
+                completionEl.style.display = 'none';
+
                 renderCurrentGroup();
             }
-
-            // 新练习按钮事件
-            // newExerciseBtn.addEventListener('click', function () {
-            //     // 重置手指选择
-            //     fingerButtons.forEach(btn => btn.classList.remove('active'));
-            //     selectedFingers.clear();
-
-            //     // 开始新练习
-            //     startExercise();
-            //     completionModal.hide();
-            // });
-
-            // 继续练习按钮事件
-            restartModalBtn.addEventListener('click', function () {
-                startExercise();
-            });
 
             // 键盘事件处理
             document.addEventListener('keydown', function (e) {
                 // 处理重新开始快捷键 (Ctrl+R)
                 if (e.ctrlKey && (e.key === 'r' || e.key === 'R')) {
-                    e.preventDefault();
+                    e.preventDefault(); // 阻止浏览器刷新页面
                     startExercise();
                     return;
                 }
 
-                // 处理普通R键重新开始
-                // if (e.key === 'r' || e.key === 'R') {
-                //     e.preventDefault();
-                //     handleKeyPress(e.key);
-                //     return;
-                // }
-
-                // 处理字母键输入
+                // 只处理字母键
                 if (e.key.length === 1 && e.key.match(/[a-z]/i)) {
                     e.preventDefault();
                     handleKeyPress(e.key.toLowerCase());
+                    return;
                 }
             });
 
             // 初始化
             renderKeyboard();
-
-            // 默认选择左食指和右食指
-            document.querySelector('[data-finger="left-index"]').classList.add('active');
-            document.querySelector('[data-finger="right-index"]').classList.add('active');
-            selectedFingers.add('left-index');
-            selectedFingers.add('right-index');
-
             startExercise();
         });
     </script>
